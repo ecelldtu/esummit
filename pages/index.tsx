@@ -1,6 +1,7 @@
 
 import Home from './screens/home'
 import About from './screens/about'
+import Footer from '../components/Footer'
 
 
 export default function Root() {
@@ -8,6 +9,10 @@ export default function Root() {
     <>
     <Home/>
     <About/>
+
+
+
+    <Footer/>
     {/* <Home/> */}
    
     </>

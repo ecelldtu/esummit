@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-    <div className=" bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-0.1">
+    <div className=" bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50">
   
-  <div className="  2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 " >
+  <div className=" 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 " >
 
 
         <div className=" flex flex-col lg:flex-row justify-between gap-8 " >
