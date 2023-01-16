@@ -13,7 +13,7 @@ const options = [
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className=" p-5 border-spacing-0 flex flex-row justify-between w-full absolute m-0">
+    <nav className=" p-5 border-spacing-0 flex flex-row justify-between w-[100%] absolute m-0">
       <div>
         <Image src="/ecell_logo_white.png" width={100} height={100} alt="" />
       </div>
@@ -29,22 +29,21 @@ function Navbar() {
         ))}
       </div>
       <div></div>
-      <div className="flex flex-col justify-end ease-in duration-200 md:hidden">
-        <div
+      <div className="flex flex-col ease-in duration-200 md:hidden">
+        <button
+          type="button"
           onClick={() => {
             setOpen(!open);
           }}
-          className={
-            " text-white cursor-pointer ease-in duration-200 flex w-full justify-between items-center"
-          }
+          className={" text-white"}
         >
           {open ? (
             <AiOutlineArrowUp size={25} />
           ) : (
             <HiOutlineViewList size={25} />
           )}
-        </div>
-        <div className="">{open ? <Dropdown /> : <></>}</div>
+        </button>
+        <div>{open ? <Dropdown /> : <></>}</div>
       </div>
     </nav>
   );
@@ -54,7 +53,7 @@ export default Navbar;
 
 function Dropdown() {
   return (
-    <div className=" flex justify-end ">
+    <div className=" flex justify-end  ">
       <ul className=" absolute ease-in duration-200">
         {options.map((val) => {
           return (
