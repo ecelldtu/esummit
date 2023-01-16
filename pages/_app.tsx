@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     
     <div className="bg-background font-poppins w-[100%] m-0">
-      <div className=" left-[100vx]  top-[0px] right-[0px] absolute justify-end flex-row">
+      <div className=" top-0 right-0 absolute justify-end flex-row">
         <Image
           height={550}
           width={550}
