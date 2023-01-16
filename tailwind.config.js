@@ -5,7 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        poppins : ["Poppins"]
+      },
+      colors :{
+        background: '#180613',
+        pink : '#8B2097'
+      }
+    },
   },
   plugins: [],
 }
