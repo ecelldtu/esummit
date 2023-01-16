@@ -1,52 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-
+import { HiOutlineViewList } from "react-icons/hi";
+import { AiOutlineArrowUp } from "react-icons/ai";
+const options = [
+  "HOME",
+  "ABOUT US",
+  "ITINERARY",
+  "EVENTS",
+  "SPONSORS",
+  "CONTACT",
+];
 function Navbar() {
-  const options = [
-    "HOME",
-    "ABOUT US",
-    "ITINERARY",
-    "EVENTS",
-    "SPONSORS",
-    "CONTACT",
-  ];
+  const [open, setOpen] = useState(false);
   return (
-    <nav className="transparent p-5 flex flex-row justify-between absolute w-full">
+    <nav className=" p-5 border-spacing-0 flex flex-row justify-between w-full absolute m-0">
       <div>
         <Image src="/ecell_logo_white.png" width={100} height={100} alt="" />
       </div>
 
-      <div className="flex flex-row">
+      <div className=" md:flex md:flex-row">
         {options.map((val) => (
-          <p className="text-white mx-4" key={options.indexOf(val)}>
+          <p
+            className="hidden md:flex md:text-white md:mx-2 lg:mx-4 md:text-sm lg:text-xl ease-in duration-200"
+            key={options.indexOf(val)}
+          >
             {val}
           </p>
         ))}
       </div>
-
       <div></div>
+      <div className="flex flex-col justify-end ease-in duration-200 md:hidden">
+        <div
+          onClick={() => {
+            setOpen(!open);
+          }}
+          className={
+            " text-white cursor-pointer ease-in duration-200 flex w-full justify-between items-center"
+          }
+        >
+          {open ? (
+            <AiOutlineArrowUp size={25} />
+          ) : (
+            <HiOutlineViewList size={25} />
+          )}
+        </div>
+        <div className="">{open ? <Dropdown /> : <></>}</div>
+      </div>
     </nav>
   );
 }
 
 export default Navbar;
-  // <div className="flex flex-row bg-background">
-    //   <div className="flex flex-col justify-between h-100 bg-background m-0">
-    //     <h1 className = "text-white font-bold text-2xl">E-SUMMIT 23</h1>
 
-    //     <p className = "text-white  text-xl">
-    //       Entrepreneurship Cell organises North India`s biggest Entrepreneurship
-    //       Summit 2023. It is a two day event wherein we start with
-    //       Entrepreneurship events in the morning and Cultural nights in the
-    //       evening.
-    //     </p>
-
-    //     <h3 className = "text-white font-bold text-2xl">
-    //         4th-th February 2023
-    //     </h3>
-    //   </div>
-    //   <div className="m-0 h-1000 w-1000" >
-    //     <Image src="/celestial_and_space.png" height={1000}  width={1000} alt =""/>
-    //   </div>
-    // </div>
-    <></>
+function Dropdown() {
+  return (
+    <div className=" flex justify-end ">
+      <ul className=" absolute ease-in duration-200">
+        {options.map((val) => {
+          return (
+            <p
+              className="my-2 hover:font-bold hover:ease-in hover:duration-100  hover:rounded-md hover:cursor-pointer text-sm text-white   "
+              key={options.indexOf(val)}
+            >
+              {val}
+            </p>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
