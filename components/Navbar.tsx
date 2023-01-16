@@ -59,7 +59,7 @@ function Dropdown() {
         {options.map((val) => {
           return (
             <p
-              className="my-2 hover:font-bold hover:ease-in hover:duration-100  hover:rounded-md hover:cursor-pointer text-sm text-white   "
+              className="my-2 hover:font-bold hover:ease-in hover:duration-100  hover:rounded-md hover:cursor-pointer text-sm text-white"
               key={options.indexOf(val)}
             >
               {val}
