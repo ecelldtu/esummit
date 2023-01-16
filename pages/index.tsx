@@ -1,6 +1,7 @@
 
 import Home from './screens/home'
-
+import Image from 'next/image'
+import Head from 'next/head'
 
 export default function Root() {
   return (
