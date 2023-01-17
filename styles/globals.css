@@ -7,3 +7,16 @@ body {
   @apply leading-[normal] m-0;
  
 }
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+@media screen and (max-width: 320px) {
+  #__next {
+    display: flex
+  }
+}
