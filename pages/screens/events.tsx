@@ -35,12 +35,12 @@ function Events() {
     },
   ];
   return (
-    <div className="bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto">
-      <div className="bg-background/90">
+    <div className="bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
+      <div className="bg-background/90 w-screen">
         <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-pink p-5 pl-10">
           Events
         </h1>
-        <div className="place-items-center  grid grid-cols-1 md:grid-cols-2 md:gap-2">
+        <div className="place-items-center  grid grid-cols-1 lg:grid-cols-2 md:gap-2">
           {events.map((e) => {
             const { eventName, date, imagePath } = e;
             return (

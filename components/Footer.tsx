@@ -3,10 +3,10 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="container">
+      <div className="">
         <div className="flex justify-center mb-0"></div>
 
-        <div className="w-full  min-h-screen flex items-center justify-center bg-pink">
+        <div className="w-screen min-h-screen flex items-center justify-center bg-pink">
           <div className="w-full px-24 text-white flex flex-col">
             <div className="w-full text-4xl font-bold">
               <h1 className="w-full pt-16">
