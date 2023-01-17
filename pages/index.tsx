@@ -1,23 +1,21 @@
-
-import Footer from '../components/Footer'
-import About from './screens/about'
-import Home from './screens/home'
-import Events from './../components/Events';
-import Maps from './../components/Maps';
-import Itenary from './../components/Itenary';
-
-
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import About from "./screens/about";
+import Events from "./screens/events";
+import Home from "./screens/home";
 export default function Root() {
   return (
-    <>
+    <div className = "bg-background font-poppins">
+      <Navbar />
     <Home/>
     <About/>
-    
-    <Itenary/>
-    {/* <Maps/> */}
+
+      <Events />
+
+
     <Footer/>
-    {/* <Home/> */}
-   
-    </>
+    
+
+    </div>
   )
 }

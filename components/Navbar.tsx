@@ -29,13 +29,13 @@ function Navbar() {
         ))}
       </div>
       <div></div>
-      <div className="flex flex-col ease-in duration-200 md:hidden">
+      <div className=" md:hidden">
         <button
           type="button"
           onClick={() => {
             setOpen(!open);
           }}
-          className={" text-white"}
+          className={"text-white"}
         >
           {(open) ? (
             <AiOutlineArrowUp size={25} />
