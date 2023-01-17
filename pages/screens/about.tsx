@@ -14,12 +14,14 @@ export default function About() {
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
                 
                 <h1 className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">About Us</h1>
-                <p className="text-poppins font-normal font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
+                <p className="text-poppins font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
                     The Annual Flagship Extravaganza hosted by Entrepreneurship Cell of Delhi Technological University. E-Summit by E-Cell
 DU is the largest entrepreneurship promoting event of Northern India. The event has served as host to some of the eminent personalities from myriad industries over the many years. It continues to cultivate and nurture numerous ideas every year, and provide an extraordinary platform putting forward the youth to exchange their ideas with the sharpest brains of the corporate world, giving them innumerous insights and lessons to raise their business acumen.</p>
             </div>
             <div className="w-400 lg:w-400">
-                <img className="w-400 h-400  rounded-lg border-2 border-gray-500" src="/about.png" alt="" />
+                <Image
+                width="300" height="900"
+                className="w-400 h-400  rounded-lg border-2 border-gray-500" src="/about.png" alt="" />
             </div>
         </div>
 

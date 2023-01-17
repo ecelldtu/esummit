@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (<>
 
-<div className="container px-6 pt-6">
+<div className="container pt-6">
 
     <div className="flex justify-center mb-0">
          
@@ -12,12 +12,12 @@ export default function Footer() {
     
 
 
-    <div className="w-git  min-h-screen flex items-center justify-center bg-pink">
+    <div className="w-full  min-h-screen flex items-center justify-center bg-pink">
         
-        <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
-            <div className="w-full text-7xl font-bold">
+        <div className="md:w-4/5 w-full px-4 text-white flex flex-col">
+            <div className="w-full text-4xl font-bold">
                 
-                <h1 className="w-full md:w-2/3">How can we help you. get
+                <h1 className="w-full md:w-2/3">How can we help you get
                     in touch</h1>
             </div>
             
@@ -39,7 +39,7 @@ nights and so much more.</p>
 </div>
            
             <div className="flex flex-col">
-                <div className="flex mt-20 mb-12 flex-row justify-between">
+                <div className="flex mt-20 mb-6 flex-row justify-between">
                     <div className="">
                     <h2 className="text-3xl font-bold mb-12">Contact us</h2>
                     <div className="flex flex-col">
@@ -118,11 +118,11 @@ nights and so much more.</p>
 
 
 
-                    <div className="flex flex-row space-x-8 items-center justify-between">
+                    {/* <div className="flex flex-row space-x-8 items-center justify-between">
                         
 
                             
-                    </div>
+                    </div> */}
                     
                 </div>
                 

@@ -37,13 +37,13 @@ function Navbar() {
           }}
           className={" text-white"}
         >
-          {open ? (
+          {(open) ? (
             <AiOutlineArrowUp size={25} />
           ) : (
             <HiOutlineViewList size={25} />
           )}
         </button>
-        <div>{open ? <Dropdown /> : <></>}</div>
+        {(open) ? (<Dropdown />) : null}
       </div>
     </nav>
   );
