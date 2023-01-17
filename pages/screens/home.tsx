@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 function Home() {
   return (
     <div className="w-full m-0">
       <div className="flex flex-row justify-between w-full">
-        <Navbar />
 
         <div className=" flex flex-col lg:h-[550px] transparent relative justify-between pl-12 pr-3">
           <div className="h-[150px] "></div>
