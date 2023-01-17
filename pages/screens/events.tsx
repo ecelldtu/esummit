@@ -35,7 +35,7 @@ function Events() {
     },
   ];
   return (
-    <div className="bg-[url('/events_bg.png')] bg-cover bg-scroll ">
+    <div className="bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto">
       <div className="bg-background/90">
         <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-pink p-5 pl-10">
           Events
