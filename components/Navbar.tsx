@@ -21,7 +21,7 @@ function Navbar() {
       <div className=" md:flex md:flex-row">
         {options.map((val) => (
           <p
-            className="hidden md:flex md:text-white md:mx-2 lg:mx-4 md:text-sm lg:text-xl ease-in duration-200"
+            className="hidden md:flex hover:text-pink cursor-pointer  md:text-white md:mx-2 lg:mx-4 md:text-sm lg:text-xl ease-in duration-200"
             key={options.indexOf(val)}
           >
             {val}
@@ -57,12 +57,12 @@ function Dropdown() {
       <ul className=" absolute ease-in duration-200">
         {options.map((val) => {
           return (
-            <p
-              className="my-2 hover:font-bold hover:ease-in hover:duration-100  hover:rounded-md hover:cursor-pointer text-sm text-white"
+            <li
+              className="my-2 hover:font-bold hover:ease-in hover:duration-100 hover:text-pink hover:rounded-md hover:cursor-pointer text-sm text-white"
               key={options.indexOf(val)}
             >
               {val}
-            </p>
+            </li>
           );
         })}
       </ul>
