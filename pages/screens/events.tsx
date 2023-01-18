@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import EventCard from "../../components/Event";
+import { Element } from "react-scroll";
 function Events() {
   const events = [
     {
@@ -35,6 +36,7 @@ function Events() {
     },
   ];
   return (
+    <Element name = "events">
     <div className="bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
       <div className="bg-background/90 w-screen">
         <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-pink p-5 pl-10">
@@ -56,6 +58,7 @@ function Events() {
         </div>
       </div>
     </div>
+    </Element>
   );
 }
 

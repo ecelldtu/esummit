@@ -1,8 +1,9 @@
 import React from "react";
-
+import { Element } from "react-scroll";
+import Image from "next/image";
 export default function Footer() {
   return (
-    <>
+    <Element name = "footer">
       <div className="">
         <div className="flex justify-center mb-0"></div>
 
@@ -26,8 +27,10 @@ export default function Footer() {
                 href="https://ecelldtu.in/"
                 className="flex items-center mb-4 sm:mb-0  hover:bg-black hover:bg-opacity-50"
               >
-                <img
-                  src="./ecelltext.png"
+                <Image
+                  height={20}
+                  width={150}
+                  src="/ecelltext.png"
                   className="h-20 w-100 mr-3 "
                   alt="=Logo"
                 />
@@ -130,6 +133,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </Element>
   );
 }

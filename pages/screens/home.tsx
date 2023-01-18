@@ -1,9 +1,10 @@
 import React from "react";
 import CountUp from 'react-countup';
-
+import { Element } from "react-scroll";
 function Home() {
   return (
-
+ <Element name = "home">
+ 
     <div className="bg-[url('/celestial_and_space.png')] max-w-full aspect-auto ">
       <div className="flex flex-row justify-between w-full">
 
@@ -55,6 +56,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </Element>
   );
 }
 
