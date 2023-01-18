@@ -15,7 +15,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className=" p-5 border-spacing-0 flex flex-row justify-between w-[100%] m-0 sticky">
+    <nav className="bg-pink p-5 border-spacing-0 flex flex-row justify-between w-[100%] sticky">
       <div>
         <Image src="/ecell_logo_white.png" width={100} height={100} alt="" />
       </div>
