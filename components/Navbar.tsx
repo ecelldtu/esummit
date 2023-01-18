@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiOutlineViewList } from "react-icons/hi";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { useRouter } from "next/router";
 const options = [
   "HOME",
   "ABOUT US",
@@ -12,6 +13,7 @@ const options = [
 ];
 function Navbar() {
   const [open, setOpen] = useState(false);
+
   return (
     <nav className=" p-5 border-spacing-0 flex flex-row justify-between w-[100%] absolute m-0">
       <div>
@@ -37,13 +39,13 @@ function Navbar() {
           }}
           className={"text-white"}
         >
-          {(open) ? (
+          {open ? (
             <AiOutlineArrowUp size={25} />
           ) : (
             <HiOutlineViewList size={25} />
           )}
         </button>
-        {(open) ? (<Dropdown />) : null}
+        {open ? <Dropdown /> : null}
       </div>
     </nav>
   );
