@@ -4,14 +4,12 @@ import CountUp from 'react-countup';
 function Home() {
   return (
 
-    <div className="bg-[url('/celestial_and_space.png')] max-w-full aspect-auto">
+    <div className="bg-[url('/celestial_and_space.png')] max-w-full aspect-auto ">
       <div className="flex flex-row justify-between w-full">
 
         <div className=" flex flex-col lg:h-[550px] mx-auto transparent relative justify-between px-auto pr-3">
           <div className="h-[150px] "></div>
-          {
-            // a div to get precise spacing
-          }
+          
           <h1 className="text-5xl lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
             E-SUMMIT 23’
           </h1>
