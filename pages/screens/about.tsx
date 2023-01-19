@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { Element } from "react-scroll";
 // bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50 style={{ backgroundImage: `url(${backgroundImage})`,opacity: 1}}
 export default function About() {
   return (
-    <>
+    <Element name = "about">
       <div className=" bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50 w-screen">
         <div className=" lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
           <div className=" flex flex-col lg:flex-row justify-between gap-8 ">
@@ -36,6 +37,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </Element>
   );
 }
