@@ -16,22 +16,24 @@ const Itenary = () => {
   return (
     <div className="bg-[url('/123STARS.jpg')] bg-cover bg-center bg-scroll 2xl:mx-auto">
       <div className="bg-background/70 w-screen">
-        <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+        <h1 className="font-poppins text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Itenary
         </h1>
 
         {/*======================= day 1 ==================== */}
         <div className="place-items-center px-12 md:gap-2">
-          <h1 className="text-6xl font-bold text-white pl-16 pt-8">Day 1</h1>
-          <h1 className="text-2xl font-bold text-white pl-16 ">
+          <h1 className="text-6xl font-bold text-white pl-16 pt-8 font-poppins">Day 1</h1>
+          <h1 className="font-poppins text-2xl font-bold text-white pl-16 ">
             4th February 2023
           </h1>
 
-          <VerticalTimeline className="mx-auto">
+          <VerticalTimeline className="mx-auto"
+          >
             <TimeLineElement
               icon={<GiInauguration/>}
               title="Inauguration-LDS Panel 1"
               date=""
+              
             />
 
             <TimeLineElement
@@ -65,8 +67,8 @@ const Itenary = () => {
 
         {/*======================= day 2 ==================== */}
         <div className="place-items-center px-12 md:gap-2">
-          <h1 className="text-6xl font-bold text-white pl-16 pt-8">Day 2</h1>
-          <h1 className="text-2xl font-bold text-white pl-16 ">
+          <h1 className="text-6xl font-poppins font-bold text-white pl-16 pt-8">Day 2</h1>
+          <h1 className="text-2xl font-poppins font-bold text-white pl-16 ">
             5th February 2023
           </h1>
 

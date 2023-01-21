@@ -4,28 +4,28 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <Element name = "footer">
-      <div className="">
+      <div className="font-poppins">
         <div className="flex justify-center mb-0"></div>
 
-        <div className="w-screen min-h-screen flex items-center justify-center bg-pink">
+        <div className="w-screen min-h-screen flex items-center justify-center bg-gradient-to-tr from-pink1 to-pink2">
           <div className="w-full px-24 text-white flex flex-col">
             <div className="w-full text-4xl font-bold">
-              <h1 className="w-full pt-16">
+              <h1 className="w-full pt-12">
                 How can we help you. get in touch
               </h1>
             </div>
 
-            <div className="flex mt-8 flex-col md:flex-row md:justify-between">
+            <div className="flex mt-4 flex-col md:flex-row md:justify-between">
               <p className="w-full md:w-2/3 text-gray-400">
                 An extravagant event filled with exciting and breathtaking
                 events and competitions like Panel Discussions, Business Plan,
                 Comedy Evening, Gaming nights and so much more.
               </p>
             </div>
-            <div className="w-44 pt-6 md:pt-0 ml-right my-10   ">
+            <div className="w-44 pt-3 md:pt-0 ml-right my-5   ">
               <a
                 href="https://ecelldtu.in/"
-                className="flex items-center mb-4 sm:mb-0  hover:bg-black hover:bg-opacity-50"
+                className="flex items-center mb-4 sm:mb-0  hover:bg-pink2 rounded-lg hover:bg-opacity-50"
               >
                 <Image
                   height={20}
@@ -45,7 +45,7 @@ export default function Footer() {
                     <p className="text-poppins ">
                       Delhi Technological University
                     </p>
-                    <p className="text-poppins ">
+                    <p className="font-poppins">
                       Bawana Rd, Shahbad Daulatpur Village, Rohini, New Delhi,
                       Delhi 110042
                     </p>
@@ -54,13 +54,13 @@ export default function Footer() {
                   <br />
                   +91 95994 24420 <br />
                   (Aditya Khandelwal, President E-Cell)
-                  <div className="text-white leading-normal uppercase  focus:outline-none   h-3 m-4 mx-auto ">
+                  <div className="text-white leading-normal uppercase  focus:outline-none h-3 m-4 mx-auto ">
                     Get connected with us on social networks:
                   </div>
                   <a
                     href="https://www.instagram.com/ecelldtu/"
                     type="button"
-                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-pink2 hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                   >
                     <svg
                       aria-hidden="true"
@@ -81,7 +81,7 @@ export default function Footer() {
                   <a
                     href="https://www.facebook.com/ECellDTU/"
                     type="button"
-                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-pink2 hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                   >
                     <svg
                       aria-hidden="true"
@@ -102,7 +102,7 @@ export default function Footer() {
                   <a
                     href="https://www.linkedin.com/company/ecelldtu/"
                     type="button"
-                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                    className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-pink2 hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                   >
                     <svg
                       aria-hidden="true"
@@ -126,7 +126,7 @@ export default function Footer() {
               </div>
 
               <hr className="border-gray-600" />
-              <p className="w-full text-center my-12 text-black bg-gradient-gray-100">
+              <p className="w-full text-center my-4 text-black bg-gradient-gray-100">
                 Copyright © 2023 E-cell,DTU
               </p>
             </div>

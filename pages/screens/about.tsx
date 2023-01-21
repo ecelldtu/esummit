@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Element } from "react-scroll";
+import{ motion }from "framer-motion";
+import {navVariants, slideIn, staggerContainer, textVariant, textContainer} from '../utils/motion';
 // bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50 style={{ backgroundImage: `url(${backgroundImage})`,opacity: 1}}
 export default function About() {
   return (
@@ -8,11 +10,19 @@ export default function About() {
       <div className=" bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50 w-screen">
         <div className=" lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
           <div className=" flex flex-col lg:flex-row justify-between gap-8 ">
-            <div className="w-full lg:w-5/12 flex flex-col justify-center">
-              <h1 className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
+            <motion.div
+            variants={textContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+            className="w-full lg:w-5/12 flex flex-col justify-center">
+              <h1
+              className="font-poppins text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
                 About Us
               </h1>
-              <p className="text-poppins font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
+              <motion.p
+              variants={textVariant(0.6)}
+              className="font-poppins font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
                 The Annual Flagship Extravaganza hosted by Entrepreneurship Cell
                 of Delhi Technological University. E-Summit by E-Cell DU is the
                 largest entrepreneurship promoting event of Northern India. The
@@ -23,9 +33,11 @@ export default function About() {
                 their ideas with the sharpest brains of the corporate world,
                 giving them innumerous insights and lessons to raise their
                 business acumen.
-              </p>
-            </div>
-            <div className="w-400 lg:w-400 mx-auto">
+              </motion.p>
+            </motion.div>
+            <motion.div
+            variants={slideIn('left', 'tween', 0.2, 1)}
+            className="w-400 lg:w-400 mx-auto">
               <Image
                 width="300"
                 height="300"
@@ -33,7 +45,7 @@ export default function About() {
                 alt=""
 
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
