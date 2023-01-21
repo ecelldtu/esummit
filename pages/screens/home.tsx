@@ -4,11 +4,11 @@ import CountUp from "react-countup";
 import { Element } from "react-scroll";
 function Home() {
   return (
-    <Element name="home">
-      <div className=" bg-url['/celestial_and_space.png']   md:bg-transparent max-w-full aspect-auto ">
+    <Element name="home" className="">
+      <div className=" bg-url['/celestial_and_space.png'] md:bg-transparent max-w-full aspect-auto">
         {/* laptop view landing page */}
         <div className=" flex-row hidden md:flex font-poppins">
-          <div className="flex flex-row justify-between w-full">
+          <div className="flex flex-row justify-between w-full bg-background/60">
             <div className=" flex flex-col lg:h-[550px] mx-auto transparent relative justify-between px-auto pr-3">
               <div className="h-[150px] "></div>
 
@@ -35,7 +35,7 @@ function Home() {
 
         {/* mobile view landing page */}
         <div className="flex-row md:hidden flex bg-[url('/celestial_and_space.png')] bg-center bg-cover">
-        <div className="flex flex-row justify-between w-full">
+        <div className="flex flex-row justify-between w-full bg-background/60">
             <div className=" flex flex-col lg:h-[550px] mx-auto transparent relative justify-between px-auto pr-3">
               <div className="h-[150px] "></div>
 
@@ -55,8 +55,9 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="m-0 h-30 w-screen md:h-40 lg:h-50 bg-gradient-to-tr from-pink1 to-pink2  p-7 justify-around grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 ease-in duration-200">
+      <div className="m-0 h-30 w-screen md:h-40 lg:h-50 bg-gradient-to-tr from-pink1 to-pink2  p-7 justify-around grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 ease-in duration-200">
           <div className=" text-center md:p-2">
             <h2 className="font-bold text-white text-5xl m-1 md:text-3xl lg:text-6xl">
               <CountUp start={0} end={40000} duration={2.25} /> +
@@ -76,7 +77,6 @@ function Home() {
             <p className="text-white text-2xl">Speakers and Artists</p>
           </div>
         </div>
-      </div>
     </Element>
   );
 }
