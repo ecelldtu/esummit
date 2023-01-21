@@ -11,7 +11,9 @@ module.exports = {
       },
       colors :{
         background: '#180613',
-        pink : '#8B2097'
+        pink : '#8B2097',
+        pink1 : "#84248E",
+        pink2 : "#581674"
       }
     },
   },
