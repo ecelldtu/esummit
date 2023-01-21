@@ -39,7 +39,7 @@ function Events() {
     <Element name = "events">
     <div className="bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
       <div className="bg-background/90 w-screen">
-        <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-pink p-5 pl-10">
+        <h1 className="ttext-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Events
         </h1>
         <div className="place-items-center  grid grid-cols-1 lg:grid-cols-2 md:gap-2">
