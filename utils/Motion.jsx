@@ -1,4 +1,4 @@
-export const navVariants = {
+export const NavVariants = {
     hidden: {
       opacity: 0,
       y: -50,
@@ -19,7 +19,7 @@ export const navVariants = {
     },
   };
   
-  export const slideIn = (direction, type, delay, duration) => ({
+  export const SlideIn = (direction, type, delay, duration) => ({
     hidden: {
       x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
       y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
@@ -36,7 +36,7 @@ export const navVariants = {
     },
   });
   
-  export const staggerContainer = (staggerChildren, delayChildren) => ({
+  export const StaggerContainer = (staggerChildren, delayChildren) => ({
     hidden: {},
     show: {
       transition: {
@@ -46,7 +46,7 @@ export const navVariants = {
     },
   });
   
-  export const textVariant = (delay) => ({
+  export const TextVariant = (delay) => ({
     hidden: {
       y: 50,
       opacity: 0,
@@ -62,7 +62,7 @@ export const navVariants = {
     },
   });
   
-  export const textContainer = {
+  export const TextContainer = {
     hidden: {
       opacity: 0,
     },
@@ -72,7 +72,7 @@ export const navVariants = {
     }),
   };
   
-  export const textVariant2 = {
+  export const TextVariant2 = {
     hidden: {
       opacity: 0,
       y: 20,
@@ -87,7 +87,7 @@ export const navVariants = {
     },
   };
   
-  export const fadeIn = (direction, type, delay, duration) => ({
+  export const FadeIn = (direction, type, delay, duration) => ({
     hidden: {
       x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
       y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
@@ -106,7 +106,7 @@ export const navVariants = {
     },
   });
   
-  export const planetVariants = (direction) => ({
+  export const PlanetVariants = (direction) => ({
     hidden: {
       x: direction === 'left' ? '-100%' : '100%',
       rotate: 120,
@@ -122,7 +122,7 @@ export const navVariants = {
     },
   });
   
-  export const zoomIn = (delay, duration) => ({
+  export const ZoomIn = (delay, duration) => ({
     hidden: {
       scale: 0,
       opacity: 0,
@@ -139,7 +139,7 @@ export const navVariants = {
     },
   });
   
-  export const footerVariants = {
+  export const FooterVariants = {
     hidden: {
       opacity: 0,
       y: 50,

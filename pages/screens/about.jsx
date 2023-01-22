@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Element } from "react-scroll";
 import{ motion }from "framer-motion";
-import {navVariants, slideIn, staggerContainer, textVariant, textContainer} from '../utils/motion';
+import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } from './../../utils/Motion';
 // bg-[url('/crowd.png')] bg-cover bg-center bg-no-repeat bg-opacity-50 style={{ backgroundImage: `url(${backgroundImage})`,opacity: 1}}
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <div className=" lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
           <div className=" flex flex-col lg:flex-row justify-between gap-8 ">
             <motion.div
-            variants={textContainer}
+            variants={TextContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
@@ -21,7 +21,7 @@ export default function About() {
                 About Us
               </h1>
               <motion.p
-              variants={textVariant(0.6)}
+              variants={TextVariant(0.6)}
               className="font-poppins font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
                 The Annual Flagship Extravaganza hosted by Entrepreneurship Cell
                 of Delhi Technological University. E-Summit by E-Cell DU is the
@@ -36,7 +36,7 @@ export default function About() {
               </motion.p>
             </motion.div>
             <motion.div
-            variants={slideIn('left', 'tween', 0.2, 1)}
+            variants={SlideIn('left', 'tween', 0.2, 1)}
             className="w-400 lg:w-400 mx-auto">
               <Image
                 width="300"

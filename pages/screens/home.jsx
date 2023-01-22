@@ -5,7 +5,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { Element } from "react-scroll";
 import{ motion }from "framer-motion";
-import {navVariants, slideIn, staggerContainer, textVariant, textContainer} from '../utils/motion';
+import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } from './../../utils/Motion';
 
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
         <div className=" flex-row hidden md:flex font-poppins">
           <div className="flex flex-row justify-between w-full bg-background/60">
             <motion.div
-            variants={staggerContainer}
+            variants={StaggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
@@ -27,7 +27,7 @@ function Home() {
                 E-SUMMIT 23’
               </h1>
               <motion.p
-              variants={textVariant(0.8)}
+              variants={TextVariant(0.8)}
               className=" pt-6 break-normal font-poppins text-sm lg:text-base flex-wrap inline-block w-[300px] h-[181px] text-white ease-in duration-200">
                 Entrepreneurship Cell organises North India’s Biggest
                 Entrepreneurship Summit 2023. It is a two day event wherein we
@@ -35,7 +35,7 @@ function Home() {
                 nights in the evening.
               </motion.p>
               <motion.h4
-              variants={textVariant(0.8)}
+              variants={TextVariant(0.8)}
               className=" font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
                 4th-5th February 2023
               </motion.h4>
@@ -52,7 +52,7 @@ function Home() {
         <div className="flex-row md:hidden flex bg-[url('/celestial_and_space.png')] bg-center bg-cover">
         <div className="flex flex-row justify-between w-full bg-background/60">
             <motion.div
-            variants={textContainer}
+            variants={TextContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
@@ -60,12 +60,12 @@ function Home() {
               <div className="h-[150px] "></div>
 
               <motion.h1
-              variants={textVariant(0.5)}
+              variants={TextVariant(0.5)}
               className="font-poppins text-5xl lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
                 E-SUMMIT 23’
               </motion.h1>
               <motion.p
-              variants={slideIn("left", "tween", 0.2, 0.5)}
+              variants={SlideIn("left", "tween", 0.2, 0.5)}
               className="font-poppins pt-6 break-normal text-sm lg:text-base flex-wrap inline-block w-[300px] h-[181px] text-white ease-in duration-200">
                 Entrepreneurship Cell organises North India’s Biggest
                 Entrepreneurship Summit 2023. It is a two day event wherein we
@@ -73,7 +73,7 @@ function Home() {
                 nights in the evening.
               </motion.p>
               <motion.h4
-              variants={textVariant(0.7)}
+              variants={TextVariant(0.7)}
               className="font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
                 4th-5th February 2023
               </motion.h4>
