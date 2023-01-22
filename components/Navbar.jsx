@@ -8,18 +8,9 @@ const options = [
   { title: "ABOUT US", path: "about" },
   { title: "ITINERARY", path: "itenary" },
   { title: "EVENTS", path: "events" },
-  { title: "SPONSORS", path: "about" },
+  { title: "SPONSORS", path: "sponsors" },
   { title: "CONTACT", path: "footer" },
 ];
-
-const navLinks = [
-  { title: "HOME", path: "/" },
-  { title: "ABOUT US", path: "about" },
-  { title: "ITINERARY", path: "itenary" },
-  { title: "EVENTS", path: "events" },
-  { title: "SPONSORS", path: "about" },
-  { title: "CONTACT", path: "footer" },
-]
 
 
 function Navbar({navLinkId, scrollToId}) {

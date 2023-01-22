@@ -1,80 +1,114 @@
-import React from 'react'
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
-
-const handleDragStart = (e) => e.preventDefault();
-
-const items = [
-  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
-  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
-  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
-];
+import React, {useState} from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from 'next/image'
+import { Element } from 'react-scroll';
 
 
 const Sponsors = () => {
   var settings = {
-    dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    speed: 1000,
+    slidesToShow: 8,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 2,
+          infinite: true,
+          autoplay: true,
+          speed:1000,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          autoplay: true,
+          speed: 1200,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          autoplay: true,
+          speed: 1200,
+        }
+      }
+    ]
   };
 
+  const Sponsors = [
+    {img: "/about.png"},
+    {img: "/events_bg.png"},
+    {img: "/about.png"},
+    {img: "/events_bg.png"},
+    {img: "/about.png"},
+    {img: "/events_bg.png"},
+    {img: "/events_bg.png"},
+    {img: "/about.png"},
+    {img: "/events_bg.png"},
+  ]
   return (
-    <div className="relative m-auto grid items-center">
+    <Element name = "sponsors">
+<h1 className="font-poppins text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+          Past Sponsors
+        </h1>
+    <div className="w-9/10 flex flex-col">
 
-      <div style={{width: "calc(250px * 11)"}} className="carousel11 flex">
+    {/* ===============Row 1 ============== */}
+    <Slider className="hidden md:flex" {...settings}>
 
-        <div className="text-base text-white">
-          1
-        </div>
+    {
+      Sponsors.map((image)=> {
+        return (
+          <Image
+          key={image.img}
+                width="300"
+                height="300"
+                src={image.img}
+                alt=""
+                className="w-400 lg:w-400 mx-auto m-3 p-3"
+              />
+        )
+      })
+    }
+   
+    </Slider>
 
-        <div className="text-base text-white">
-          2
-        </div>
+   
+{/* ===============Row 2 ============== */}
+    <Slider className="hidden md:flex" {...settings}>
 
-        <div className="text-base text-white">
-          3
-        </div>
+    {
+      Sponsors.map((image)=> {
+        return (
+          <Image
+          key={image.img}
+                width="300"
+                height="300"
+                src={image.img}
+                alt=""
+                className="w-400 lg:w-400 mx-auto m-3 p-3"
+              />
+        )
+      })
+    }
+   
+    </Slider>
 
-        <div className="text-base text-white">
-          4
-        </div>
-
-        <div className="text-base text-white">
-          5
-        </div>
-
-        <div className="text-base text-white">
-          6
-        </div>
-
-        <div className="text-base text-white">
-          7
-        </div>
-
-        <div className="text-base text-white">
-          8
-        </div>
-
-        <div className="text-base text-white">
-          9
-        </div>
-
-        <div className="text-base text-white">
-          10
-        </div>
-
-        <div className="text-base text-white">
-          11
-        </div>
-      </div>
     </div>
-
-
-<AliceCarousel mouseTracking={true} items={items} />
-  )
+    </Element>
+  );
 }
 
 export default Sponsors

@@ -106,3 +106,37 @@ body {
     display: flex
   }
 }
+
+
+
+.brands-container {
+  /* all pictures should be the same size as this value. */
+  max-width: 1050px;
+  margin: auto;
+  padding:0 1em;
+  overflow: hidden;
+}
+
+.brands-carousel > div {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  animation: carousel 20s linear infinite;
+
+  /* It also starts off the screen until it is time. */
+  transform: translateX(100%);
+}
+
+.brands-carousel {
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.brands-carousel > div {
+  width: 100%;
+}
