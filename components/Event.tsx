@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import {motion} from 'framer-motion';
-import {fadeIn} from "../pages/utils/motion"
+// import { FadeIn } from './../pages/utils/motion';
 
 
 function EventCard({
