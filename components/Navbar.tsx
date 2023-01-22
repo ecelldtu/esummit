@@ -11,7 +11,18 @@ const options = [
   { title: "SPONSORS", path: "about" },
   { title: "CONTACT", path: "footer" },
 ];
-function Navbar() {
+
+const navLinks = [
+  { title: "HOME", path: "/" },
+  { title: "ABOUT US", path: "about" },
+  { title: "ITINERARY", path: "itenary" },
+  { title: "EVENTS", path: "events" },
+  { title: "SPONSORS", path: "about" },
+  { title: "CONTACT", path: "footer" },
+]
+
+
+function Navbar({navLinkId, scrollToId}) {
   const [open, setOpen] = useState(false);
 
   return (
