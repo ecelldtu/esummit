@@ -4,6 +4,7 @@ import About from "./screens/about";
 import Events from "./screens/events";
 import Home from "./screens/home";
 import Itenaryscreen from "./screens/itenaryscreen";
+import Sponsors from './../components/Sponsors';
 
 export default function Root() {
 
@@ -14,7 +15,7 @@ export default function Root() {
       <About />
       <Itenaryscreen />
       <Events />
-
+      <Sponsors/>
       <Footer />
     </div>
   );

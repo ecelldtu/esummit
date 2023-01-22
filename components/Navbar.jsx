@@ -8,10 +8,12 @@ const options = [
   { title: "ABOUT US", path: "about" },
   { title: "ITINERARY", path: "itenary" },
   { title: "EVENTS", path: "events" },
-  { title: "SPONSORS", path: "about" },
+  { title: "SPONSORS", path: "sponsors" },
   { title: "CONTACT", path: "footer" },
 ];
-function Navbar() {
+
+
+function Navbar({navLinkId, scrollToId}) {
   const [open, setOpen] = useState(false);
 
   return (
