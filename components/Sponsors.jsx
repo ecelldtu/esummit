@@ -9,7 +9,7 @@ import { Element } from 'react-scroll';
 const Sponsors = () => {
   var settings = {
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 8,
     slidesToScroll: 2,
     initialSlide: 0,
@@ -22,7 +22,7 @@ const Sponsors = () => {
           slidesToScroll: 2,
           infinite: true,
           autoplay: true,
-          speed:1000,
+          speed:1500,
         }
       },
       {
@@ -32,7 +32,7 @@ const Sponsors = () => {
           slidesToScroll: 2,
           initialSlide: 2,
           autoplay: true,
-          speed: 1200,
+          speed: 1500,
         }
       },
       {
@@ -41,7 +41,7 @@ const Sponsors = () => {
           slidesToShow: 4,
           slidesToScroll: 2,
           autoplay: true,
-          speed: 1200,
+          speed: 1500,
         }
       }
     ]

@@ -5,6 +5,7 @@ import Events from "./screens/events";
 import Home from "./screens/home";
 import Itenaryscreen from "./screens/itenaryscreen";
 import Sponsors from './../components/Sponsors';
+import Motivation from './../components/Motivation';
 
 export default function Root() {
 
@@ -12,6 +13,7 @@ export default function Root() {
     <div>
       <Navbar  />
       <Home />
+      <Motivation/>
       <About />
       <Itenaryscreen />
       <Events />
