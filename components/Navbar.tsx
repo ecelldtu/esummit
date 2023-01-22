@@ -23,9 +23,11 @@ function Navbar() {
 
       <ul className=" md:flex md:flex-row list-none">
         {options.map((val) => (
-          <li key={val.title}>
+          <li
+          activeclassName="active"
+          key={val.title}>
             <Link
-              activeclassName="active"
+              
               to={val.path}
               spy={true}
               smooth={true}
@@ -67,9 +69,11 @@ function Dropdown() {
       <ul className=" absolute ease-in duration-200 bg-pink py-1 px-1 leading-tight  rounded border-radius-90%  bg-pink text-base z-10 list-none divide-y divide-gray-100 rounded shadow ">
      {options.map((val) => {
           return (
-            <li key={val.title}>
+            <li 
+            activeClass="active"
+            key={val.title}>
               <Link
-                activeClass="active"
+                
                 to={val.path}
                 spy={true}
                 smooth={true}
