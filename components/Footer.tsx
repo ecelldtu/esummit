@@ -55,8 +55,9 @@ export default function Footer() {
                   +91 95994 24420 <br />
                   (Aditya Khandelwal, President E-Cell)
                   <div className="text-white leading-normal uppercase  focus:outline-none h-3 m-4 mx-auto ">
-                    Get connected with us on social networks:
+                    Our Social Networks:
                   </div>
+                  <div className="flex flex-row my-2">
                   <a
                     href="https://www.instagram.com/ecelldtu/"
                     type="button"
@@ -120,6 +121,8 @@ export default function Footer() {
                       ></path>
                     </svg>
                   </a>
+                  </div>
+                  
                 </div>
 
                 <div className="flex flex-row space-x-8 items-center justify-between"></div>
