@@ -54,7 +54,7 @@ export default function Footer() {
                   <br />
                   +91 95994 24420 <br />
                   (Aditya Khandelwal, President E-Cell)
-                  <div className="text-white leading-normal uppercase  focus:outline-none h-3 m-4 mx-auto ">
+                  <div className="text-white leading-normal uppercase sm:text-sm focus:outline-none m-4 mx-auto ">
                     Our Social Networks:
                   </div>
                   <div className="flex flex-row my-2">

@@ -20,7 +20,8 @@ function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className=" flex flex-col lg:h-[550px] mx-auto transparent relative justify-between px-auto pr-3">
+            className=" flex flex-col lg:h-[550px] mx-auto transparent relative justify-between px-auto pr-3
+            ">
               <div className="h-[150px] "></div>
 
               <h1 className="text-box font-poppins text-5xl lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">

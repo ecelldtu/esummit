@@ -32,35 +32,35 @@ const Itenary = () => {
             <TimeLineElement
               icon={<GiInauguration/>}
               title="Inauguration-LDS Panel 1"
-              date=""
+              date="10:30 - 12:00, BR Audi"
               
             />
 
             <TimeLineElement
               icon={<SiLionair />}
               title="LDS Panel-2"
-              date="2010 - 2011"
+              date="12:30 - 02:00, BR Audi"
             />
 
             <TimeLineElement
               icon={<TbSocial />}
               title="Startup Social"
-              date="2008 - 2010"
+              date="02:00 - 04:00"
             />
             <TimeLineElement
               icon={<GiBookCover />}
               title="Lecture Series"
-              date="2006 - 2008"
+              date="04:00 - 05:00, OAT"
             />
             <TimeLineElement
               icon={<MdOutlineEmojiEvents />}
               title="Society Events / Content Creator"
-              date="April 2013"
+              date="05:00 - 06:00, OAT"
             />
             <TimeLineElement
               icon={<BiLaugh />}
               title="Comedy Evening"
-              date="November 2012"
+              date="06:00 Onwards, OAT"
             />
           </VerticalTimeline>
         </div>
@@ -77,36 +77,41 @@ const Itenary = () => {
             <TimeLineElement
               icon={<SiLionair />}
               title="Investors Clique - 2"
-              date="10:30-12:00"
+              date="11:00 - 12:30"
+            />
+            <TimeLineElement
+              // icon={<SiLionair />}
+              title="B - Plan"
+              date="11:00 - 12:30"
             />
             <TimeLineElement
               icon={<GiMagnifyingGlass />}
               title="Case Study"
-              date="2008 - 2010"
+              date="11:00 - 12:30"
             />
 
             <TimeLineElement
               icon={<BsShopWindow />}
               title=" Market Competition"
-              date="2008 - 2010"
+              date="12:00 - 01:30"
             />
 
             <TimeLineElement
               icon={<GiBookCover />}
-              title="Lecture Series"
-              date="April 2013"
+              title="Lecture Series - 2"
+              date="04:00 - 05:00, OAT"
             />
 
             <TimeLineElement
               icon={<VscSymbolEvent />}
               title="Content Creator"
-              date="Novemeber 2012"
+              date="05:00 - 06:00, OAT"
             />
 
             <TimeLineElement
               icon={<BiLaugh />}
               title="Comedy Evening"
-              date="2002 - 2006"
+              date="06:00 Onwards, OAT"
             />
           </VerticalTimeline>
         </div>
