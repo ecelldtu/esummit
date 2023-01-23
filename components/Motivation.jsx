@@ -7,7 +7,7 @@ import { FadeIn , TextVariant, TextContainer} from './../utils/Motion';
 
 const Motivation = () => {
   return (
-    <>
+    <div className="bg-slate-700">
     {/* laptop viww */}
     <motion.div
     variants={TextContainer}
@@ -15,7 +15,7 @@ const Motivation = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
      className="
-     bg-[url('/saturn.gif')] bg-center font-poppins bg-opacity-40 bg-cover bg-background/60
+     bg-[url('/saturn.gif')] bg-center font-poppins opacity-20 bg-cover bg-background/60 bg-blend-overlay
      flex flex-row whitespace-pre text-white font-semibold italic mx-auto justify-center items-center
      ">
      {/* bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink1 to-transparent */}
@@ -50,7 +50,7 @@ const Motivation = () => {
     {/* <div className="md:hidden flex flex-row text-white">
       view 2
     </div> */}
-    </>
+    </div>
   )
 }
 
