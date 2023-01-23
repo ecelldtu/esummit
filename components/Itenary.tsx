@@ -80,7 +80,7 @@ const Itenary = () => {
               date="11:00 - 12:30"
             />
             <TimeLineElement
-              // icon={<SiLionair />}
+              icon={<MdOutlineEmojiEvents/>}
               title="B - Plan"
               date="11:00 - 12:30"
             />
