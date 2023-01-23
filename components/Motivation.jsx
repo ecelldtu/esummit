@@ -15,8 +15,8 @@ const Motivation = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
      className="
-     bg-[url('/saturn.gif')] bg-center font-poppins bg-background/50 bg-cover
-     flex flex-row whitespace-pre text-white mx-auto justify-center items-center
+     bg-[url('/saturn.gif')] bg-center font-poppins bg-opacity-40 bg-cover bg-background/60
+     flex flex-row whitespace-pre text-white font-semibold italic mx-auto justify-center items-center
      ">
      {/* bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink1 to-transparent */}
       <motion.div
@@ -29,10 +29,10 @@ const Motivation = () => {
       height={450}
       className="" /> */}
       </motion.div>
-      <div className="flex flex-col my-4 text-4xl justify-center">
+      <div className="flex flex-col my-4 sm:text-4xl text-xl  justify-center">
       <motion.div className="p-3 mx-auto "
       variants={TextVariant(0.8)}>
-      AIM FOR THE MOON, 
+      &quot; AIM FOR THE MOON, 
       </motion.div>
         <motion.div className="p-3 mx-auto "
         variants={TextVariant(0.8)}>
@@ -40,7 +40,7 @@ const Motivation = () => {
         </motion.div>
         <motion.div className="p-3 mx-auto"
         variants={TextVariant(0.8)}>
-        YOU MAY REACH THE STARS
+        YOU MAY REACH THE STARS &quot;
         </motion.div>
       </div>
     </motion.div>
