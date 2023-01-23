@@ -18,6 +18,7 @@ export default function Root() {
       <Itenaryscreen />
       <Events />
       <Sponsors/>
+      <PastSpeakers/>
       <Footer />
     </div>
   );
