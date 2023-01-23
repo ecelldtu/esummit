@@ -14,7 +14,7 @@ import { VscSymbolEvent } from "react-icons/vsc";
 import { BsShopWindow } from "react-icons/bs";
 const Itenary = () => {
   return (
-    <div className="bg-[url('/123STARS.jpg')] bg-cover bg-center bg-scroll 2xl:mx-auto">
+    <div className="bg-[url('https://images.hdqwalls.com/wallpapers/planet-space-mars-4k-8l.jpg')] bg-cover bg-center bg-scroll 2xl:mx-auto">
       <div className="bg-background/70 w-screen">
         <h1 className="font-poppins text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Itenary
