@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <Element name = "footer">
-      <div className="font-poppins">
+      <div className="">
         <div className="flex justify-center mb-0"></div>
 
         <div className="w-screen min-h-screen flex items-center justify-center bg-gradient-to-tr from-pink1 to-pink2">
@@ -42,10 +42,10 @@ export default function Footer() {
                 <div className="">
                   <h2 className="text-3xl font-bold mb-12">Contact us</h2>
                   <div className="flex flex-col">
-                    <p className="text-poppins ">
+                    <p className=" ">
                       Delhi Technological University
                     </p>
-                    <p className="font-poppins">
+                    <p className="">
                       Bawana Rd, Shahbad Daulatpur Village, Rohini, New Delhi,
                       Delhi 110042
                     </p>

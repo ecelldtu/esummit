@@ -17,12 +17,12 @@ export default function About() {
             viewport={{ once: false, amount: 0.25 }}
             className="w-full lg:w-5/12 flex flex-col justify-center">
               <h1
-              className="font-poppins text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
+              className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
                 About Us
               </h1>
               <motion.p
               variants={TextVariant(0.6)}
-              className="font-poppins font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
+              className=" font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
                 The Annual Flagship Extravaganza hosted by Entrepreneurship Cell
                 of Delhi Technological University. E-Summit by E-Cell DU is the
                 largest entrepreneurship promoting event of Northern India. The

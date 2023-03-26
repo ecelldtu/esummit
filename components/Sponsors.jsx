@@ -60,7 +60,7 @@ const Sponsors = () => {
   ]
   return (
     <Element name = "sponsors">
-<h1 className="font-poppins text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+<h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Past Sponsors
         </h1>
     <div className="w-9/10 flex flex-col">

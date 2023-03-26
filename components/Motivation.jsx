@@ -15,7 +15,7 @@ const Motivation = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
      className="
-     bg-[url('/saturn.gif')] bg-center font-poppins opacity-20 bg-cover bg-background/60 bg-blend-overlay
+     bg-[url('/saturn.gif')] bg-center opacity-20 bg-cover bg-background/60 bg-blend-overlay
      flex flex-row whitespace-pre text-white font-semibold italic mx-auto justify-center items-center
      ">
      {/* bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-pink1 to-transparent */}

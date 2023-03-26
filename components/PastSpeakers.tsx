@@ -59,9 +59,9 @@ export default function PastSpeakers() {
   return (
     <>
     
-    <div className="font-poppins bg-[url('https://img.freepik.com/premium-photo/cargo-space-craft-earth-planet-dark-background-sci-fi-wallpaper-space-station-orbiting-earth-space-ship-space-art-wallpaper-solar-observatory-elements-this-image-furnished-by-nasa-3d-illustration_150455-15545.jpg?w=2000')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
+    <div className=" bg-[url('https://img.freepik.com/premium-photo/cargo-space-craft-earth-planet-dark-background-sci-fi-wallpaper-space-station-orbiting-earth-space-ship-space-art-wallpaper-solar-observatory-elements-this-image-furnished-by-nasa-3d-illustration_150455-15545.jpg?w=2000')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
       <div className="bg-background/90 w-screen">
-        <h1 className="font-poppins text-2xl text-center  lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+        <h1 className=" text-2xl text-center  lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Our Past Speakers
         </h1>
 
@@ -76,7 +76,7 @@ export default function PastSpeakers() {
         {speakers.map((info)=>{
             return (
            <div key={info.name}>
-           <div className="relative overflow-hidden transition duration-300  transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+           <div className="relative overflow-hidden transition duration-300  transform rounded-2xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
              <img
                className="object-cover w-full h-35 md:h-64 xl:h-80 "
                src={info.src}
