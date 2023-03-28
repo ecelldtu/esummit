@@ -24,12 +24,12 @@ function Home() {
             ">
               <div className="h-[150px] "></div>
 
-              <h1 className="text-box font-poppins text-5xl lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
+              <h1 className="font-extrabold-poppins  text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white pl ease-in duration-200">
                 E-SUMMIT 23’
               </h1>
               <motion.p
               variants={TextVariant(0.8)}
-              className=" pt-6 break-normal font-poppins text-sm lg:text-base flex-wrap inline-block w-[300px] h-[181px] text-white ease-in duration-200">
+              className=" pt-6 break-normal font-poppins text-xl tracking-wide flex-wrap inline-block w-[600px] h-[181px] text-white ease-in duration-200">
                 Entrepreneurship Cell organises North India’s Biggest
                 Entrepreneurship Summit 2023. It is a two day event wherein we
                 start with Entrepreneurship Events in the morning and Cultural
@@ -37,9 +37,11 @@ function Home() {
               </motion.p>
               <motion.h4
               variants={TextVariant(0.8)}
-              className=" font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
-                4th-5th February 2023
+              className=" font-poppins mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
+                6th-7th-8th April, 2023
               </motion.h4>
+              <motion.h4  variants={TextVariant(0.8)} className=" font-poppins mt-10 text-xl lg:text-3xl hover:text-pink font-bold text-white ease-in duration-200">&quot; AIM FOR THE MOON, 
+              <br></br>IF YOU MISS,<br></br> YOU MAY REACH THE STARS &quot;</motion.h4>
               <div className="h-[150px]"></div>
             </motion.div>
           </div>
@@ -62,8 +64,8 @@ function Home() {
 
               <motion.h1
               variants={TextVariant(0.5)}
-              className="font-poppins text-5xl lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
-                E-SUMMIT 23’
+              className="font-poppins text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
+               E-SUMMIT 23’
               </motion.h1>
               <motion.p
               variants={TextVariant(0.7)}
@@ -76,8 +78,15 @@ function Home() {
               <motion.h4
               variants={TextVariant(0.7)}
               className="font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
-                4th-5th February 2023
+              6th-7th-8th April, 2023
               </motion.h4>
+              <motion.h4
+              variants={TextVariant(0.7)}
+              className="font-poppins mt-5 text-xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
+              &quot; AIM FOR THE MOON, 
+              <br></br>IF YOU MISS,<br></br> YOU MAY REACH THE STARS &quot;
+              </motion.h4>
+             
               <div className="h-[150px]"></div>
             </motion.div>
           </div>

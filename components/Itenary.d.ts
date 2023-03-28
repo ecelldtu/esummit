@@ -13,6 +13,7 @@ export interface VerticalTimelineElementProps {
     id?: string | undefined;
     className?: string | undefined;
     date?: string | undefined;
+    description?: string | undefined;
     dateClassName?: string | undefined;
     iconClassName?: string | undefined;
     iconOnClick?: (() => void) | undefined;

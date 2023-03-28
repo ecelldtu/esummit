@@ -14,7 +14,7 @@ export default function Root() {
     <div>
       <Navbar  />
       <Home />
-      <Motivation/>
+    
       <About />
       <Itenaryscreen />
       <Events />

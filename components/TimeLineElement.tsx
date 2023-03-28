@@ -5,10 +5,12 @@ function TimeLineElement({
   icon,
   title,
   date,
+  description,
 }: {
   icon: any;
   title: string;
   date: string;
+  description:string;
 }) {
   return (
     <VerticalTimelineElement
@@ -20,6 +22,7 @@ function TimeLineElement({
       icon={icon}
     >
       <h3 className=" text-white">{title}</h3>
+      <h4 className=" text-white font-poppins text-sm mt-1">{description}</h4>
     </VerticalTimelineElement>
   );
 }
