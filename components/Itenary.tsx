@@ -63,6 +63,7 @@ const Itenary = () => {
               icon={<MdOutlineEmojiEvents />}
               title="Society Events / Content Creator"
               date="05:00 - 06:00, OAT"
+              description=""
             />
             <TimeLineElement
               icon={<BiLaugh />}
@@ -113,6 +114,7 @@ const Itenary = () => {
               icon={<GiBookCover />}
               title="Lecture Series - 2"
               date="04:00 - 05:00, OAT"
+              description=""
             />
 
             <TimeLineElement
