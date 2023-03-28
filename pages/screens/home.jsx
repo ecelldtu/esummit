@@ -68,15 +68,15 @@ function Home() {
                E-SUMMIT 23’
               </motion.h1>
               <motion.p
-              variants={TextVariant(0.7)}
-              className="font-poppins pt-6 break-normal text-sm lg:text-base flex-wrap inline-block w-[300px] h-[181px] text-white ease-in duration-200">
+              variants={TextVariant(1)}
+              className="font-poppins pt-6 break-normal lg:text-2xl md:text-2xl sm:text-xl flex-wrap inline-block w-[300px] h-[181px] text-white ease-in duration-200">
                 Entrepreneurship Cell organises North India’s Biggest
                 Entrepreneurship Summit 2023. It is a two day event wherein we
                 start with Entrepreneurship Events in the morning and Cultural
                 nights in the evening.
               </motion.p>
               <motion.h4
-              variants={TextVariant(0.7)}
+              variants={TextVariant(1)}
               className="font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
               6th-7th-8th April, 2023
               </motion.h4>
