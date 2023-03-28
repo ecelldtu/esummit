@@ -24,7 +24,7 @@ function Home() {
             ">
               <div className="h-[150px] "></div>
 
-              <h1 className="font-extrabold-poppins  text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white pl ease-in duration-200">
+              <h1 className="font-extrabold-poppins  text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-red-100 text-white pl ease-in duration-200">
                 E-SUMMIT 23’
               </h1>
               <motion.p
@@ -40,7 +40,7 @@ function Home() {
               className=" font-poppins mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
                 6th-7th-8th April, 2023
               </motion.h4>
-              <motion.h4  variants={TextVariant(0.8)} className=" font-poppins mt-10 text-xl lg:text-3xl hover:text-pink font-bold text-white ease-in duration-200">&quot; AIM FOR THE MOON, 
+              <motion.h4  variants={TextVariant(0.8)} className=" font-poppins  text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mt-10 text-xl mt-5 lg:text-3xl hover:text-pink font-bold text-white ease-in duration-200">&quot; AIM FOR THE MOON, 
               <br></br>IF YOU MISS,<br></br> YOU MAY REACH THE STARS &quot;</motion.h4>
               <div className="h-[150px]"></div>
             </motion.div>
@@ -64,7 +64,7 @@ function Home() {
 
               <motion.h1
               variants={TextVariant(0.5)}
-              className="font-poppins text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
+              className="font-poppins text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-red-100 lg:text-6xl mx-auto font-bold text-white pl ease-in duration-200">
                E-SUMMIT 23’
               </motion.h1>
               <motion.p
@@ -82,7 +82,7 @@ function Home() {
               </motion.h4>
               <motion.h4
               variants={TextVariant(0.7)}
-              className="font-poppins mt-5 text-xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
+              className="font-poppins text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-purple-100 mt-5 text-xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
               &quot; AIM FOR THE MOON, 
               <br></br>IF YOU MISS,<br></br> YOU MAY REACH THE STARS &quot;
               </motion.h4>
