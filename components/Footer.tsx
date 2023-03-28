@@ -6,7 +6,11 @@ export default function Footer() {
     <Element name = "footer">
       <div className="">
         <div className="flex justify-center mb-0"></div>
-
+  
+        <h1 className="font-poppins text-2xl text-center  lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+         MAP
+        </h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.138159746277!2d77.11426731506498!3d28.745291685719316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0125d6f9588d%3A0x153fdaa12a9ef84a!2sDelhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1647234165134!5m2!1sen!2sin"width="100%" height="300" loading="lazy" style={{ opacity: 0.8 }}> </iframe>
         <div className="w-screen min-h-screen flex items-center justify-center bg-gradient-to-tr from-pink1 to-pink2">
           <div className="w-full px-24 text-white flex flex-col">
             <div className="w-full text-4xl font-bold">
