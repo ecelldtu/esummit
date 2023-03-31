@@ -24,7 +24,7 @@ export default function About() {
               variants={TextVariant(0.6)}
               className=" font-normal lg:text-xl text-base leading-6 text-white dark:text-white">
                 The Annual Flagship Extravaganza hosted by Entrepreneurship Cell
-                of Delhi Technological University. E-Summit by E-Cell DU is the
+                of Delhi Technological University. E-Summit by E-Cell DTU is the
                 largest entrepreneurship promoting event of Northern India. The
                 event has served as host to some of the eminent personalities
                 from myriad industries over the many years. It continues to

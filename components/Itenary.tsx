@@ -94,7 +94,7 @@ const Itenary = () => {
               icon={<MdOutlineEmojiEvents/>}
               title="B - Plan"
               date="11:00 - 12:30"
-              description="lorem ipsum"
+              description="B plan competition is a prestigious event that provides a platform for budding entrepreneurs to showcase their innovative ideas and strategies for the creation and growth of a successful business venture. It is characterized by rigorous evaluation processes, with expert judges scrutinizing the business plans for their feasibility, potential for success, and overall merit. Participants are expected to demonstrate a deep understanding of their target market, industry trends, financial projections, and competitive landscape, while also showcasing their leadership and communication skills."
             />
             <TimeLineElement
               icon={<GiMagnifyingGlass />}

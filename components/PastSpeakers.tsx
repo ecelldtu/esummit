@@ -19,13 +19,13 @@ export default function PastSpeakers() {
         },
         {
             name: "Kenny Sebastian",
-            src: "https://raw.githubusercontent.com/ecelldtu/esummit/main/images/Kenny-Sebastian.webp",
+            src: "https://i0.wp.com/deadant.co/wp-content/uploads/2018/10/Kenny-Da-20612.jpg?fit=3840%2C5760&ssl=1",
             desc: "Comedian",
         },
         {
             name: "Vinod Dham",
             src: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Vinod_Dham_%28cropped%29.jpg",
-            desc: "Father Of Pentium",
+            desc: "Father Of Pentium Chip",
         },
         {
             name: "Rahul Dua",
@@ -37,12 +37,12 @@ export default function PastSpeakers() {
 
         {
             name: "ASHWANI LOHANI",
-            src: "https://esummit.ecelldtu.in/images/ASHWANI-LOHANI.webp",
+            src: "https://img.theweek.in/content/dam/week/magazine/theweek/business/images/2019/12/13/52-Ashwani-Lohani.jpg",
             desc: "CEO AIR INDIA LIMITED",
         },
         {
             name: "RAJIV SIKKA",
-            src: "https://esummit.ecelldtu.in/images/Rajiv-Sikka.webp",
+            src: "https://i0.wp.com/cgdindia.net/wp-content/uploads/2020/11/APH_1663-scaled.jpg?resize=1280%2C640&ssl=1",
             desc: "CEO INDIAN OIL-ADANI GAS",
         },
         {
@@ -71,14 +71,14 @@ export default function PastSpeakers() {
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       
        
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 ">
 
         {speakers.map((info)=>{
             return (
            <div key={info.name}>
            <div className="relative overflow-hidden transition duration-300  transform rounded-2xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
              <img
-               className="object-cover w-full h-35 md:h-64 xl:h-80 "
+               className="object-cover w-full h-35 md:h-64 xl:h-80  "
                src={info.src}
                alt="Person"
              />

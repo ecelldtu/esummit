@@ -38,7 +38,7 @@ function Home() {
               <motion.h4
               variants={TextVariant(0.8)}
               className=" font-poppins mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
-                6th-7th-8th April, 2023
+                7th-8th April, 2023
               </motion.h4>
               <motion.h4  variants={TextVariant(0.8)} className=" font-poppins  text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mt-10 text-xl mt-5 lg:text-3xl hover:text-pink font-bold text-white ease-in duration-200">&quot; AIM FOR THE MOON, 
               <br></br>IF YOU MISS,<br></br> YOU MAY REACH THE STARS &quot;</motion.h4>
@@ -78,7 +78,7 @@ function Home() {
               <motion.h4
               variants={TextVariant(1)}
               className="font-poppins text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200">
-              6th-7th-8th April, 2023
+              7th-8th April, 2023
               </motion.h4>
               <motion.h4
               variants={TextVariant(0.7)}
