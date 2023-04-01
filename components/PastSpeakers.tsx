@@ -19,7 +19,7 @@ export default function PastSpeakers() {
         },
         {
             name: "Kenny Sebastian",
-            src: "https://i0.wp.com/deadant.co/wp-content/uploads/2018/10/Kenny-Da-20612.jpg?fit=3840%2C5760&ssl=1",
+            src: "https://i0.wp.com/deadant.co/wp-content/uploads/2020/05/KennyNew.png?fit=1489%2C841&ssl=1",
             desc: "Comedian",
         },
         {
@@ -47,7 +47,7 @@ export default function PastSpeakers() {
         },
         {
             name: "Chhaya Sharma",
-            src: "https://femina.wwmindia.com/content/2019/sep/chhayasharma11569824996.jpg",
+            src: "https://etimg.etb2bimg.com/thumb/msid-88179266,imgsize-50620,width-1200,height-900,overlay-etgovernment/top-ips-officer-chhaya-sharma-to-assume-charge-as-jt-commissioner-of-police-in-delhi.jpg",
             desc: "IPS officer (cracked Nirbhaya case)",
         },
         {
