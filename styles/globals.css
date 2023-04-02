@@ -222,7 +222,7 @@ margin-right: auto;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   width: 100%;
- 
+  
 }
 @media screen and (max-width: 768px) {
   .video-container {
@@ -302,6 +302,20 @@ margin-right: auto;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
+}
+
+.bg-celestial-and-space {
+  background-image: url('/celestial_and_space.png');
+  background-position: left center;
+  background-size: cover;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.section-no-overflow {
+  display: inline-block;
+ 
 }
 
 @font-face {

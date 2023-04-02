@@ -7,11 +7,13 @@ import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } fr
 export default function About() {
   return (
     <Element name = "about">
-    <div className="bg-[url('/celestial_and_space.png')] bg-background bg-blend-overlay bg-background/70  bg-cover bg-center bg-no-repeat  w-screen  ">
+    
+    <div className="bg-[url('/celestial_and_space.png')] bg-background bg-cover bg-center bg-no-repeat w-screen h-min"  style={{ marginLeft: 0, overflow: "hidden" }} >
+    
 
-    <section class="lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+    <section class=" px-5 py-24 mx-auto section-no-overflow " style={{ height: "calc(100vh - 4rem)" }}>
     <div class="flex flex-col lg:flex-row justify-between gap-8">
-      <div class="flex flex-col text-center w-full mb-12">
+      <div class="flex flex-col text-center w-full mb-12 ">
       <motion.div
             variants={TextContainer}
             initial="hidden"
@@ -20,7 +22,7 @@ export default function About() {
             className="">
  <div class="">
               <h1
-              className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
+              className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4    ">
              <h1 className="">
              <span>ABOUT US</span>
               
