@@ -155,7 +155,7 @@ const HomePage = () => {
             >
               <div className="h-[150px]"></div>
               <div className="container">
-                <h1 className=" text-9xl mt-20 hover:text-pink  text-white pl ease-in duration-200">
+                <h1 className=" text-8xl mt-20   text-white pl ease-in duration-200">
                   E-SUMMIT 23’
                 </h1>
 
@@ -167,7 +167,7 @@ const HomePage = () => {
                 </motion.p>
                 <motion.h4
                   variants={TextVariant(0.8)}
-                  className=" mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200"
+                  className=" mt-10 text-2xl lg:text-4xl  font-bold text-white ease-in duration-200"
                 >
                   7th-8th April, 2023
                 </motion.h4>
@@ -182,7 +182,7 @@ const HomePage = () => {
         <div className="md:hidden px-6  pt-10 flex-col justify-center items-center w-screen h-screen">
         <div className="max-w-screen-md ml-0 mx-auto">
 
-        <h1 className=" text-center mt-10 hover:text-pink text-5xl lg:text-9xl mt-20  text-white pl ease-in duration-200">
+        <h1 className=" text-center mt-10  text-4xl lg:text-9xl text-white pl ease-in duration-200">
           E-SUMMIT 23’
         </h1>
       
@@ -194,7 +194,7 @@ const HomePage = () => {
         </motion.p>
         <motion.h4
           variants={TextVariant(0.8)}
-          className=" mt-9 text-center text-xl lg:text-2xl hover:text-pink font-bold text-white ease-in duration-200"
+          className=" mt-9 text-center text-xl lg:text-2xl  font-bold text-white ease-in duration-200"
         >
           7th-8th April, 2023
         </motion.h4>
