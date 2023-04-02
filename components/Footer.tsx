@@ -3,30 +3,26 @@ import { Element } from "react-scroll";
 import Image from "next/image";
 export default function Footer() {
   return (
-    <Element name = "footer">
+    <Element name = "footer max-h-[200px]">
       <div className="">
         <div className="flex justify-center mb-0"></div>
   
-        <h1 className=" text-2xl text-center  w-screen lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
+        <h1 className=" text-xl text-center  w-screen lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-3 pl-10">
          MAP
         </h1>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.138159746277!2d77.11426731506498!3d28.745291685719316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0125d6f9588d%3A0x153fdaa12a9ef84a!2sDelhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1647234165134!5m2!1sen!2sin"width="100%" height="300" loading="lazy" style={{ opacity: 0.8 }}> </iframe>
-        <div className="w-screen min-h-screen flex items-center justify-center bg-gradient-to-tr from-pink1 to-pink2">
+        <div className="w-screen max-h-fit flex items-center justify-center bg-gradient-to-tr from-pink1 to-pink2">
           <div className="w-full px-24 text-white flex flex-col">
-            <div className="w-full text-4xl font-bold">
-              <h1 className="w-full pt-12">
+            <div className="w-full text-2xl font-bold">
+              <h1 className="w-full pt-3">
                 How can we help you. get in touch
               </h1>
             </div>
 
             <div className="flex mt-4 flex-col md:flex-row md:justify-between">
-              <p className="w-full md:w-2/3 text-gray-400">
-                An extravagant event filled with exciting and breathtaking
-                events and competitions like Panel Discussions, Business Plan,
-                Comedy Evening, Gaming nights and so much more.
-              </p>
+
             </div>
-            <div className="w-44 pt-3 md:pt-0 ml-right my-5   ">
+            <div className="w-44 pt-3 md:pt-0 ml-right my-3   ">
               <a
                 href="https://ecelldtu.in/"
                 className="flex items-center mb-4 sm:mb-0  hover:bg-pink2 rounded-lg hover:bg-opacity-50"
@@ -42,9 +38,9 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col">
-              <div className="flex mb-12 flex-row justify-between">
+              <div className="flex mb-6 flex-row justify-between">
                 <div className="">
-                  <h2 className="text-3xl font-bold mb-12">Contact us</h2>
+                  <h2 className="text-xl font-bold mb-5">Contact us</h2>
                   <div className="flex flex-col">
                     <p className=" ">
                       Delhi Technological University
@@ -55,13 +51,13 @@ export default function Footer() {
                     </p>
                   </div>
                   <br />
-                  <br />
+             
                   +91 95994 24420 <br />
                   (Aditya Khandelwal, President E-Cell)
                   <div className="text-white leading-normal uppercase sm:text-sm focus:outline-none m-4 mx-auto ">
                     Our Social Networks:
                   </div>
-                  <div className="flex flex-row my-2">
+                  <div className="flex flex-row my-1">
                   <a
                     href="https://www.instagram.com/ecelldtu/"
                     type="button"
@@ -133,7 +129,7 @@ export default function Footer() {
               </div>
 
               <hr className="border-gray-600" />
-              <p className="w-full text-center my-4 text-black bg-gradient-gray-100">
+              <p className="w-full text-center my-2 text-black bg-gradient-gray-100">
                 Copyright © 2023 E-cell,DTU
               </p>
             </div>

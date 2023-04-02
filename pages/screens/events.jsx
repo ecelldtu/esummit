@@ -48,7 +48,7 @@ function Events() {
         <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Events
         </h1>
-        <div className="place-items-center px-3 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
+        <div className="place-items-center px-3 grid justify-evenly lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
           {events.map((e) => {
             const { index, eventName, date, imagePath, link } = e;
             return (
