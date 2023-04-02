@@ -9,7 +9,7 @@ export default function About() {
     <Element name = "about">
     <div className="bg-[url('/celestial_and_space.png')] bg-background bg-blend-overlay bg-background/70  bg-cover bg-center bg-no-repeat  w-screen  ">
 
-    <section class="lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+    <section class="lg:py-8 lg:px-20 md:py-12 md:px-6 py-5 px-4">
     <div class="flex flex-col lg:flex-row justify-between gap-8">
       <div class="flex flex-col text-center w-full mb-12">
       <motion.div
@@ -40,8 +40,8 @@ export default function About() {
        <iframe
        width="560"
        height="315"
-       src="https://www.youtube.com/embed/TQ1sUYDVRmY?controls=1&amp;start=38&autoplay=1&showinfo=0&controls=0"
-       title="YouTube video player"
+       src="/aftermovie.mp4"
+       title="E-Summit 2022 Aftermovie"
        frameborder="0"
        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
        allowfullscreen

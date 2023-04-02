@@ -8,14 +8,14 @@ function Events() {
       index: 3,
       eventName: "Startup Socials",
       date: "7th April '23",
-      imagePath: "/startupsocials.jpg",
+      imagePath: "/startupsocials.png",
       link: "https://unstop.com/p/startup-socials-e-summit-23-dtu-new-delhi-657365",
     },
     { 
       index: 1,
       eventName: "Designathon",
       date: "8th April '23",
-      imagePath: "/designatthon.jpg",
+      imagePath: "/designathon.jpg",
       link: "https://unstop.com/p/nixi-design-a-thon-e-summit-23-dtu-new-delhi-658128",
     },
     { 
@@ -24,6 +24,20 @@ function Events() {
       date: "8th April '23",
       imagePath: "/sharktank.jpg",
       link: "https://unstop.com/competitions/shark-tank-e-summit-23-dtu-new-delhi-652566",
+    },
+    { 
+      index: 4,
+      eventName: "Reel Quest",
+      date: "8th April '23",
+      imagePath: "/reelquest.png",
+      link: "https://www.instagram.com/p/CqhzXpVJieB/?igshid=YmMyMTA2M2Y",
+    },
+    { 
+      index: 5,
+      eventName: "Hack-A-Thon",
+      date: "8th April '23",
+      imagePath: "/hackathonecell.png",
+      link: "https://unstop.com/hackathons/web-30-hackathon-e-summit-23-dtu-new-delhi-659400",
     },
    
   ];
@@ -34,7 +48,7 @@ function Events() {
         <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Events
         </h1>
-        <div className="place-items-center px-3 grid ">
+        <div className="place-items-center px-3 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
           {events.map((e) => {
             const { index, eventName, date, imagePath, link } = e;
             return (
