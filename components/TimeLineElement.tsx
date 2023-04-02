@@ -21,7 +21,7 @@ function TimeLineElement({
       iconStyle={{ background: "#8B2097", color: "#fff" }}
       icon={icon}
     >
-      <h3 className=" text-white">{title}</h3>
+      <h3 className="text-2xl text-white">{title}</h3>
       <h4 className=" text-white text-xs mt-1">{description}</h4>
     </VerticalTimelineElement>
   );
