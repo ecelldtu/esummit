@@ -5,41 +5,27 @@ import { Element } from "react-scroll";
 function Events() {
   const events = [
     { 
+      index: 3,
+      eventName: "Startup Socials",
+      date: "7th April '23",
+      imagePath: "/startupsocials.jpg",
+      link: "https://unstop.com/p/startup-socials-e-summit-23-dtu-new-delhi-657365",
+    },
+    { 
       index: 1,
-      eventName: "Event 1",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
+      eventName: "Designathon",
+      date: "8th April '23",
+      imagePath: "/designatthon.jpg",
+      link: "https://unstop.com/p/nixi-design-a-thon-e-summit-23-dtu-new-delhi-658128",
     },
     { 
       index: 2,
-      eventName: "Event 2",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
+      eventName: "Shark Tank",
+      date: "8th April '23",
+      imagePath: "/sharktank.jpg",
+      link: "https://unstop.com/competitions/shark-tank-e-summit-23-dtu-new-delhi-652566",
     },
-    { 
-      index: 3,
-      eventName: "Event 3",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
-    },
-    { 
-      index: 4,
-      eventName: "Event 4",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
-    },
-    { 
-      index: 5,
-      eventName: "Event 5",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
-    },
-    { 
-      index: 6,
-      eventName: "Event 6",
-      date: "DD/MM/YY",
-      imagePath: "/imagePath.png",
-    },
+   
   ];
   return (
     <Element name = "events">
@@ -48,12 +34,13 @@ function Events() {
         <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Events
         </h1>
-        <div className="place-items-center px-3 grid grid-cols-2 lg:grid-cols-4 md:gap-2">
+        <div className="place-items-center px-3 grid ">
           {events.map((e) => {
-            const { index, eventName, date, imagePath } = e;
+            const { index, eventName, date, imagePath, link } = e;
             return (
               <>
                 <EventCard
+                link={link}
                 key={index}
                   imagePath={imagePath}
                   date={date}
