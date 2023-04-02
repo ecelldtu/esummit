@@ -22,7 +22,7 @@ function TimeLineElement({
       icon={icon}
     >
       <h3 className=" text-white">{title}</h3>
-      <h4 className=" text-white text-sm mt-1">{description}</h4>
+      <h4 className=" text-white text-xs mt-1">{description}</h4>
     </VerticalTimelineElement>
   );
 }
