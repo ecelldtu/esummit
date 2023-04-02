@@ -36,12 +36,17 @@ export default function About() {
               </motion.p>
         </motion.div>
 
-       
-        <video autoPlay 
-        className="mx-auto mt-4"
-        style={{ width: '500px', height: '500px' }}>
-        <source src="/TEESRA RENDER.mp4" />
-      </video>
+       <div className="video-container">
+       <iframe
+       width="560"
+       height="315"
+       src="https://www.youtube.com/embed/TQ1sUYDVRmY?controls=1&amp;start=38&autoplay=1&showinfo=0&controls=0"
+       title="YouTube video player"
+       frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+       allowfullscreen
+     ></iframe>
+      </div>
       </div>
       
         
