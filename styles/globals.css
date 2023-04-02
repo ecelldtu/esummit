@@ -261,6 +261,12 @@ margin-right: auto;
   background-color: transparent;
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .navbar {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
 .content {
   
   position: relative;
@@ -308,3 +314,16 @@ margin-right: auto;
 .font-audiowide {
   font-family: 'Audiowide', sans-serif;
 }
+
+/* .aboutvideo {
+  overflow: hidden;
+ 
+}
+
+@media screen and (min-width: 768px) {
+  .aboutvideo {
+    max-width: 800px;
+    height: 450px;
+    margin: auto;
+  }
+} */

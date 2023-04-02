@@ -179,10 +179,10 @@ const HomePage = () => {
         </div>
 
         {/* mobile view */}
-        <div className="md:hidden px-6  pt-10 flex-col justify-center items-center w-screen h-screen">
+        <div className="md:hidden px-6  pt-20 flex-col justify-center items-center w-screen h-screen">
         <div className="max-w-screen-md ml-0 mx-auto">
 
-        <h1 className=" text-center mt-10  text-4xl lg:text-9xl text-white pl ease-in duration-200">
+        <h1 className=" text-center mt-20  text-4xl lg:text-9xl text-white pl ease-in duration-200">
           E-SUMMIT 23’
         </h1>
       
