@@ -18,27 +18,30 @@ export default function About() {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
             className="">
- <div class="wrapper nine">
+ <div class="">
               <h1
               className="text-3xl lg:text-6xl font-bold leading-9 text-white dark:text-white pb-4   ">
-             <h1 className="rotate"><span>A</span>
-              <span>B</span>
-              <span>O</span>
-              <span>U</span>
-              <span>T</span>
-              <span></span>
-              <span style={{ marginLeft: '10px' }}>U</span>
-              <span>S</span>
+             <h1 className="">
+             <span>ABOUT US</span>
+              
+              
+              
               </h1> 
               </h1>
               </div>
               <motion.p
               variants={TextVariant(0.6)}
-              className="font-normal lg:text-l text-base leading-6 text-white dark:text-white">
+              className="font-normal lg:text-l text-base leading-6 text-white dark:text-white w-3/5 text-center mx-auto my-4">
               E-Cell DTU presents its annual flagship event E-SUMMIT'23! One of the biggest Entrepreneurship summits in India, E-Summit will bring to you a series of enthralling events, from panel discussions with distinguished dignitaries to exciting competitions like B-plan, Case study, hackathon, along with a spectacular band night and comedy night, the level of grandeur will be unparalleled!
               </motion.p>
         </motion.div>
-        
+
+       
+        <video autoPlay 
+        className="mx-auto mt-4"
+        style={{ width: '500px', height: '500px' }}>
+        <source src="/TEESRA RENDER.mp4" />
+      </video>
       </div>
       
         

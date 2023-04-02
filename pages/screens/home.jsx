@@ -15,7 +15,7 @@ import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } fr
 //     <Element name="home" className="">
 //       <div className=" bg-url['/celestial_and_space.png'] md:bg-transparent max-w-full aspect-auto">
 //         {/* laptop view landing page */}
-//         <div className=" flex-row hidden md:flex font-poppins">
+//         <div className=" flex-row hidden md:flex ">
 //           <div className="flex flex-row justify-between w-full bg-background/60">
 //             <motion.div
 //             variants={StaggerContainer}
@@ -26,12 +26,12 @@ import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } fr
 //             ">
 //               <div className="h-[150px] "></div>
 
-//               <h1 className="font-extrabold-poppins   text-8xl text-white pl ease-in duration-200">
+//               <h1 className="  text-8xl text-white pl ease-in duration-200">
 //                 E-SUMMIT 23’
 //               </h1>
 //               <motion.p
 //               variants={TextVariant(0.8)}
-//               className=" pt-6 break-normal font-poppins text-xl tracking-wide flex-wrap inline-block w-[600px] h-[181px] text-white ease-in duration-200">
+//               className=" pt-6 break-normal  text-xl tracking-wide flex-wrap inline-block w-[600px] h-[181px] text-white ease-in duration-200">
 //                 Entrepreneurship Cell organises North India’s Biggest
 //                 Entrepreneurship Summit 2023. It is a two day event wherein we
 //                 start with Entrepreneurship Events in the morning and Cultural
@@ -144,7 +144,7 @@ const HomePage = () => {
     <Element name="home" className="">
       <div className=" ">
         {/* desktop view */}
-        <div className="hidden md:flex font-poppins">
+        <div className="hidden md:flex">
           <div className="flex flex-row justify-between w-full h-screen">
             <motion.div
               variants={StaggerContainer}
@@ -161,13 +161,13 @@ const HomePage = () => {
 
                 <motion.p
                   variants={TextVariant(0.8)}
-                  className="pt-6 break-normal font-poppins text-2xl tracking-wide flex-wrap inline-block text-white ease-in duration-200"
+                  className="pt-6 break-normal text-2xl tracking-wide flex-wrap inline-block text-white ease-in duration-200"
                 >
                   North India’s Biggest Entrepreneurship Summit 2023. 
                 </motion.p>
                 <motion.h4
                   variants={TextVariant(0.8)}
-                  className="font-poppins mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200"
+                  className=" mt-10 text-2xl lg:text-4xl hover:text-pink font-bold text-white ease-in duration-200"
                 >
                   7th-8th April, 2023
                 </motion.h4>
@@ -179,7 +179,7 @@ const HomePage = () => {
         </div>
 
         {/* mobile view */}
-        <div className="md:hidden font-poppins  px-6  pt-10 flex-col justify-center items-center w-screen h-screen">
+        <div className="md:hidden px-6  pt-10 flex-col justify-center items-center w-screen h-screen">
         <div className="max-w-screen-md ml-0 mx-auto">
 
         <h1 className=" text-center mt-10 hover:text-pink text-5xl lg:text-9xl mt-20  text-white pl ease-in duration-200">
@@ -188,13 +188,13 @@ const HomePage = () => {
       
         <motion.p
           variants={TextVariant(0.8)}
-          className="pt-6 break-normal font-poppins text-lg lg:text-2xl tracking-wide flex-wrap inline-block text-white ease-in duration-200 text-center"
+          className="pt-6 break-normal text-lg lg:text-2xl tracking-wide flex-wrap inline-block text-white ease-in duration-200 text-center"
         >
           North India’s Biggest Entrepreneurship Summit 2023. 
         </motion.p>
         <motion.h4
           variants={TextVariant(0.8)}
-          className="font-poppins mt-9 text-center text-xl lg:text-2xl hover:text-pink font-bold text-white ease-in duration-200"
+          className=" mt-9 text-center text-xl lg:text-2xl hover:text-pink font-bold text-white ease-in duration-200"
         >
           7th-8th April, 2023
         </motion.h4>
