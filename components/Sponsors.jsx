@@ -99,11 +99,11 @@ const Sponsors = () => {
     { img: "/sponsors/picture.jpg" },
   ];
   return (
-    <Element name="sponsors">
+    <Element name="sponsors  ">
       <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
         Past Sponsors
       </h1>
-      <div className="w-9/10 flex flex-col">
+      <div className=" bg-[url('/saturn.png')] bg-blend-overlay bg-background/75   bg-cover bg-center bg-no-repeat  w-screen w-9/10 flex flex-col">
         {/* ===============Row 1 ============== */}
         <Slider
           className="hidden md:flex md:justify-center md:items-center"
