@@ -17,14 +17,14 @@ const Itenary = () => {
     <div className="bg-[url('https://images.hdqwalls.com/wallpapers/planet-space-mars-4k-8l.jpg')] bg-cover bg-center bg-scroll 2xl:mx-auto">
       <div className="bg-background/70 w-screen">
         <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
-          Itenary
+        Itinerary
         </h1>
 
         {/*======================= day 1 ==================== */}
         <div className="place-items-center px-12 md:gap-2">
           <h1 className="text-6xl font-bold text-white pl-16">Day 1</h1>
           <h1 className="text-2xl font-bold text-white pl-16 py-4">
-            6th April 2023
+            7th April 2023
           </h1>
 
           <VerticalTimeline className="mx-auto"
@@ -78,7 +78,7 @@ const Itenary = () => {
         <div className="place-items-center px-12 md:gap-2">
           <h1 className="text-6xl font-bold text-white pl-16">Day 2</h1>
           <h1 className="text-2xl font-bold text-white pl-16 py-4">
-            7th April 2023
+            8th April 2023
           </h1>
 
           <VerticalTimeline className="mx-auto">

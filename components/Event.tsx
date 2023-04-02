@@ -26,6 +26,12 @@ function EventCard({
       onClick={()=>window.open(`${link}`,'_blank')}
       className = "rounded-lg w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 object-contain" src={imagePath} height={200} width={200} alt="" />
       <p className="hover:text-pink ease-in duration-150">{date}</p>
+      <button
+      onClick={()=>window.open(`${link}`,'_blank')}
+      className="bg-gradient-to-r from-pink to-pink2 hover:bg-white hover:bg-gradient-to-l hover:from-pink hover:to-pink2 text-white font-bold py-2 px-4 rounded-full mt-4"
+      >
+        Register
+      </button>
     </div>
   );
 }
