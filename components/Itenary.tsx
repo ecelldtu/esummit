@@ -22,8 +22,8 @@ const Itenary = () => {
 
         {/*======================= day 1 ==================== */}
         <div className="place-items-center px-12 md:gap-2">
-          <h1 className="text-6xl font-bold text-white pl-16 pt-8">Day 1</h1>
-          <h1 className="text-2xl font-bold text-white pl-16 ">
+          <h1 className="text-6xl font-bold text-white pl-16">Day 1</h1>
+          <h1 className="text-2xl font-bold text-white pl-16 py-4">
             6th April 2023
           </h1>
 
@@ -76,8 +76,8 @@ const Itenary = () => {
 
         {/*======================= day 2 ==================== */}
         <div className="place-items-center px-12 md:gap-2">
-          <h1 className="text-6xl font-bold text-white pl-16 pt-8">Day 2</h1>
-          <h1 className="text-2xl font-bold text-white pl-16 ">
+          <h1 className="text-6xl font-bold text-white pl-16">Day 2</h1>
+          <h1 className="text-2xl font-bold text-white pl-16 py-4">
             7th April 2023
           </h1>
 
