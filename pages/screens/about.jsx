@@ -31,7 +31,7 @@ export default function About() {
               </div>
               <motion.p
               variants={TextVariant(0.6)}
-              className="font-normal lg:text-l text-base leading-6 text-white dark:text-white w-3/5 text-center mx-auto my-4">
+              className="font-normal lg:text-l text-base leading-6 text-white dark:text-white w-4/5 text-center mx-auto my-4">
               E-Cell DTU presents its annual flagship event E-SUMMIT'23! One of the biggest Entrepreneurship summits in India, E-Summit will bring to you a series of enthralling events, from panel discussions with distinguished dignitaries to exciting competitions like B-plan, Case study, hackathon, along with a spectacular band night and comedy night, the level of grandeur will be unparalleled!
               </motion.p>
         </motion.div>
