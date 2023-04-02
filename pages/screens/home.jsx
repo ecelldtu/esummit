@@ -156,7 +156,7 @@ const HomePage = () => {
               <div className="h-[150px]"></div>
               <div className="container">
                 <h1 className=" text-8xl mt-20   text-white pl ease-in duration-200">
-                  E-SUMMIT 23’
+                  E-SUMMIT '23
                 </h1>
 
                 <motion.p
