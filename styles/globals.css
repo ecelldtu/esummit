@@ -262,12 +262,12 @@ margin-right: auto;
   background-color: transparent;
   z-index: 2;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar {
     background-color: transparent;
     box-shadow: none;
   }
-}
+} */
 .content {
   
   position: relative;
