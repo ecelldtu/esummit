@@ -20,7 +20,7 @@ function EventCard({
   return (
     <div
     // variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-    className = "p-4  flex flex-col items-center text-white hover:text-pink ease-in duration-150 ">
+    className = "p- flex flex-col items-center text-white hover:text-pink ease-in duration-150 ">
       <h2 className="font-semibold text-2xl py-4 hover:text-pink ease-in duration-150">{eventName}</h2>
       <Image 
       onClick={()=>window.open(`${link}`,'_blank')}

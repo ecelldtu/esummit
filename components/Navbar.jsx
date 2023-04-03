@@ -19,9 +19,9 @@ function Navbar({navLinkId, scrollToId}) {
   return (
     <>
     <div className="navbar">
-    <nav className="  px-2 flex flex-wrap items-center justify-between mx-auto sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <nav className="px-2 flex flex-wrap items-center justify-between mx-auto sm:px-4 py-2.5 rounded">
       <div className="flex items-center h-6 mr-3 sm:h-9">
-        <Image src="/ecell_logo_white.png" width={100} height={100} alt="" />
+        <Image src="/ecell_logo_white.png" width={90} height={90} alt="" />
       </div>
 
       <ul className=" md:flex md:flex-row list-none">

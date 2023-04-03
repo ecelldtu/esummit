@@ -32,23 +32,23 @@ function Events() {
       imagePath: "/reelquest.png",
       link: "https://www.instagram.com/p/CqhzXpVJieB/?igshid=YmMyMTA2M2Y",
     },
-    { 
-      index: 5,
-      eventName: "Hack-A-Thon",
-      date: "8th April '23",
-      imagePath: "/hackathonecell.png",
-      link: "https://unstop.com/hackathons/web-30-hackathon-e-summit-23-dtu-new-delhi-659400",
-    },
+    // { 
+    //   index: 5,
+    //   eventName: "Hack-A-Thon",
+    //   date: "8th April '23",
+    //   imagePath: "/hackathonecell.png",
+    //   link: "https://unstop.com/hackathons/web-30-hackathon-e-summit-23-dtu-new-delhi-659400",
+    // },
    
   ];
   return (
     <Element name = "events">
     <div className=" bg-[url('/events_bg.png')] bg-cover bg-center bg-scroll 2xl:container 2xl:mx-auto w-screen">
-      <div className="bg-background/90 w-screen">
+      <div className="bg-background/90 w-screen py-3">
         <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
           Events
         </h1>
-        <div className="place-items-center px-3 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
+        <div className="place-items-center px-3 py-6 grid justify-items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
           {events.map((e) => {
             const { index, eventName, date, imagePath, link } = e;
             return (
@@ -64,6 +64,13 @@ function Events() {
             );
           })}
         </div>
+        <EventCard
+                link="https://unstop.com/hackathons/web-30-hackathon-e-summit-23-dtu-new-delhi-659400"
+                key="Hack-A-Thon"
+                  imagePath="/hackathonecell.png"
+                  date="8th April '23"
+                  eventName="Hack-A-Thon"
+                />
       </div>
     </div>
     </Element>
