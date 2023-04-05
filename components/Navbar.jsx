@@ -3,6 +3,8 @@ import Image from "next/image";
 import { HiOutlineViewList } from "react-icons/hi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { Link } from "react-scroll";
+
+
 const options = [
   { title: "HOME", path: "/" },
   { title: "ABOUT US", path: "about" },
