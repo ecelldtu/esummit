@@ -60,14 +60,21 @@ const Sponsors = () => {
   // ];
   const SponsorsRow1 = [
     { img: "/sponsor/0C7281B4-B7B5-40D4-B29E-27B58B796944 - Madhav Aggarwal.png" },
-    { img: "/sponsors/774337-730329-icofof.jpg" },
-    { img: "/sponsors/1583540113395.jpg" },
-    { img: "/sponsors/1623588535920.jpg" },
-    { img: "/sponsors/a40oglrdoyxf8t3vw5ap.webp" },
-    { img: "/sponsors/Bosch-Logo-1981-2002.png" },
-    { img: "/sponsors/coding-ninjas-logo-white.png" },
-    { img: "/sponsors/download (1).jpg" },
-    { img: "/sponsors/download (1).png" },
+    { img: "/sponsor/2ED3D778-F7D8-4E37-9841-D79FD6E9AA3F - Apara Maity.jpeg" },
+    { img: "/sponsor/3AD0C1CA-10D5-436C-B1CB-37BDE5AF100F - Apara Maity.jpeg" },
+    { img: "/sponsor/aceofputs.jpeg" },
+    { img: "/sponsor/1676886021-91f4f523c333760d - Madhav Aggarwal.webp" },
+    { img: "/sponsor/1674700874431 - Anshul s.png" },
+    { img: "/sponsor/Adobe-logo - Madhav Aggarwal.png" },
+    { img: "/sponsor/AU LOGO (1)_page-0001 - Rishabh Chandra.jpg" },
+    { img: "/sponsor/Ayouthveda logo - Akash Jindal.png" },
+    { img: "/sponsor/download - Utkarsh Sharma.png" },
+    { img: "/sponsor/GMC LogoS - Utkarsh Roy.png" },
+    // 
+    { img: "/sponsor/IGL LOGO - Utkarsh Roy.PNG" },
+    { img: "/sponsor/images - Madhav Aggarwal.png" },
+    { img: "/sponsor/images (1) - Utkarsh Sharma.png" },
+    { img: "/sponsor/IMG_20220902_002652 - Akash Jindal.jpg" },
   ];
   // const SponsorsRow2 = [
   //   { img: "https://drive.google.com/uc?export=view&id=1MbXQahRojb3QUOON4uW22FTuDHOigIQ9" },
@@ -84,19 +91,19 @@ const Sponsors = () => {
 
   // ];
   const SponsorsRow2 = [
-    { img: "/sponsors/download.jpg" },
-    { img: "/sponsors/download.png" },
-    { img: "/sponsors/dukan.png" },
-    { img: "/sponsors/Dx4I5Aan_400x400.jpg" },
-    { img: "/sponsors/g8oubsl3purepi6ivqa6.webp" },
-    { img: "/sponsors/gsvrp23vrur2hhwmlt670lxhbbgp.png" },
-    { img: "/sponsors/HackerEarth_logo.png" },
-    { img: "/sponsors/Havells-Logo.wine.png" },
+    { img: "/sponsor/logo-main-scaled-e1640936622894 (1) - Madhav Aggarwal.webp" },
+    { img: "/sponsor/National_Internet_Exchange_of_India_logo.svg - Madhav Aggarwal.png" },
+    { img: "/sponsor/new-logo-zeeve (1) - Utkarsh Roy.png" },
+    { img: "/sponsor/osbt0wkcrzgly1sjchyo - Madhav Aggarwal.avif" },
+    { img: "/sponsor/pcmb logo - Akash Jindal.jpg" },
+    { img: "/sponsor/PrepInsta_Logo - Madhav Aggarwal.png" },
+    { img: "/sponsor/Sober logo - Akash Jindal.jpeg" },
+    { img: "/sponsor/stackos logo - Utkarsh Roy.png" },
     {
-      img: "/sponsors/learning-while-travelling-salt-lake-city-sector-2-kolkata-educational-tour-operators-8xp4u-250.jpg",
+      img: "/sponsor/WhatsApp Image 2023-04-04 at 22.25.55 - Utkarsh Roy.jpeg",
     },
-    { img: "/sponsors/parchhayi logo.jpeg" },
-    { img: "/sponsors/picture.jpg" },
+    { img: "/sponsor/Wox Logo - Akash Jindal.jpeg" },
+
   ];
   return (
     <Element name="sponsors  ">
