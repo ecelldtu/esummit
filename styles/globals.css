@@ -287,6 +287,7 @@ margin-right: auto;
 @media (max-width: 767px) {
   .about {
     padding-top: 80px;
+    
   }
   .video-container {
     margin-top: 60px;
@@ -303,6 +304,7 @@ margin-right: auto;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-left: 0px !important;
   
 }
 

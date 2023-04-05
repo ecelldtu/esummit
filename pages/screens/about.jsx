@@ -8,7 +8,7 @@ export default function About() {
   return (
     <Element name = "about">
     
-    <div className="bg-[url('/celestial_and_space.png')] bg-background/60 bg-cover bg-center bg-no-repeat w-screen min-h-fit py-12"  style={{ marginLeft: 0, overflow: "hidden" }} >
+    <div className="bg-[url('/celestial_and_space.png')] bg-background/100 bg-cover bg-center bg-no-repeat w-screen min-h-fit py-12"  style={{ marginLeft: "0 !important", overflow: "hidden" }} >
     
 
     <section class=" px-5 py-24 mx-auto section-no-overflow " style={{ height: "calc(100vh - 4rem)" }}>

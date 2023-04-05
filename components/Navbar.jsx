@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 
 
 const options = [
-  { title: "HOME", path: "/" },
+  { title: "HOME", path: "home" },
   { title: "ABOUT US", path: "about" },
   { title: "ITINERARY", path: "itenary" },
   { title: "EVENTS", path: "events" },

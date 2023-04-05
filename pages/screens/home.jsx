@@ -11,6 +11,7 @@ import { NavVariants, SlideIn, StaggerContainer, TextVariant, TextContainer } fr
 
 const HomePage = () => {
   return (<>
+    <Element name="home">
     <div className="video-container bg-background/50 max-h-[800px]">
   <video
     autoPlay
@@ -109,7 +110,7 @@ const HomePage = () => {
   <p className="text-white text-xl md:text-2xl">Speakers and Artists</p>
 </div>
 </div>
-
+</Element>
 </>
   
   );
