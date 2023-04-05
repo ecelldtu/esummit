@@ -94,7 +94,7 @@ const Sponsors = () => {
     { img: "/sponsor/logo-main-scaled-e1640936622894 (1) - Madhav Aggarwal.webp" },
     { img: "/sponsor/National_Internet_Exchange_of_India_logo.svg - Madhav Aggarwal.png" },
     { img: "/sponsor/new-logo-zeeve (1) - Utkarsh Roy.png" },
-    { img: "/sponsor/osbt0wkcrzgly1sjchyo - Madhav Aggarwal.avif" },
+    { img: "/sponsor/inc 42.png" },
     { img: "/sponsor/pcmb logo - Akash Jindal.jpg" },
     { img: "/sponsor/PrepInsta_Logo - Madhav Aggarwal.png" },
     { img: "/sponsor/Sober logo - Akash Jindal.jpeg" },
@@ -108,7 +108,7 @@ const Sponsors = () => {
   return (
     <Element name="sponsors">
       <h1 className=" text-2xl lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-5 pl-10">
-        Past Sponsors
+        Sponsors
       </h1>
       <div className=" bg-[url('/saturn.png')] bg-blend-overlay bg-background/75   bg-cover bg-center bg-no-repeat  w-screen w-9/10 flex flex-col">
         {/* ===============Row 1 ============== */}

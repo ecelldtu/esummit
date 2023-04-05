@@ -48,6 +48,14 @@ const Itenary = () => {
             />
 
             <TimeLineElement
+              icon={<SiLionair />}
+              title="Web 3.0 - Summit"
+              date="2:00 - 5:00"
+              description="Future is shaped by visionaries, in this time of advancements listen to a panel of esteemed 
+              "
+            />
+
+            <TimeLineElement
               icon={<TbSocial />}
               title="Startup Social"
               date="02:00 - 04:00"
@@ -85,51 +93,58 @@ const Itenary = () => {
           
             <TimeLineElement
               icon={<SiLionair />}
-              title="Investors Clique - 2"
-              date="11:00 - 12:30"
+              title="Shark Tank"
+              date="11:00 - 2:00"
               description="Day 2 marks the beginning of the most ideal showcase event that provides an avenue to thousands of startup enthusiasts to exhibit their business acumen, creativity, and innovation - The UDAAN Startupthon. One of the flagship events of E-Cell DTU, it aims to promote the spirit of Entrepreneurship.
               "
             />
             <TimeLineElement
               icon={<MdOutlineEmojiEvents/>}
-              title="B - Plan"
-              date="11:00 - 12:30"
-              description="B plan competition is a prestigious event that provides a platform for budding entrepreneurs to showcase their innovative ideas and strategies for the creation and growth of a successful business venture. It is characterized by rigorous evaluation processes, with expert judges scrutinizing the business plans for their feasibility, potential for success, and overall merit. Participants are expected to demonstrate a deep understanding of their target market, industry trends, financial projections, and competitive landscape, while also showcasing their leadership and communication skills."
+              title="Designathon"
+              date="11:00 - 2:00"
+              description="A competition for creative minds to showcase their design skills and come up with innovative solutions to real-world problems. The competition is a test of creativity, market awareness, and presentation skills. "
             />
             <TimeLineElement
               icon={<GiMagnifyingGlass />}
-              title="Case Study"
-              date="11:00 - 12:30"
-              description=" The Case Study Competition, hosted at the prestigious DTU, puts forth a gruelling challenge, calling forth the brightest minds to tackle intricate real-world business problems. A crucible of innovation and creativity, this competition provides a platform for aspiring individuals to demonstrate their solutions to contemporary business predicaments."
+              title="B - Plan"
+              date="11:00 - 1:00"
+              description="Business Plan competition is a competition for budding entrepreneurs to showcase their business acumen and problem solving skills."
             />
 
             <TimeLineElement
               icon={<BsShopWindow />}
-              title=" Market Competition"
-              date="12:00 - 01:30"
-              description="In this marketing competition a problem statement or some product description is given to the contestants for which they have to devise a marketing ad or strategy. An electrifying platform for the brightest minds to demonstrate their acumen in devising innovative marketing strategies, the competition is a test of creativity, market awareness, and presentation skills. "
+              title="Hackathon"
+              date="11:00 - 2:00"
+              description="To all the geeks with a knack of problem - solving, this is the event for you. The event is a test of your logical and analytical skills being put to a test to innovate and come up with a business solution."
             />
 
             <TimeLineElement
               icon={<GiBookCover />}
-              title="Lecture Series - 2"
-              date="04:00 - 05:00, OAT"
-              description=""
+              title="Entrepreneuship Redefined"
+              date="03:00 - 04:00"
+              description="Amidst a line-up of speakers with great experience and expertise in their respective fields, the event will be graced by the presence of business tycoons and entrepreneurs who have made it big in their respective fields. The event will be a platform for the attendees to interact with the speakers and gain valuable insights."
             />
 
             <TimeLineElement
               icon={<VscSymbolEvent />}
-              title="Content Creator"
-              date="05:00 - 06:00, OAT"
-              description="We also have a session on some of the more unconventional forms of entrepreneurship namely youtube entrepreneurship, various YouTubers, and social media influencers share their experiences with the massive crowd assembled at the Open Amphitheatre. We have had the pleasure of hosting various content creators such as Harsh Beniwal Amit Badhana, Slay point, RJ Abhinav - The FAAD magician, Nazarbattu for this event.
-              "
+              title="Lecture Series"
+              date="04:00 - 05:00"
+              description="A panel of business and corporate minds who have made it big in their respective fields will be present to share their experiences and insights with the attendees. The event will be a platform for the attendees to interact with the speakers and gain valuable insights."
+              
             />
 
             <TimeLineElement
               icon={<BiLaugh />}
-              title="Comedy Evening"
-              date="06:00 Onwards, OAT"
-              description="To conclude E-Summit on a lighter note, the Comedy Night is held right after the Content Creator Summit. The evening begins with a short performance of a local comedian followed by the main act and concludes with an improv session with some of the top improv artists of the industry. We have had the pleasure of having numerous top comedians of India, such as Biswa Kalyan Rath, Kenny Sebastien, and Abhishek Upmanyu who have performed and exhilarated the audience with their wit and humor."
+              title="Content Creator"
+              date="05:00 - 06:00 "
+              description="Content is the new Oil. With new geenration, new industries are coming up and it is an opportunity for you to understand how prominent content creators are making it big in the industry. "
+            />
+
+<TimeLineElement
+              icon={<BiLaugh />}
+              title="Singer"
+              date="06:00 Onwards"
+              description="Wrapping the e-summit with a beautifull note, we have a singer who will be performing and an experience to remember. "
             />
           </VerticalTimeline>
         </div>
