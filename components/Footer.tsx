@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <Element name = "footer max-h-[200px]">
-      <div className="">
+      <div className="footer">
         <div className="flex justify-center mb-0"></div>
   
         <h1 className=" text-xl text-center  w-screen lg:text-5xl font-bold text-white ease-in duration-200 bg-gradient-to-tr from-pink1 to-pink2  p-3 pl-10">

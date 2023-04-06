@@ -62,7 +62,7 @@ const Sponsors = () => {
     { img: "/sponsor/0C7281B4-B7B5-40D4-B29E-27B58B796944 - Madhav Aggarwal.png" },
     { img: "/sponsor/2ED3D778-F7D8-4E37-9841-D79FD6E9AA3F - Apara Maity.jpeg" },
     { img: "/sponsor/3AD0C1CA-10D5-436C-B1CB-37BDE5AF100F - Apara Maity.jpeg" },
-    { img: "/sponsor/aceofputs.jpeg" },
+    { img: "/sponsor/0307501C-9386-4F3D-A267-F38292BE2B46 - Apara Maity.jpeg" },
     { img: "/sponsor/1676886021-91f4f523c333760d - Madhav Aggarwal.webp" },
     { img: "/sponsor/1674700874431 - Anshul s.png" },
     { img: "/sponsor/Adobe-logo - Madhav Aggarwal.png" },
@@ -71,10 +71,10 @@ const Sponsors = () => {
     { img: "/sponsor/download - Utkarsh Sharma.png" },
     { img: "/sponsor/GMC LogoS - Utkarsh Roy.png" },
     // 
-    { img: "/sponsor/IGL LOGO - Utkarsh Roy.PNG" },
+    { img: "/sponsor/IGL LOGO - Utkarsh Roy.png" },
     { img: "/sponsor/images - Madhav Aggarwal.png" },
     { img: "/sponsor/images (1) - Utkarsh Sharma.png" },
-    { img: "/sponsor/IMG_20220902_002652 - Akash Jindal.jpg" },
+    { img: "/sponsor/tracker- Madhav Aggarwal.webp" },
   ];
   // const SponsorsRow2 = [
   //   { img: "https://drive.google.com/uc?export=view&id=1MbXQahRojb3QUOON4uW22FTuDHOigIQ9" },
@@ -91,18 +91,18 @@ const Sponsors = () => {
 
   // ];
   const SponsorsRow2 = [
-    { img: "/sponsor/logo-main-scaled-e1640936622894 (1) - Madhav Aggarwal.webp" },
     { img: "/sponsor/National_Internet_Exchange_of_India_logo.svg - Madhav Aggarwal.png" },
     { img: "/sponsor/new-logo-zeeve (1) - Utkarsh Roy.png" },
-    { img: "/sponsor/inc 42.png" },
-    { img: "/sponsor/pcmb logo - Akash Jindal.jpg" },
     { img: "/sponsor/PrepInsta_Logo - Madhav Aggarwal.png" },
     { img: "/sponsor/Sober logo - Akash Jindal.jpeg" },
     { img: "/sponsor/stackos logo - Utkarsh Roy.png" },
-    {
-      img: "/sponsor/WhatsApp Image 2023-04-04 at 22.25.55 - Utkarsh Roy.jpeg",
-    },
+    { img: "/sponsor/WhatsApp Image 2023-04-04 at 22.25.55 - Utkarsh Roy.jpeg" },
     { img: "/sponsor/Wox Logo - Akash Jindal.jpeg" },
+    { img: "/sponsor/pcmb logo - Akash Jindal.jpg" },
+    {
+      img: "/sponsor/Sober logo - Akash Jindal.jpeg",
+    },
+    { img: "/sponsor/2ED3D778-F7D8-4E37-9841-D79FD6E9AA3F - Apara Maity.jpeg" },
 
   ];
   return (
