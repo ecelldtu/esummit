@@ -71,7 +71,7 @@ const Sponsors = () => {
     { img: "/sponsor/download - Utkarsh Sharma.png" },
     { img: "/sponsor/GMC LogoS - Utkarsh Roy.png" },
     // 
-    { img: "/sponsor/IGL LOGO - Utkarsh Roy.png" },
+    { img: "/sponsor/IGL- UtkarshRoy.png" },
     { img: "/sponsor/images - Madhav Aggarwal.png" },
     { img: "/sponsor/images (1) - Utkarsh Sharma.png" },
     { img: "/sponsor/tracker- Madhav Aggarwal.webp" },
