@@ -1,27 +1,15 @@
-"use client"
-import { useState } from "react";
+import { Socials } from "@/constants";
 import Image from "next/image";
+import React from "react";
 
 const Navbar = () => {
-  const [isBannerVisible, setBannerVisibility] = useState(true);
-
-  const hideBanner = () => {
-    setBannerVisibility(false);
-  };
-
   return (
-    <div className="w-screen h-auto py-4 fixed top-0 shadow-lg font-CyberSport shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md px-10 z-[1000]">
-      <div className={`w-full bg-violet-500 top-0 left-0 h-8 fixed z-[10000] font-Para font-extrabold flex flex-row justify-between ${isBannerVisible ? '' : 'hidden'}`}>
-        <div className="my-auto ml-2 md:ml-4 text-sm font-medium md:text-xl">
-          E-Cell DTU Official Website Launched
-          <a href="https://ecelldtu.in/" className="my-auto mx-4 underline-offset-4 underline text-sm md:text-sm text-white">KNOW MORE</a>
-        </div>
-        <button className="my-auto mr-2 md:mr-4 text-white" onClick={hideBanner}>
-          X
-        </button>
-      </div>
-      <div className={`w-full ${isBannerVisible ? 'mt-7' : ''} h-full flex flex-row items-center justify-center md:justify-between m-auto px-[10px]`}>
-        <a href="#about-me" className="h-auto w-auto flex flex-row items-center">
+    <div className="w-screen h-[80px] fixed top-0 shadow-lg font-CyberSport shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10 z-[1000000]">
+      <div className="w-full h-full flex flex-row items-center justify-center md:justify-between m-auto px-[10px]">
+        <a
+          href="#about-me"
+          className="h-auto w-auto flex flex-row items-center"
+        >
           <Image
             src="/logo.png"
             alt="logo"
