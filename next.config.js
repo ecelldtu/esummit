@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+    reactStrictMode: true,
+    images: {
+        domains: [
+            "img.etimg.com",
+            "assets.vogue.com",
+            "m.media-amazon.com",
+            "upload.wikimedia.org",
+            "i.postimg.cc",
+            "pbs.twimg.com",
+        ],
+    },
+};
 
-module.exports = nextConfig
-// module.exports = {
-//   typescript: {
-//     // !! WARN !!
-//     // Dangerously allow production builds to successfully complete even if
-//     // your project has type errors.
-//     // !! WARN !!
-//     ignoreBuildErrors: true,
-//   },
-//   reactStrictMode: true,
-// }
+module.exports = nextConfig;
