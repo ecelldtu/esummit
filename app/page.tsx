@@ -8,6 +8,7 @@ import Footer from "@/components/main/Footer";
 import Feedback from "@/components/main/Feedback";
 import About from "../components/main/About";
 import Map from "../components/main/Map";
+import Contact from "../components/main/Contact";
 import Events from "../components/main/Events";
 import Sponsors from "../components/main/Sponsors";
 import Speakers from "../components/main/Speakers";
@@ -20,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 8100);
+    }, 80);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,9 +41,7 @@ export default function Home() {
             <Itenaries />
             <Events />
             <Speakers />
-            {/* <Skills /> */}
-            {/* <Encryption /> */}
-            {/* <Projects /> */}
+            <Contact />
             <Map />
             <Footer />
           </div>

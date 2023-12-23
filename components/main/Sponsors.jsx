@@ -44,26 +44,42 @@ export default function Quotes() {
       <div className='text-white text-5xl md:text-8xl xl:text-9xl font-semibold text-center -mt-36 mb-12 md:mb-24 font-CyberGraph' id='Sponsors' >SPONSORS</div>
       <div className="h-auto flex items-center w-screen my-8">
         <Marquee className="py-2 flex gap-4" speed={180}>
-          <Image alt="" src={adobe} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={amar} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={ayouth} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={bombay} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={coding} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={digit} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={sober} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={haldiram} className="h-32 my-2 w-32 object-contain mx-24" />
+          {/* <Image alt="" src={adobe} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={amar} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={ayouth} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={bombay} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={coding} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={digit} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={sober} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={haldiram} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
         </Marquee>
       </div>
       <div className="h-16 flex items-center w-screen my-8">
         <Marquee className="py-2 flex gap-4" speed={180} direction="right">
-          <Image alt="" src={havells} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={igl} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={newdelhi} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={ntpc} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={one} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={ongc} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={unstop} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={pvr} className="h-32 my-2 w-32 object-contain mx-24" />
+          {/* <Image alt="" src={havells} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={igl} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={newdelhi} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={ntpc} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={one} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={ongc} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={unstop} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          {/* <Image alt="" src={pvr} className="h-32 my-2 w-32 object-contain mx-24" /> */}
+          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
         </Marquee>
       </div>
     </motion.div>

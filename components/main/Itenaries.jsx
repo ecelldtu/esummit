@@ -64,17 +64,17 @@ const DayContainer = ({ day, date, data }) => {
 
 export default function Iteneraries() {
   const day1Data = [
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
   ];
 
   const day2Data = [
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
-    { title: 'Inauguration-LDS Panel 1', description: 'Lorem ipsum dolor...', time: '10:30 - 12:00, BR Audi' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
+    { title: 'COMING SOON', description: 'COMING SOON', time: 'COMING SOON' },
   ];
 
   return (
