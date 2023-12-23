@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="my-auto ml-2 md:ml-4 text-sm font-extrabold md:text-xl text-white">
           E-Cell DTU Official Website Launched
         </div>
-        <a href="https://ecelldtu.in/" className="font-extrabold text-center my-auto hover:bg-white/80 w-40 md:w-auto scale-75 mr-[20px] md:scale-100 md:-mr-[560px] xl:ml-[360px] bg-white text-violet-500 text-sm md:text-base px-4 rounded-2xl py-2 md:py-1">CKECK NOW</a>
+        <a href="https://ecelldtu.in/" className="font-extrabold text-center my-auto hover:bg-white/80 w-40 md:w-auto scale-75 mr-[20px] md:scale-100 md:-mr-[560px] xl:ml-[360px] bg-white text-violet-500 text-sm md:text-base px-4 rounded-2xl py-2 md:py-1">CHECK NOW</a>
         <button className="my-auto mr-2 md:mr-12 text-white" onClick={hideBanner}>
           X
         </button>
