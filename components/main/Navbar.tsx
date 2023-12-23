@@ -20,7 +20,7 @@ const Navbar = () => {
           X
         </button>
       </div>
-      <div className={`w-full ${isBannerVisible ? 'mt-12' : ''} h-full flex flex-row items-center justify-center md:justify-between m-auto px-[10px]`}>
+      <div className={`w-full ${isBannerVisible ? 'mt-12' : ''} h-full md:pr-[120px] lg:pr-[100px] xl:pr-[120px] flex flex-row items-center justify-center md:justify-between m-auto px-[10px]`}>
         <a href="#about-me" className="h-auto w-auto flex flex-row items-center">
           <Image
             src="/logo.png"
@@ -31,7 +31,7 @@ const Navbar = () => {
           />
         </a>
 
-        <div className="w-auto mr-[220px] xl:mr-[420px] hidden md:flex h-full text-2xl flex-row items-center justify-start mx-auto">
+        <div className="w-auto hidden md:flex h-full text-2xl flex-row items-center justify-start mx-auto">
           <div className="flex items-center justify-between uppercase w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
             <a href="#About" className="cursor-pointer mx-6 hover:text-violet-400 transition-all">
               About Us
