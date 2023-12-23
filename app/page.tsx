@@ -34,11 +34,11 @@ export default function Home() {
           <div className="flex flex-col">
             <Navbar />
             <Hero />
+            <Sponsors />
             <About />
             <Feedback />
             <Itenaries />
             <Events />
-            <Sponsors />
             <Speakers />
             {/* <Skills /> */}
             {/* <Encryption /> */}
