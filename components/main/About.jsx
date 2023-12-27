@@ -9,7 +9,7 @@ import { slideIn } from "../utils/motion";
 export const countCardData = [
   {
     title: `Footfall`,
-    count: 60000,
+    count: 40000,
   },
   {
     title: `Competitons`,
