@@ -1,10 +1,11 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
-export default function Events() {
+const GalleryComponent = () => {
+
     const controls = useAnimation();
     const [ref, inView] = useInView({ threshold: 0.01 });
 
@@ -14,48 +15,61 @@ export default function Events() {
         }
     }, [controls, inView]);
 
-    const Dep = [
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-        { name: 'Rishi Aryan', href: '/', instagram: 'https://www.instagram.com/_rishi_aryan_/', linkedin: 'https://www.linkedin.com/in/rishi-aryan-52969a213/', image: 'https://pbs.twimg.com/profile_images/1635702166722838528/RvXEdABq_400x400.jpg' },
-    ];
-
     return (
         <>
             <h1 className='text-center text-5xl md:text-8xl mt-16 md:mt-32 md:mb-12 xl:text-9xl w-full text-white py-4 font-CyberGraph'>EVENTS</h1>
-            <motion.div
-                ref={ref}
-                animate={controls}
-                initial='hidden'
-                transition={{ duration: 1 }}
-                variants={{
-                    visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: 60 },
-                }}
-                className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
-                id='Events'
-            >
-                {Dep.map((person, index) => (
-                    <div key={index} className='z-[500] max-w-sm rounded hover:scale-100 transition-all scale-90 overflow-hidden shadow-lg mx-auto'>
-                        <div className='relative m-4 flex items-center align-middle justify-center px-auto'>
-                            <Image alt='' src={""} width={400} height={400} className='mx-auto border-4 hover:border-violet-500 transiton-all border-white transition-all rounded-2xl bg-black object-cover' />
-                            <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end text-center'>
-                                <a
-                                    href={person.href}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    className='bg-violet-700 hover:bg-violet-900 w-fit rounded-3xl px-6 py-2 font-Para text-xl text-white mb-4 mx-auto font-extrabold'
-                                >
-                                    COMING SOON
-                                </a>
+            <div className="flex h-auto items-center z-[500] justify-center">
+                <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+                    {galleryData.map((item, index) => (
+                        <motion.div ref={ref}
+                            animate={controls}
+                            initial='hidden'
+                            transition={{ duration: 1 }}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 60 },
+                            }} key={index} className="group relative cursor-pointer rounded-xl items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                            <div className="h-72 w-72 mx-auto">
+                                <Image width={400} height={400} className="h-full rounded-xl w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={item.imageUrl} alt={""} />
                             </div>
-                        </div>
-                    </div>
-                ))}
-            </motion.div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                                <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">{item.title}</h1>
+                                <p className="mb-3 text-lg font-Queensides my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.time}</p>
+                                <p className="mb-3 text-lg font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.location}</p>
+                                <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">Know More</a>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
         </>
+
     );
-}
+};
+
+const galleryData = [
+    {
+        title: 'ECELL CONCLAVE',
+        imageUrl: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        href: "/Conclave",
+        time: "10 AM - 4 PM",
+        location: "DTU MAIN CAMPUS"
+    },
+    {
+        title: 'COMING SOON',
+        imageUrl: '',
+        href: "/",
+        time: "COMING SOON",
+        location: "COMING SOON"
+    },
+    {
+        title: 'COMING SOON',
+        imageUrl: '',
+        href: "/",
+        time: "COMING SOON",
+        location: "COMING SOON"
+    },
+];
+
+export default GalleryComponent;
