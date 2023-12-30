@@ -35,7 +35,7 @@ const GalleryComponent = () => {
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
                             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                                 <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">{item.title}</h1>
-                                <p className="mb-3 text-lg font-Queensides my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.time}</p>
+                                <p className="mb-3 text-lg font-Para my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.time}</p>
                                 <p className="mb-3 text-lg font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.location}</p>
                                 <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">Know More</a>
                             </div>
@@ -53,7 +53,7 @@ const galleryData = [
         title: 'ECELL CONCLAVE',
         imageUrl: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         href: "/Conclave",
-        time: "10 AM - 4 PM",
+        time: "28 JAN, 10 AM - 4 PM",
         location: "DTU MAIN CAMPUS"
     },
     {
