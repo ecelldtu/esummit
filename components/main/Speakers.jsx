@@ -32,7 +32,7 @@ export default function Events() {
                 visible: { opacity: 1, y: 0 },
                 hidden: { opacity: 0, y: 60 },
             }} className='mb-12'>
-            <h1 className='text-center text-5xl mt-16 md:mt-32 md:mb-12  md:text-8xl xl:text-9xl w-full text-white py-4 font-CyberGraph'>PAST SPEAKERS</h1>
+            <h1 className='text-center text-5xl mt-16 md:mt-32 md:mb-12  md:text-8xl xl:text-9xl w-full text-white py-4 font-CyberGraph'>SPEAKERS</h1>
             <div className="container mx-auto p-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {Dep.map((person, index) => (
