@@ -3,10 +3,11 @@ import Image from "next/image"
 import Con1 from "../../public/con1.jpg"
 import Con2 from "../../public/con2.jpg"
 import Con3 from "../../public/con3.jpg"
+import Contact from "./Conact"
 
 export default function page() {
     return (
-        <>
+        <div className='w-screen overflow-x-hidden'>
             <div className="w-full h-auto py-4 fixed top-0 shadow-lg font-CyberSport shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md px-10 z-[1000]">
                 <div className="w-full h-full flex flex-row items-center justify-center md:justify-between m-auto px-[10px]">
                     <a href="/" className="h-auto w-full flex flex-row items-center">
@@ -22,7 +23,7 @@ export default function page() {
             </div>
             <h1 className='text-center mt-36 text-4xl md:text-8xl xl:text-9xl mx-full text-white w-auto py-4 shadow-lg shadow-violet-600' id='con'>ECELL CONCLAVE</h1>
             <p className='text-white text-lg md:text-2xl md:mx-24 xl:mx-16 mx-6 my-2 font-semibold mt-12'>
-                ECell DTU extends a warm and exclusive invitation, inviting you to immerse yourself in the world of entrepreneurship ON <span className='text-violet-600'>28TH OF JANUARY 2024.</span>
+                ECELL DTU extends a warm and exclusive invitation, inviting you to immerse yourself in the world of entrepreneurship ON <span className='text-violet-600'>28TH OF JANUARY 2024.</span>
             </p>
             <p className='text-slate-100 md:text-xl md:mx-24 xl:mx-16 mx-6 font-medium mt-12'>
                 Join us for an exploration of innovation, collaboration, and empowerment, where aspiring entrepreneurs from 30+ E Cell’s converge to share ideas, gain insights, and chart the course for future success. Your presence at E-Cell Conclave is not just an invitation; it’s an opportunity to be part of a thriving community that celebrates the spirit of innovation and fosters the entrepreneurial mindset. We look forward to hosting you at this enriching event, where possibilities unfold and connections flourish.
@@ -228,7 +229,7 @@ export default function page() {
                     </div>
                 </div>
                 <section className="mb-8">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 mt-16 text-violet-600">PAST EVENTS SNAPSHOTS</h1>
+                    <h1 className="text-2xl md:text-5xl font-bold mb-4 mt-16 text-violet-600">PAST EVENTS SNAPSHOTS</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mr-24 w-full md:w-fit">
                         <Image alt='' src={Con1} width={720} height={405} className='scale-90 mx-auto' />
                         <Image alt='' src={Con2} width={720} height={405} className='scale-90 mx-auto' />
@@ -236,6 +237,7 @@ export default function page() {
                     </div>
                 </section>
             </div>
-        </>
+            <Contact />
+        </div>
     )
 }
