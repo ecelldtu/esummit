@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from "next/image"
+import Con1 from "../../public/con1.jpg"
+import Con2 from "../../public/con2.jpg"
+import Con3 from "../../public/con3.jpg"
 
 export default function page() {
     return (
@@ -139,7 +142,7 @@ export default function page() {
                     <h2 className="text-xl mb-4 text-violet-600">VENUE:</h2>
                     <p className="text-2xl md:text-3xl font-bold">DELHI TECHNOLOGICAL UNIVERSITY CAMPUS, NEAR ROHINI</p>
                 </div>
-                <div className="container mx-auto py-8 px-4">
+                <div className="container mx-auto py-8 px-4 md:w-[95%] md:-ml-4">
                     <h1 className="text-4xl font-bold mb-8 text-violet-600 mt-24">FAQs</h1>
 
                     {/* Question 1 */}
@@ -224,6 +227,14 @@ export default function page() {
                         </p>
                     </div>
                 </div>
+                <section className="mb-8">
+                    <h1 className="text-3xl md:text-5xl font-bold mb-4 mt-16 text-violet-600">PAST EVENTS SNAPSHOTS</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mr-24 w-full md:w-fit">
+                        <Image alt='' src={Con1} width={720} height={405} className='scale-90 mx-auto' />
+                        <Image alt='' src={Con2} width={720} height={405} className='scale-90 mx-auto' />
+                        <Image alt='' src={Con3} width={720} height={405} className='scale-90 mx-auto' />
+                    </div>
+                </section>
             </div>
         </>
     )

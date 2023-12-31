@@ -16,12 +16,12 @@ const GalleryComponent = () => {
     }, [controls, inView]);
 
     return (
-        <>
-            <h1 className='text-center text-5xl md:text-8xl mt-16 md:mt-32 md:mb-12 xl:text-9xl w-full text-white py-4 font-CyberGraph'>EVENTS</h1>
+        <div className='mb-12 md:mb-24 xl:mb-36 z-[500]' ref={ref}>
+            <h1 className='text-center text-5xl md:text-8xl mb-12 md:mb-24 xl:text-9xl w-full text-white py-4 font-CyberGraph'>EVENTS</h1>
             <div className="flex h-auto items-center z-[500] justify-center">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
                     {galleryData.map((item, index) => (
-                        <motion.div ref={ref}
+                        <motion.div
                             animate={controls}
                             initial='hidden'
                             transition={{ duration: 1 }}
@@ -43,7 +43,7 @@ const GalleryComponent = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
 
     );
 };
@@ -57,14 +57,28 @@ const galleryData = [
         location: "DTU MAIN CAMPUS"
     },
     {
-        title: 'COMING SOON',
+        title: 'LDS SESSION',
         imageUrl: '',
         href: "/",
         time: "COMING SOON",
         location: "COMING SOON"
     },
     {
-        title: 'COMING SOON',
+        title: 'STARTUP SOCIAL',
+        imageUrl: '',
+        href: "/",
+        time: "COMING SOON",
+        location: "COMING SOON"
+    },
+    {
+        title: 'EXECUTE HACKATHON',
+        imageUrl: '',
+        href: "/",
+        time: "COMING SOON",
+        location: "COMING SOON"
+    },
+    {
+        title: 'CONTENT CREATOR SUMMIT',
         imageUrl: '',
         href: "/",
         time: "COMING SOON",

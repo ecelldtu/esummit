@@ -38,8 +38,8 @@ export default function Home() {
             <Sponsors />
             <About />
             <Feedback />
-            <Itenaries />
             <Events />
+            <Itenaries />
             <Speakers />
             <Contact />
             <Map />
