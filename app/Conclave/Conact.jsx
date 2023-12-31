@@ -51,7 +51,7 @@ const App = () => {
         <div
             className="md:mt-20 rounded-xl z-[500] mb-24"
         >
-            <h1 className="text-xl md:text-3xl text-center mx-4 font-bold my-16 md:my-24 text-violet-600">
+            <h1 className="text-xl md:text-4xl leading-10 md:mx-24 text-center mx-4 font-bold my-16 md:my-24 text-violet-600">
                 Want your E Cell at the Inter E Cell Conclave?
                 Contact the team now to reserve your spot
             </h1>
@@ -66,7 +66,7 @@ const App = () => {
                             placeholder="Your Name"
                             name="Name"
                             type="text"
-                            className="input-field"
+                            className="input-field bg-slate-400/10 text-white"
                         />
                     </div>
                     <div className="mb-4 z-[500] col-span-2 md:col-span-1">
@@ -74,7 +74,7 @@ const App = () => {
                             placeholder="Your Official Email"
                             name="Mail"
                             type="text"
-                            className="input-field"
+                            className="input-field bg-slate-400/10 text-white"
                         />
                     </div>
                     <div className="mb-4 z-[500] col-span-2 md:col-span-1">
@@ -82,7 +82,7 @@ const App = () => {
                             placeholder="Your College"
                             name="College"
                             type="text"
-                            className="input-field"
+                            className="input-field bg-slate-400/10 text-white"
                         />
                     </div>
                     <div className="mb-4 z-[500] col-span-2 md:col-span-1">
@@ -90,7 +90,7 @@ const App = () => {
                             placeholder="Your Phone"
                             name="Phone"
                             type="number"
-                            className="input-field"
+                            className="input-field bg-slate-400/10 text-white"
                         />
                     </div>
                     <div className="mb-4 col-span-2 z-[500]">
@@ -98,7 +98,7 @@ const App = () => {
                             placeholder="Your Message"
                             name="Message"
                             type="text"
-                            className="input-field"
+                            className="input-field bg-slate-400/10 text-white"
                         />
                     </div>
                     <div className="col-span-2 z-[500]">
