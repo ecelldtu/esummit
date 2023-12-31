@@ -60,6 +60,7 @@ const ForgotPasswordForm = () => {
                         </div>
                     </div>
                 </form>
+                <div className='md:mx-10 mx-4 text-lg xl:mx-20'>For getting in direct contact please drop a mail at <span>akash@ecelldtu.in</span></div>
             </motion.div>
         </>
     );
