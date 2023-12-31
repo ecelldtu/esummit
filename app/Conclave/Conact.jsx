@@ -28,7 +28,6 @@ const submitForm = async (e, formRef, controls) => {
         }
         alert('Your Message has been Sent!');
         controls.start('hidden'); // Hide the form after successful submission
-        alert("Your Message has been Sent!");
         formRef.current.reset();
     } catch (error) {
         console.error('Error:', error);
