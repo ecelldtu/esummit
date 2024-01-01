@@ -14,6 +14,7 @@ import Sponsors from "../components/main/Sponsors";
 import Speakers from "../components/main/Speakers";
 import Itenaries from "../components/main/Itenaries";
 import Loaders from "./Preloader"
+import Script from 'next/script'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,16 @@ export default function Home() {
 
       ) : (
         <div className="h-full w-screen overflow-hidden">
+          <Script src="https://www.googletagmanager.com/gtag/js?id=G-F37Z0H3KL6" />
+          <Script id="google-analytics">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-F37Z0H3KL6');
+        `}
+          </Script>
           <div className="flex flex-col">
             <Navbar />
             <Hero />
