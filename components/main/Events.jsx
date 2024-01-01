@@ -84,6 +84,13 @@ const galleryData = [
         time: "COMING SOON",
         location: "COMING SOON"
     },
+    {
+        title: 'DJ NIGHT',
+        imageUrl: 'https://images.unsplash.com/photo-1630163664357-370482810342?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGRqfGVufDB8fDB8fHww',
+        href: "/",
+        time: "COMING SOON",
+        location: "COMING SOON"
+    },
 ];
 
 export default GalleryComponent;
