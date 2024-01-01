@@ -58,28 +58,28 @@ const galleryData = [
     },
     {
         title: 'LDS SESSION',
-        imageUrl: '',
+        imageUrl: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BlZWNofGVufDB8fDB8fHww',
         href: "/",
         time: "COMING SOON",
         location: "COMING SOON"
     },
     {
         title: 'STARTUP SOCIAL',
-        imageUrl: '',
+        imageUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl0Y2h8ZW58MHx8MHx8fDA%3D',
         href: "/",
         time: "COMING SOON",
         location: "COMING SOON"
     },
     {
         title: 'EXECUTE HACKATHON',
-        imageUrl: '',
+        imageUrl: 'https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFja2F0aG9ufGVufDB8fDB8fHww',
         href: "/",
         time: "COMING SOON",
         location: "COMING SOON"
     },
     {
         title: 'CONTENT CREATOR SUMMIT',
-        imageUrl: '',
+        imageUrl: 'https://images.unsplash.com/photo-1613294326794-e7c74fe886e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29udGVudCUyMGNyZWF0b3J8ZW58MHx8MHx8fDA%3D',
         href: "/",
         time: "COMING SOON",
         location: "COMING SOON"
