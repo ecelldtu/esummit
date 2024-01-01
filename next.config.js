@@ -9,7 +9,8 @@ const nextConfig = {
             "upload.wikimedia.org",
             "i.postimg.cc",
             "pbs.twimg.com",
-            "images.unsplash.com"
+            "images.unsplash.com",
+            "unsplash.com",
         ],
     },
 };
