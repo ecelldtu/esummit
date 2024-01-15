@@ -31,9 +31,9 @@ const Feedback = () => (
 
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
-        className="relative flex-1 flex justify-center items-center"
+        className="relative flex-1 flex justify-center items-center h-fit my-auto rounded-2xl"
       >
-        <video autoPlay muted loop>
+        <video autoPlay muted loop className="rounded-2xl">
           <source src="/heronew.mp4" type="video/mp4" className="rounded-2xl" />
         </video>
       </motion.div>
