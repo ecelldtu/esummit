@@ -34,7 +34,7 @@ const Feedback = () => (
         className="relative flex-1 flex justify-center items-center"
       >
         <video autoPlay muted loop>
-          <source src="/hero.mp4" type="video/mp4" className="rounded-2xl" />
+          <source src="/heronew.mp4" type="video/mp4" className="rounded-2xl" />
         </video>
       </motion.div>
     </motion.div>
