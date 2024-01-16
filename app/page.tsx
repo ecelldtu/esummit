@@ -13,6 +13,7 @@ import Events from "../components/main/Events";
 import Sponsors from "../components/main/Sponsors";
 import Speakers from "../components/main/Speakers";
 import Itenaries from "../components/main/Itenaries";
+import New from "../components/main/New";
 import Loaders from "./Preloader"
 import Script from 'next/script'
 
@@ -46,6 +47,7 @@ export default function Home() {
           <div className="flex flex-col">
             <Navbar />
             <Hero />
+            <New />
             <Sponsors />
             <About />
             <Feedback />

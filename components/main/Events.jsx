@@ -37,7 +37,7 @@ const GalleryComponent = () => {
                                 <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">{item.title}</h1>
                                 <p className="mb-3 text-lg font-Para my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.time}</p>
                                 <p className="mb-3 text-lg font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.location}</p>
-                                <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">Know More</a>
+                                <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">Register Now</a>
                             </div>
                         </motion.div>
                     ))}

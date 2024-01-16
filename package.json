@@ -27,6 +27,7 @@
     "react-google-forms-hooks": "^1.2.4",
     "react-icons": "^4.11.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "reactjs-popup": "^2.0.6",
     "sass": "^1.69.5"
   },
   "devDependencies": {
