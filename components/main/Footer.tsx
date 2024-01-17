@@ -7,7 +7,7 @@ import insta from "../../public/insta.png"
 import ln from "../../public/ln.png"
 
 const Footer = () => {
-    return <div className="bg-[#0A0702] z-[1000]" id="Footer">
+    return <div className="bg-[#0A0702] z-[500]" id="Footer">
         <footer className=" bg-violet-900/80 z-[1000]">
             <div className="relative bottom-10  pt-28 md:pt-32 md:pb-1 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-3 md:justify-start items-start content-start">
