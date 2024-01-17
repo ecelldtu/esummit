@@ -31,21 +31,15 @@ export default function Quotes() {
       <div className='text-white text-5xl md:text-8xl xl:text-9xl font-semibold text-center -mt-36 mb-12 md:mb-24 font-CyberGraph' id='Sponsors' >SPONSORS</div>
       <div className="h-auto flex items-center w-screen my-8">
         <Marquee className="py-2 flex gap-4" speed={180}>
-          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
-          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
-
-          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Devfolio" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Replit" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Polygon" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Devfolio" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Replit" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Polygon" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Devfolio" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Replit" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Polygon" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
         </Marquee>
       </div>
       <div className="h-16 flex items-center w-screen my-8">
