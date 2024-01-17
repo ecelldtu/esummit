@@ -32,6 +32,7 @@ export default function New() {
             <button className="close" onClick={close}>
               &times;
             </button>
+            <h1 className="text-2xl font-extrabold font-Queensides text-white">LIVE NOW!</h1>
             <EventInfo title="SHARK TANK" link="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" />
             <EventInfo title="EXECUTE 3.O" link="https://execute3.devfolio.co/" />
           </div>
@@ -44,7 +45,7 @@ export default function New() {
 const EventInfo = ({ title, link }) => (
   <div className="flex flex-row items-center">
     <div className="header text-2xl font-CyberSport text-white mt-1">{title}</div>
-    <a href={link} className="hover:bg-violet-500 w-fit scale-[80%] ml-4 font-CyberGraph mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">
+    <a href={link} className="w-fit scale-[80%] ml-4 font-CyberGraph mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">
       REGISTER NOW
     </a>
   </div>
