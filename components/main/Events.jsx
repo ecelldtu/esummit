@@ -29,35 +29,12 @@ const GalleryComponent = () => {
         height: '44px',
         width: '312px',
         // Add other style properties as needed
-      };
+    };
     return (
         <div className='mb-12 md:mb-24 xl:mb-36 z-[500]' ref={ref}>
             <h1 className='text-center text-5xl md:text-8xl mb-12 md:mb-24 xl:text-9xl w-full text-white py-4 font-CyberGraph'>EVENTS</h1>
             <div className="flex h-auto items-center z-[500] justify-center">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-                    <motion.div
-                        animate={controls}
-                        initial='hidden'
-                        transition={{ duration: 1 }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 60 },
-                        }} className="group relative cursor-pointer rounded-xl items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                        <div className="h-72 w-72 mx-auto">
-                            <Image width={400} height={400} className="h-full rounded-xl w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src='https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFja2F0aG9ufGVufDB8fDB8fHww' alt={""} />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                        <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                            <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">EXECUTE HACKATHON</h1>
-                            <p className="mb-3 text-lg font-Para my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">10 PM, 23 JAN</p>
-                            <p className="mb-3 text-lg font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">ONLINE AND DTU CAMPUS</p>
-                            <div
-                                className="apply-button w-[312px] h-[44px]"
-                                data-hackathon-slug="YOUR-HACKATHON-SLUG"
-                                data-button-theme="light"
-                            ></div>
-                        </div>
-                    </motion.div>
                     {galleryData.map((item, index) => (
                         <motion.div
                             animate={controls}
@@ -92,6 +69,13 @@ const galleryData = [
         imageUrl: '/images/shark.jpg',
         href: "https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828",
         time: "15 JAN, 2024",
+        location: "ONLINE AND DTU CAMPUS"
+    },
+    {
+        title: 'EXECUTE HACKATHON',
+        imageUrl: 'https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFja2F0aG9ufGVufDB8fDB8fHww',
+        href: "https://execute3.devfolio.co/",
+        time: "10 PM, 23 JAN",
         location: "ONLINE AND DTU CAMPUS"
     },
     {

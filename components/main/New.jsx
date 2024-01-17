@@ -40,11 +40,7 @@ export default function New() {
             <a href="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" className="w-fit font-Para mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">REGISTER NOW</a>
             <div className='flex flex-col items-center'>
               <div className="header text-4xl md:text-8xl font-CyberSport text-white mt-6"> EXECUTE 3.O IS LIVE</div>
-              <div
-                class="apply-button h-[44px] w-[312px]"
-                data-hackathon-slug="YOUR-HACKATHON-SLUG"
-                data-button-theme="light"
-              ></div>
+              <a href="https://execute3.devfolio.co/" className="w-fit font-Para mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">REGISTER NOW</a>
             </div>
           </div>
         </div>
