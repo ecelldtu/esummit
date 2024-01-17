@@ -43,7 +43,7 @@ export default function New() {
 }
 
 const EventInfo = ({ title, link }) => (
-  <div className="flex flex-row items-center">
+  <div className="flex flex-row items-center ml-6">
     <div className="header text-2xl font-CyberSport text-white mt-1">{title}</div>
     <a href={link} className="w-fit scale-[80%] ml-4 font-CyberGraph mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">
       REGISTER NOW
