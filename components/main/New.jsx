@@ -13,6 +13,17 @@ export default function New() {
     document.getElementById('popup-trigger').click();
   };
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <Popup
       trigger={<button id="popup-trigger" className="button z-[500]" style={{ display: 'none' }}> Open Modal </button>}
@@ -25,8 +36,16 @@ export default function New() {
             <button className="close" onClick={close}>
               &times;
             </button>
-            <div className="header text-4xl md:text-9xl font-CyberSport text-white"> SHARK TANK IS LIVE!</div>
+            <div className="header text-4xl md:text-8xl font-CyberSport text-white"> SHARK TANK IS LIVE!</div>
             <a href="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" className="w-fit font-Para mt-2 rounded-full py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">REGISTER NOW</a>
+            <div className='flex flex-col items-center'>
+              <div className="header text-4xl md:text-8xl font-CyberSport text-white mt-6"> EXECUTE 3.O IS LIVE</div>
+              <div
+                class="apply-button h-[44px] w-[312px]"
+                data-hackathon-slug="YOUR-HACKATHON-SLUG"
+                data-button-theme="light"
+              ></div>
+            </div>
           </div>
         </div>
       )}

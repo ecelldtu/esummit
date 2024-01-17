@@ -4,22 +4,9 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image"
 import Marquee from 'react-fast-marquee';
-import adobe from "../../public/images/adobe.png"
-import amar from "../../public/images/amar.png"
-import ayouth from "../../public/images/ayouth.png"
-import bombay from "../../public/images/bombay.png"
-import coding from "../../public/images/coding.png"
-import digit from "../../public/images/digit.png"
-import sober from "../../public/images/sober.png"
-import haldiram from "../../public/images/haldiram.png"
-import havells from "../../public/images/havells.png"
-import igl from "../../public/images/igl.png"
-import newdelhi from "../../public/images/newdelhi.jpeg"
-import ntpc from "../../public/images/ntpc.png"
-import one from "../../public/images/one.png"
-import ongc from "../../public/images/ongc.png"
-import unstop from "../../public/images/unstop.png"
-import pvr from "../../public/images/pvr.png"
+import devfolio from "../../public/images/devfolio.png"
+import polygon from "../../public/images/polygon.png"
+import rep from "../../public/images/rep.png"
 
 export default function Quotes() {
 
@@ -44,22 +31,21 @@ export default function Quotes() {
       <div className='text-white text-5xl md:text-8xl xl:text-9xl font-semibold text-center -mt-36 mb-12 md:mb-24 font-CyberGraph' id='Sponsors' >SPONSORS</div>
       <div className="h-auto flex items-center w-screen my-8">
         <Marquee className="py-2 flex gap-4" speed={180}>
-          {/* <Image alt="" src={adobe} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={amar} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={ayouth} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={bombay} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={coding} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={digit} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={sober} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
-          {/* <Image alt="" src={haldiram} className="h-32 my-2 w-32 object-contain mx-24" /> */}
-          <div className='text-white text-3xl font-Queensides mx-24'>COMING SOON</div>
+          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="" src={devfolio} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={rep} className="h-32 my-2 w-32 object-contain mx-24" />
+
+          <Image alt="" src={polygon} className="h-32 my-2 w-32 object-contain mx-24" />
         </Marquee>
       </div>
       <div className="h-16 flex items-center w-screen my-8">
