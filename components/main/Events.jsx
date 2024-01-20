@@ -73,10 +73,17 @@ const galleryData = [
     },
     {
         title: 'EXECUTE HACKATHON',
-        imageUrl: 'https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFja2F0aG9ufGVufDB8fDB8fHww',
+        imageUrl: '/images/hack.jpg',
         href: "https://execute3.devfolio.co/",
         time: "10 PM, 23 JAN",
         location: "ONLINE AND DTU CAMPUS"
+    },
+    {
+        title: 'Autodesk Product Design Challange',
+        imageUrl: '/images/pro.jpg',
+        href: "https://unstop.com/hackathons/autodesk-product-design-challaenge-e-summit-24-dtu-new-delhi-873000",
+        time: "  10:00 AM, 27 JAN ",
+        location: "DTU MAIN CAMPUS"
     },
     {
         title: 'ECELL CONCLAVE',
