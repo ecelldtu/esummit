@@ -86,6 +86,13 @@ const galleryData = [
         location: "DTU MAIN CAMPUS"
     },
     {
+        title: 'B PLAN',
+        imageUrl: '/images/bplan.jpg',
+        href: "https://unstop.com/competitions/b-plan-e-summit-24-dtu-new-delhi-875437/",
+        time: "6 PM, 20 JAN",
+        location: "ONLINE AND DTU CAMPUS"
+    },
+    {
         title: 'ECELL CONCLAVE',
         imageUrl: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         href: "/Conclave",

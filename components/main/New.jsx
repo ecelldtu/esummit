@@ -36,6 +36,7 @@ export default function New() {
             <EventInfo title="SHARK TANK" link="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" />
             <EventInfo title="EXECUTE 3.0" link="https://execute3.devfolio.co/" />
             <EventInfo title="Autodesk Product Design Challange" link="https://unstop.com/hackathons/autodesk-product-design-challaenge-e-summit-24-dtu-new-delhi-873000" />
+            <EventInfo title="B Plan" link="https://unstop.com/competitions/b-plan-e-summit-24-dtu-new-delhi-875437" />
           </div>
         </div>
       )}
