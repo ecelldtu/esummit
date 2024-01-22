@@ -88,7 +88,7 @@ const galleryData = [
         title: 'B PLAN',
         imageUrl: '/images/bplan.jpg',
         href: "https://unstop.com/competitions/b-plan-e-summit-24-dtu-new-delhi-875437/",
-        time: "6 PM, 20 JAN",
+        time: "10 AM, 28 JAN",
         location: "ONLINE AND DTU CAMPUS"
     },
     {
