@@ -19,7 +19,7 @@ export default function Events() {
 
     const Dep1 = [
         { name: 'RAKESH SWAMI', title: 'Group President (Corporate Affairs), Godrej', image: "/images/rakesh.jpeg" },
-        { name: 'ANISH PRASAD', title: 'Deputy Director/DIG at Central Bureau of Investigation, India', image: "/images/anish.jpg" },
+        { name: 'ANISH PRASAD', title: 'Deputy Director/DIG at Central Bureau of Investigation, India', image: "/images/anish.jpeg" },
         { name: 'MANMEET DHODY', title: 'CTO Paytm', image: "/images/manmeet.jpg" },
         { name: 'PRIYARANJAN KUMAR', title: 'CEO Springwel Mattress, Guardian Pharmacy and Bella Vita Luxury ', image: "/images/priya.jpeg" },
         { name: 'VIVEK RAINA', title: 'Founder at Excitel Broadband', image: "/images/vivek.jpeg" },
@@ -29,7 +29,6 @@ export default function Events() {
         { name: 'Shweta Jain', title: 'VP HSBC', image: "/images/idk.jpg" },
         { name: 'Manasa Garemella', title: 'Founder, Kindlife.in and ShopClues', image: "/images/manasa.jpeg" },
         { name: 'Ujala Bedi', title: 'Executive Director of Navjyoti Foundation  ', image: "/images/ujala.jpeg" },
-        // { name: 'VIVEK RAINA', title: 'Founder at excitel', image: "" },
     ];
     return (
         <>
