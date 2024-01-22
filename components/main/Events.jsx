@@ -51,7 +51,7 @@ const GalleryComponent = () => {
                                 <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">{item.title}</h1>
                                 <p className="mb-3 text-lg font-Para my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.time}</p>
                                 <p className="mb-3 text-lg font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{item.location}</p>
-                                <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">Register Now</a>
+                                <a href={item.href} className="font-CyberGraph rounded-full my-2 py-2 px-3.5 font-com text-base capitalize bg-violet-600 text-white shadow shadow-black/60">KNOW MORE</a>
                             </div>
                         </motion.div>
                     ))}
@@ -102,8 +102,8 @@ const galleryData = [
         title: 'LDS SESSIONS',
         imageUrl: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BlZWNofGVufDB8fDB8fHww',
         href: "/LDS",
-        time: "COMING SOON",
-        location: "COMING SOON"
+        time: "",
+        location: ""
     },
     {
         title: 'STARTUP SOCIAL',
