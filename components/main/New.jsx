@@ -27,7 +27,7 @@ export default function New() {
       onOpen={openPopup}
     >
       {close => (
-        <div className="modal-overlay z-[2000] scale-[80%] md:scale-90 top-[200px] bottom-8 font-Para font-extrabold w-fit py-2 px-6 left-1/2 transform -translate-x-1/2" onClick={close}>
+        <div className="modal-overlay z-[2000] md:scale-150 -translate-y-1/2 font-Para font-extrabold w-fit py-2 px-6 left-1/2 transform -translate-x-1/2" onClick={close}>
           <div className="modal bg-violet-900 px-12 py-4 rounded-3xl flex flex-col items-center">
             <button className="close" onClick={close}>
               &times;

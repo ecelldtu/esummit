@@ -9,6 +9,7 @@ import Feedback from "@/components/main/Feedback";
 import About from "../components/main/About";
 import Map from "../components/main/Map";
 import Contact from "../components/main/Contact";
+import Ex from "../components/main/Ex";
 import Events from "../components/main/Events";
 import Content from "../components/main/Content";
 import Sponsors from "../components/main/Sponsors";
@@ -67,6 +68,7 @@ export default function Home() {
             <Itenaries />
             <Speakers />
             <Content />
+            <Ex />
             <Contact />
             <Map />
             <Footer />

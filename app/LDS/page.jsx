@@ -41,7 +41,7 @@ export default function Events() {
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: 60 },
                 }} className='mb-12'>
-                <h1 className='text-center text-4xl md:mt-32 mt-16 md:mb-12 md:text-7xl xl:text-8xl w-full text-white py-4 font-CyberGraph'>LDS PANEL-1</h1>
+                <h1 className='text-center text-4xl mt-32 md:mb-12 md:text-7xl xl:text-8xl w-full text-white py-4 font-CyberGraph'>LDS PANEL-1</h1>
                 <div className="container mx-auto p-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {Dep1.map((person, index) => (

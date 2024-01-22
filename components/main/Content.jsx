@@ -19,9 +19,6 @@ export default function Events() {
         { name: 'AMIT BHADANA', title: 'COMEDIAN AND WRITER', image: "/images/amit.jpg" },
         { name: 'COMING SOON', title: 'COMING SOON', image: "" },
         { name: 'COMING SOON', title: 'COMING SOON', image: "" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
     ];
     return (
         <motion.div ref={ref}
