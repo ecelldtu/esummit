@@ -17,7 +17,7 @@ export default function Events() {
 
     const Dep = [
         { name: '', title: '', image: "/images/ex.jpg" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
+        { name: '', title: '', image: "/images/ex2.jpg" },
         { name: 'COMING SOON', title: 'COMING SOON', image: "" },
     ];
     return (
@@ -53,7 +53,6 @@ export default function Events() {
                           `}</style>
                             </div>
                         </div>
-
                     ))}
                 </div>
             </div >
