@@ -51,7 +51,7 @@ export default function Events() {
                               bottom: 0;
                               width: 100%;
                               height: 120px; /* Adjust the height of the shadow as needed */
-                              background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+                              background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
                             }
                           `}</style>
                             </div>

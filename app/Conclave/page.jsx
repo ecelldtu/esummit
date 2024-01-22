@@ -4,10 +4,13 @@ import Con1 from "../../public/con1.jpg"
 import Con2 from "../../public/con2.jpg"
 import Con3 from "../../public/con3.jpg"
 import Contact from "./Conact"
+import Hero from "../../components/main/Hero"
+import Navbar from "../../components/main/Navbar"
 
 export default function page() {
     return (
         <div className='w-screen overflow-x-hidden'>
+            <Navbar />
             <div className="w-full h-auto py-4 fixed top-0 shadow-lg font-CyberSport shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md px-10 z-[1000]">
                 <div className="w-full h-full flex flex-row items-center justify-center md:justify-between m-auto px-[10px]">
                     <a href="/" className="h-auto w-full flex flex-row items-center">

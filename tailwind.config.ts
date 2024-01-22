@@ -6,6 +6,15 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  images: {
+    domains: [
+      "img.etimg.com",
+      "assets.vogue.com",
+      "m.media-amazon.com",
+      "upload.wikimedia.org",
+      "s3.amazonaws.com",
+    ],
+  },
   theme: {
     extend: {
       fontFamily: {
