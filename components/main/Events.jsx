@@ -28,7 +28,6 @@ const GalleryComponent = () => {
     const myStyles = {
         height: '44px',
         width: '312px',
-        // Add other style properties as needed
     };
     return (
         <div className='mb-12 md:mb-24 xl:mb-36 z-[500]' ref={ref}>
@@ -68,21 +67,21 @@ const galleryData = [
         title: 'SHARK THANK',
         imageUrl: '/images/shark.jpg',
         href: "https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828",
-        time: "15 JAN, 2024",
-        location: "ONLINE AND DTU CAMPUS"
+        time: "11 AM, 28 JAN",
+        location: "DTU CAMPUS"
     },
     {
         title: 'EXECUTE HACKATHON',
         imageUrl: '/images/hack.jpg',
         href: "https://execute3.devfolio.co/",
-        time: "10 PM, 23 JAN",
+        time: "11 AM, 28 JAN",
         location: "ONLINE AND DTU CAMPUS"
     },
     {
         title: 'Autodesk Product Design Challange',
         imageUrl: '/images/pro.jpg',
         href: "https://unstop.com/hackathons/autodesk-product-design-challaenge-e-summit-24-dtu-new-delhi-873000",
-        time: "  10:00 AM, 27 JAN ",
+        time: "10 AM, 28 JAN ",
         location: "DTU MAIN CAMPUS"
     },
     {
@@ -94,7 +93,7 @@ const galleryData = [
     },
     {
         title: 'ECELL CONCLAVE',
-        imageUrl: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imageUrl: '/images/conclave.jpg',
         href: "/Conclave",
         time: " 10 AM - 4 PM, 28 JAN",
         location: "DTU MAIN CAMPUS"
