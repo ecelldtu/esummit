@@ -10,6 +10,7 @@ import About from "../components/main/About";
 import Map from "../components/main/Map";
 import Contact from "../components/main/Contact";
 import Events from "../components/main/Events";
+import Content from "../components/main/Content";
 import Sponsors from "../components/main/Sponsors";
 import Speakers from "../components/main/Speakers";
 import Itenaries from "../components/main/Itenaries";
@@ -65,6 +66,7 @@ export default function Home() {
             <Events />
             <Itenaries />
             <Speakers />
+            <Content />
             <Contact />
             <Map />
             <Footer />

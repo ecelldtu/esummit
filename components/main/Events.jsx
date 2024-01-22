@@ -99,9 +99,9 @@ const galleryData = [
         location: "DTU MAIN CAMPUS"
     },
     {
-        title: 'LDS SESSION',
+        title: 'LDS SESSIONS',
         imageUrl: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BlZWNofGVufDB8fDB8fHww',
-        href: "/",
+        href: "/LDS",
         time: "COMING SOON",
         location: "COMING SOON"
     },
