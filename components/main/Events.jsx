@@ -73,7 +73,7 @@ const galleryData = [
     {
         title: 'EXECUTE HACKATHON',
         imageUrl: '/images/hack.jpg',
-        href: "https://execute3.devfolio.co/",
+        href: "/Ex",
         time: "11 AM, 28 JAN",
         location: "ONLINE AND DTU CAMPUS"
     },
