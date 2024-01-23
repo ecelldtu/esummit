@@ -18,7 +18,7 @@ export default function Events() {
     const Dep = [
         { name: '', title: '', image: "/images/ex.jpg" },
         { name: '', title: '', image: "/images/ex2.jpg" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
+        { name: '', title: '', image: "/images/es3.jpg" },
     ];
     return (
         <motion.div ref={ref}
