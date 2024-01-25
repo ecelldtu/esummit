@@ -45,7 +45,7 @@ const DayContainer = ({ day, date, data }) => {
           key={index}
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, delay: 0.2 + index * 1 }}
+          transition={{ duration: 2, delay: 0.2 }}
           className='flex my-2 flex-col mx-4 md:mx-12 border-2 rounded-xl border-slate-200/30 py-4 px-6'>
           <div className='text-xl md:text-4xl font-extrabold font-Queensides my-2'>{item.title}</div>
           <div className='text-2xl md:text-2xl font-extrabold font-CyberGraph my-2'>{item.time}</div>
