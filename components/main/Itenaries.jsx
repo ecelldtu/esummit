@@ -18,11 +18,6 @@ const DayContainer = ({ day, date, data }) => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <motion.div
       ref={ref}
@@ -34,7 +29,7 @@ const DayContainer = ({ day, date, data }) => {
       id='Itenary'
     >
       <motion.h1
-        variants={itemVariants}
+        variants={containerVariantsVariants}
         className='font-CyberSport text-5xl md:text-6xl mx-8 md:mx-12'
       >
         {day}
@@ -51,8 +46,7 @@ const DayContainer = ({ day, date, data }) => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 0.2 + index * 1 }}
-          className='flex my-2 flex-col mx-4 md:mx-12 border-2 rounded-xl border-slate-200/30 py-4 px-6'
-        >
+          className='flex my-2 flex-col mx-4 md:mx-12 border-2 rounded-xl border-slate-200/30 py-4 px-6'>
           <div className='text-xl md:text-4xl font-extrabold font-Queensides my-2'>{item.title}</div>
           <div className='text-2xl md:text-2xl font-extrabold font-CyberGraph my-2'>{item.time}</div>
           <div className='font-Para text-xl'>{item.description}</div>
