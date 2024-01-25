@@ -29,13 +29,13 @@ const DayContainer = ({ day, date, data }) => {
       id='Itenary'
     >
       <motion.h1
-        variants={containerVariantsVariants}
+        variants={containerVariants}
         className='font-CyberSport text-5xl md:text-6xl mx-8 md:mx-12'
       >
         {day}
       </motion.h1>
       <motion.h1
-        variants={itemVariants}
+        variants={containerVariants}
         className='font-CyberSport text-3xl md:text-4xl mx-8 md:mx-12 my-4'
       >
         {date}
