@@ -55,6 +55,24 @@ const GalleryComponent = () => {
                             </div>
                         </motion.div>
                     ))}
+                    <motion.div
+                        animate={controls}
+                        initial='hidden'
+                        transition={{ duration: 1 }}
+                        variants={{
+                            visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 60 },
+                        }} className="group relative cursor-pointer rounded-xl items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                        <div className="h-72 w-72 mx-auto">
+                            <Image width={400} height={400} className="h-full rounded-xl w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="/images/dj.jpg" alt={""} />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                        <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                            <h1 className="font-CyberSport my-2 text-4xl font-bold text-white">DJ VANMOONS</h1>
+                            <p className="mb-3 text-lg md:text-2xl font-Para my-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>8 PM, 27 JAN
+                            <p className="mb-3 text-lg md:text-2xl font-Para my-2 font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">OAT</p>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
@@ -102,29 +120,22 @@ const galleryData = [
         title: 'LDS SESSIONS',
         imageUrl: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BlZWNofGVufDB8fDB8fHww',
         href: "/LDS",
-        time: "",
-        location: ""
+        time: "10:30 AM, 27 JAN",
+        location: "BR AUDI"
     },
     {
         title: 'LDS WOMEN',
         imageUrl: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tZW4lMjBzcGVha2VyfGVufDB8fDB8fHww',
         href: "/LDSW",
-        time: "",
-        location: ""
+        time: "12 AM, 27 JAN",
+        location: "BR AUDI"
     },
     {
         title: 'STARTUP SOCIAL',
         imageUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl0Y2h8ZW58MHx8MHx8fDA%3D',
         href: "/",
-        time: "COMING SOON",
-        location: "COMING SOON"
-    },
-    {
-        title: 'DJ NIGHT',
-        imageUrl: 'https://images.unsplash.com/photo-1630163664357-370482810342?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGRqfGVufDB8fDB8fHww',
-        href: "/",
-        time: "COMING SOON",
-        location: "COMING SOON"
+        time: "11 AM, 28 JAN",
+        location: "BR AUDI"
     },
 ];
 
