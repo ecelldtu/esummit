@@ -77,7 +77,7 @@ export default function Iteneraries() {
     { title: 'Content Creator (Amit Bhadana)', description: 'OAT', time: '4:30 PM' },
     { title: 'Vibe Society Performance', description: 'OAT', time: '5:30 PM' },
     { title: 'Comedian - Gaurav Kapoor', description: 'OAT', time: '6 PM' },
-    { title: 'Chaar Hazaari Band', description: 'OAT', time: '7 PM' },
+    // { title: 'Chaar Hazaari Band', description: 'OAT', time: '7 PM' },
     { title: 'DJ VANMOON', description: 'OAT', time: '8 PM' },
   ];
 
