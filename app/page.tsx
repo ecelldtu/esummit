@@ -66,8 +66,8 @@ export default function Home() {
             <Feedback />
             <Events />
             <Itenaries />
-            <Speakers />
             <Content />
+            <Speakers />
             <Ex />
             <Contact />
             <Map />

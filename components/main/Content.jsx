@@ -18,7 +18,8 @@ export default function Events() {
     const Dep = [
         { name: 'AMIT BHADANA', title: 'COMEDIAN AND WRITER', image: "/images/amit.jpg" },
         { name: 'GAURAV KAPOOR', title: 'Stand Up Comedian', image: "/images/gau.jpeg" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
+        { name: 'BARKHA SINGH', title: 'ACTRESS', image: "/images/bar.jpg" },
+        { name: 'AARUSH BHOLAS', title: 'YOUTUBER', image: "/images/aar.jpg" },
     ];
     return (
         <motion.div ref={ref}

@@ -16,9 +16,9 @@ export default function Events() {
     }, [controls, inView]);
 
     const Dep = [
-        { name: 'ALAKH PANDEY', title: 'CEO OF PHYSICS WALLAH', image: "/images/alakh.jpg" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
-        { name: 'COMING SOON', title: 'COMING SOON', image: "" },
+        { name: 'ALAKH PANDEY', title: 'CEO, PHYSICS WALLAH', image: "/images/alakh.jpg" },
+        { name: 'BIPIN KAUL', title: ' CBO, PAYTM', image: "/images/bip.jpg" },
+        { name: 'Akhil Choudhary', title: ' CEO & Managing Partner at Vaco Binary Semantics', image: "/images/akh.jpg" },
     ];
     return (
         <motion.div ref={ref}
@@ -38,7 +38,7 @@ export default function Events() {
                                 <Image alt='' src={person.image} width={400} height={400} className='rounded-2xl mx-auto bg-black object-cover' />
                                 <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end">
                                     <h1 className='font-Queensides text-xl text-white font-extrabold mb-1 ml-4 z-[400]'>{person.name}</h1>
-                                    <h2 className='font-Para font-extrabold text-xl text-violet-200 z-[400] ml-4 mb-2'>{person.title}</h2>
+                                    <h2 className='font-Para uppercase font-extrabold text-xl text-violet-200 z-[400] ml-4 mb-2'>{person.title}</h2>
                                 </div>
                                 <style jsx>{`
                             .relative::after {
