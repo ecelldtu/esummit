@@ -72,7 +72,7 @@ export default function Iteneraries() {
     { title: 'Amit FELMS', description: 'BR AUDI', time: '1 PM' },
     { title: 'Espresso with E-Cell (Vikrant Gupta)', description: 'BR AUDI', time: '1:15 PM' },
     { title: 'Espresso with E-Cell (Vijendra Chauhan)', description: 'BR AUDI', time: '2:15 PM' },
-    { title: 'CyberForge Forum', description: 'BR AUDI', time: '2:30 PM' },
+    { title: 'Students and Cyber security', description: 'BR AUDI', time: '2:30 PM' },
     { title: 'Parchayyi Workshop ', description: 'BR AUDI', time: '3:15 PM' },
     { title: 'Keynote (Alakh Pandey)', description: 'OAT', time: '3:30 PM' },
     { title: 'Content Creator (Amit Bhadana)', description: 'OAT', time: '4:30 PM' },
