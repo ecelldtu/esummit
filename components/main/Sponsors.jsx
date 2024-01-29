@@ -68,6 +68,7 @@ export default function Quotes() {
           <Image alt="Polygon" src="/logo/34.png" width={128} height={128} className="h-32 my-2 w-32 object-contain mx-24" />
           <Image alt="Polygon" src="/logo/35.png" width={128} height={128} className="h-32 my-2 w-32 object-contain mx-24" />
           <Image alt="Polygon" src="/logo/36.png" width={128} height={128} className="h-32 my-2 w-32 object-contain mx-24" />
+          <Image alt="Polygon" src="/logo/AMP.jpg" width={128} height={128} className="h-32 my-2 w-32 object-contain mx-24" />
         </Marquee>
       </div>
     </motion.div>
