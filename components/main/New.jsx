@@ -32,7 +32,7 @@ export default function New() {
             <button className="close" onClick={close}>
               &times;
             </button>
-            <h1 className="text-3xl text-center font-extrabold font-Para text-white">THANK YOU FOR SHAPING ESUMMMIT 2024 INTO SOMETHING REMARKABLE</h1>
+            <h1 className="text-3xl text-center font-extrabold font-Para text-white">THANK YOU FOR SHAPING E-SUMMMIT 2024 INTO SOMETHING REMARKABLE</h1>
             <h1 className="text-xl mt-4 text-center font-light font-Para text-white">SEE YOU NEXT YEAR !</h1>
             {/* <EventInfo title="SHARK TANK" link="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" />
             <EventInfo title="EXECUTE 3.0" link="/Ex" />
