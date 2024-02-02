@@ -28,15 +28,16 @@ export default function New() {
     >
       {close => (
         <div className="modal-overlay z-[2000] md:scale-150 -translate-y-1/2 font-Para font-extrabold w-fit py-2 px-6 left-1/2 transform -translate-x-1/2" onClick={close}>
-          <div className="modal bg-violet-900 px-12 py-4 rounded-3xl flex flex-col items-center">
+          <div className="modal bg-violet-900 md:w-[60%] px-12 py-4 rounded-3xl flex flex-col items-center">
             <button className="close" onClick={close}>
               &times;
             </button>
-            <h1 className="text-2xl font-extrabold font-Queensides text-white">LIVE NOW!</h1>
-            <EventInfo title="SHARK TANK" link="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" />
+            <h1 className="text-3xl text-center font-extrabold font-Para text-white">THANKS FOR SHAPING ESUMMMIT 2024 INTO SOMETHING REMARKABLE!</h1>
+            <h1 className="text-xl mt-4 text-center font-light font-Para text-white">SEE YOU NEXT YEAR!</h1>
+            {/* <EventInfo title="SHARK TANK" link="https://unstop.com/competitions/shark-tank-e-summit-24-dtu-new-delhi-869828" />
             <EventInfo title="EXECUTE 3.0" link="/Ex" />
             <EventInfo title="Autodesk Design Challange" link="https://unstop.com/hackathons/autodesk-product-design-challaenge-e-summit-24-dtu-new-delhi-873000" />
-            <EventInfo title="B Plan" link="https://unstop.com/competitions/b-plan-e-summit-24-dtu-new-delhi-875437" />
+            <EventInfo title="B Plan" link="https://unstop.com/competitions/b-plan-e-summit-24-dtu-new-delhi-875437" /> */}
           </div>
         </div>
       )}
