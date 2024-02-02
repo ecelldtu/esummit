@@ -18,7 +18,7 @@ export default function New() {
           ref={triggerButtonRef}
           className="button text-white fixed z-[800] rounded-full bg-violet-700 bottom-12 md:bottom-8 md:scale-125 font-Para font-extrabold w-fit py-2 px-6 left-1/2 transform -translate-x-1/2"
         >
-          LIVE EVENTS ⏰
+          THANK YOU 🙏
         </button>
       }
       modal
