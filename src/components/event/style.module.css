@@ -1,0 +1,79 @@
+.project {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.project:last-of-type {
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.project:hover {
+    opacity: 0.5;
+}
+
+.project:hover h2 {
+    transform: translateX(-10px);
+}
+
+.project:hover p {
+    transform: translateX(10px);
+}
+
+.project h2 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.project p {
+    transition: all 0.4s;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .project {
+        padding: 40px 80px;
+    }
+    .project h2 {
+        font-size: 48px;
+    }
+    .project p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        padding: 30px 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .project h2 {
+        font-size: 36px;
+    }
+    .project p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        padding: 20px 30px;
+        margin-top: 0; /* Remove negative margin */
+    }
+    .project h2 {
+        font-size: 28px;
+    }
+    .project p {
+        font-size: 12px;
+    }
+}
