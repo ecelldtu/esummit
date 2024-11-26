@@ -21,13 +21,13 @@ const Hero = () => {
         />
 
         {/* Overlay Text */}
-        <h1 className="special-font hero-heading tracking-widest uppercase font-black sm:right-10 text-4xl md:text-7xl lg:text-8xl absolute bottom-24 md:bottom-5 right-5 z-40 text-white font-Hero">
+        <h1 className="special-font hero-heading tracking-wide uppercase font-black sm:right-10 text-4xl md:text-7xl lg:text-8xl absolute bottom-24 md:bottom-5 right-5 z-40 text-white font-Hero">
           JANUARY 2025
         </h1>
 
         <div className="absolute left-0 top-0 z-40 w-full h-full">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font font-Hero tracking-widest hero-heading-main text-white">
+            <h1 className="special-font font-Hero tracking-wide hero-heading-main text-white">
               E-SUMMIT
             </h1>
             <p className="mb-5 max-w-108 font-DarkerBold text-3xl text-white">
