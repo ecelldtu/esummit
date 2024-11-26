@@ -56,7 +56,7 @@ const Hero = () => {
           loop
           muted
           className="absolute left-0 top-0 scale-[122%] md:scale-100 size-full object-cover object-center"
-          onLoadedData={handleVideoLoad}
+          // onLoadedData={handleVideoLoad}
         />
 
         <h1 className="special-font hero-heading tracking-widest uppercase font-black sm:right-10 text-4xl md:text-7xl lg:text-8xl absolute bottom-24 md:bottom-5 right-5 z-40 text-white font-Hero">
