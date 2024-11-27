@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <div>
-      <h2 className="max-w-7xl text-white pl-4 mx-auto text-4xl mt-36 md:mt-48 md:mb-32 md:text-7xl font-bold font-Nova">
+      <h2 className="max-w-7xl text-white pl-4 mx-auto text-4xl mt-36 md:mt-48 -mb-12 md:text-7xl font-bold font-Nova">
         Competitions
       </h2>
       <event className={styles.event}>
