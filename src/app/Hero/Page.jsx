@@ -14,7 +14,7 @@ const Page = () => {
             className="-z-100"
           />
         </div>
-        
+
         {/* Medium Screen Image */}
         <div className="hidden md:block lg:hidden w-full h-full">
           <Image
@@ -32,7 +32,7 @@ const Page = () => {
             src="/images/phone.jpg"
             alt="Small Screen Image"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
             className="-z-100"
           />
         </div>
