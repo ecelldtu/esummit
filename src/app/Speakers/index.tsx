@@ -11,7 +11,7 @@ export default function AppleCardsCarouselDemo() {
 
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 text-white mx-auto text-4xl md:text-7xl mb-8 mt-96 md:mt-48 md:mb-0 font-bold font-Nova">
+      <h2 className="max-w-7xl pl-4 text-white mx-auto text-4xl md:text-7xl mb-8 mt-[1040px] sm:mt-96 md:mb-0 font-bold font-Nova">
         Past Speakers
       </h2>
       <a></a>

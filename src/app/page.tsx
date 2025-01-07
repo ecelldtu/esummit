@@ -12,23 +12,12 @@ import Comp from "./Event/page";
 import Event from "./Event/Events"
 import Sponsors from "./Sponsors/Sponsors";
 import VideoBackground from "../components/Video";
-import Script from 'next/script'
 
 export default function Home() {
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-F37Z0H3KL6" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'G-F37Z0H3KL6');
-        `}
-      </Script>
       {/* <VideoBackground />   */}
-      <Hero />
+      {/* <Hero /> */}
       <Sponsors />
       <Zoom />
       <About />

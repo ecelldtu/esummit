@@ -2,12 +2,12 @@
 import React from 'react'
 import styles from './style.module.css';
 
-export default function index({index, title, setModal}) {
+export default function index({index, title, setModal,content}) {
 
     return (
         <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
             <h2 className='font-DarkerBold'>{title}</h2>
-            <p className='font-Darker'>Coming Soon</p>
+            <p className='font-Darker text-white'>{content}</p>
         </div>
     )
 }
