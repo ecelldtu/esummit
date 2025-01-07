@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Hero from "./Hero/Hero";
+import Hero from "./Hero/Page";
 import Zoom from "../components/ZoomParallax";
 import About from "./About/page";
 import Video from "./Stats/Video";
@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       {/* <VideoBackground />   */}
-      {/* <Hero /> */}
+      <Hero />
       <Sponsors />
       <Zoom />
       <About />
