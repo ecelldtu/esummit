@@ -18,7 +18,6 @@ export default function Home() {
       <div className="relative">
         {/* Video Background */}
         <VideoBackground />
-
         {/* Content */}
         <Hero />
         <Sponsors />
