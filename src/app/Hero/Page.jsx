@@ -7,7 +7,7 @@ const Page = () => {
         {/* Large Screen Image */}
         <div className="hidden lg:block w-full h-full">
           <Image
-            src="/images/desktop.jpg"
+            src="/images/hero.png"
             alt="Large Screen Image"
             layout="fill"
             objectFit="contain"
@@ -18,7 +18,7 @@ const Page = () => {
         {/* Medium Screen Image */}
         <div className="hidden md:block lg:hidden w-full h-full">
           <Image
-            src="/images/desktop.jpg"
+            src="/images/hero.png"
             alt="Medium Screen Image"
             layout="fill"
             objectFit="contain"
@@ -29,7 +29,7 @@ const Page = () => {
         {/* Small Screen Image */}
         <div className="md:hidden w-full h-full">
           <Image
-            src="/images/phone.jpg"
+            src="/images/herophone.png"
             alt="Small Screen Image"
             layout="fill"
             objectFit="cover"
