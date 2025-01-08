@@ -11,6 +11,7 @@ import Comp from "./Event/page";
 import Event from "./Event/Events";
 import Sponsors from "./Sponsors/Sponsors";
 import VideoBackground from "../components/Video";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
