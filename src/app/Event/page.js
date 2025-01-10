@@ -11,7 +11,6 @@ const items = [
   { title: "Coming soon", href: "/", imgSrc: "" },
   { title: "Coming soon", href: "/", imgSrc: "" },
 ];
-
 export default function Page() {
   return (
     <>
