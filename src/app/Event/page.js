@@ -7,9 +7,9 @@ const items = [
   { title: "Register now", href: "https://unstop.com/o/nKvl03J?lb=xPyC8uqj", imgSrc: "/images/bplan.png" },
   { title: "Register now", href: "https://unstop.com/p/shark-tank-e-summit25-dtu-new-delhi-1351932", imgSrc: "/images/shark.png" },
   { title: "Coming soon", href: "/", imgSrc: "" },
-  // { title: "Coming soon", href: "/", imgSrc: "" },
-  // { title: "Coming soon", href: "/", imgSrc: "" },
-  // { title: "Coming soon", href: "/", imgSrc: "" },
+  { title: "Coming soon", href: "/", imgSrc: "" },
+  { title: "Coming soon", href: "/", imgSrc: "" },
+  { title: "Coming soon", href: "/", imgSrc: "" },
 ];
 
 export default function Page() {
