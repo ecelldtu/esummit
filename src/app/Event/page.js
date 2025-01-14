@@ -6,7 +6,7 @@ import Image from "next/image";
 const items = [
   { title: "Register now", href: "https://unstop.com/o/nKvl03J?lb=xPyC8uqj", imgSrc: "/images/bplan.png" },
   { title: "Register now", href: "https://unstop.com/p/shark-tank-e-summit25-dtu-new-delhi-1351932", imgSrc: "/images/Shark.png" },
-  { title: "Coming soon", href: "/", imgSrc: "" },
+  { title: "Register now", href: "https://unstop.com/p/execute-40-hackathon-e-summit25-dtu-new-delhi-1361411", imgSrc: "/images/Hack.png" },
   { title: "Coming soon", href: "/", imgSrc: "" },
   { title: "Coming soon", href: "/", imgSrc: "" },
   { title: "Coming soon", href: "/", imgSrc: "" },
