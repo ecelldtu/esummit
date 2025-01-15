@@ -138,7 +138,7 @@ const BookingForm = () => {
               name="gender"
               value={formData.gender}
               onChange={handleChange}
-              className="w-full p-3 bg-gray-900/60 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="w-full p-3 bg-gray-900/60 h-full text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
               required
             >
               <option value="">Select Gender</option>
