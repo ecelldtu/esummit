@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import Script from "next/script";
 import HyperText from '../../components/magicui/hyper-text'
-
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: "",
