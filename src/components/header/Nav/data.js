@@ -9,7 +9,7 @@ export const links = [
     },
     {
         title: "Accommodation",
-        href: "/Accommodation"
+        href: "/ac"
     },
     {
         title: "Speakers",
