@@ -43,7 +43,7 @@ const BookingForm = () => {
     const currency = "INR";
 
     const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
-      amount: 1800 * 100,
+      amount: 2 * 100,
       receipt: "AAyu9414",
       currency,
     });
