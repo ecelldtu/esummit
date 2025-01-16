@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Script from "next/script";
 import HyperText from '../../components/magicui/hyper-text'
+
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,7 +43,7 @@ const BookingForm = () => {
     const currency = "INR";
 
     const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
-      amount: 1 * 100,
+      amount: 10 * 100,
       receipt: "AAyu9414",
       currency,
     });
@@ -50,7 +51,7 @@ const BookingForm = () => {
     const { id: orderId, amount } = response.data;
 
     const options = {
-      key: "rzp_live_JjN6EJ23Qrir9N",
+      key: "rzp_live_Kz0ka8aJYIo4Fc",
       amount,
       currency,
       name: "E-Cell DTU",
