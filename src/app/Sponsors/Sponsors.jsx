@@ -21,7 +21,7 @@ export default function Quotes() {
       <div className="h-auto flex items-center w-screen my-8 font-DarkerBold">
         <Marquee className="py-2 flex gap-4 my-2" speed={180}>
           {images.map((image, index) => (
-                      <div key={index} className="rounded overflow-hidden shadow-lg mx-auto bg-white/20 mb-12">
+                      <div key={index} className="rounded overflow-hidden shadow-lg mx-auto mb-12">
                         <div className="relative w-32 h-32 m-2 md:w-64 md:h-64 flex items-center justify-center">
                           <Image
                             alt=""
@@ -39,9 +39,9 @@ export default function Quotes() {
       <div className="h-16 flex items-center w-screen my-8 font-DarkerBold">
         <Marquee className="py-2 flex gap-4 my-2" right direction='' speed={180}>
         {imagesR.map((image, index) => (
-                      <div key={index} className="rounded overflow-hidden shadow-lg mx-auto bg-white/20 mb-12">
+                      <div key={index} className="rounded overflow-hidden  mb-12">
                         <div className="relative w-32 h-32 m-2 md:w-64 md:h-64 flex items-center justify-center">
-                          <Image
+                          <Image 
                             alt=""
                             src={image}
                             width={160}  // Set width for mobile
