@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import Hero from "./Hero/Page";
 import Zoom from "../components/ZoomParallax";
 import About from "./About/page";
@@ -10,25 +9,30 @@ import Redirect from "../components/Redirect";
 import Comp from "./Event/page";
 import Event from "./Event/Events";
 import Sponsors from "./Sponsors/Sponsors";
-import VideoBackground from "../components/Video";
+import AnoAI from "../components/ui/animated-shader-background";
 import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
     <>
       <div className="relative">
-        {/* Video Background */}
-        <VideoBackground />
-        {/* Content */}
-        <Hero />
-        <Sponsors />
-        <Zoom />
-        <About />
-        <Stats />
-        <Why />
-        <Event />
-        <Comp />
-        <Speakers />
+        {/* Shader background mounted fixed behind content */}
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <AnoAI />
+        </div>
+
+        {/* Site content (keeps higher stacking context) */}
+        <div className="relative z-10">
+          <Hero />
+          <Sponsors />
+          <Zoom />
+          <About />
+          <Stats />
+          <Why />
+          <Event />
+          <Comp />
+          <Speakers />
+        </div>
       </div>
     </>
   );
