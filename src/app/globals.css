@@ -55,7 +55,6 @@ body{
   font-weight: normal;
 } */
 
-
 .main {
   transition: all 0.5s;
   -webkit-text-stroke: 4px #d6f4f4;
@@ -401,6 +400,26 @@ body {
   position: fixed;
   z-index: -1; /* Keeps the video behind other content */
 }
+
+/*
+  Mobile behavior:
+  - Keep the background video enabled only while the hero is on screen.
+  - Disable it for the rest of the page for performance.
+
+  Note: `#hero` exists on the homepage hero section.
+*/
+@media (max-width: 1023px) {
+  /* Mobile: keep the video visible across the full page */
+  .video-background {
+    display: block !important;
+    opacity: 0.18; /* lighter on mobile for readability */
+  }
+}
+
+/* Ensure background sits behind content by using negative z-index via utility in markup, but keep a sane default here */
+.video-background {
+  z-index: -10;
+}
 .video-background {
   top: 0;
   left: 0;
@@ -417,4 +436,17 @@ body {
 .video-background.fixed {
   position: fixed;
   z-index: -1; /* Keeps the video behind other content */
+}
+
+/*---break---*/
+
+@theme inline {
+  @keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    }
+  50% {
+    transform: translateY(-10px);
+    }
+  }
 }

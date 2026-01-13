@@ -24,11 +24,12 @@ const VideoBackground = () => {
 
   return (
     <video
-      className={`video-background ${isScrolled ? "fixed" : "absolute"}`}
+      className={`video-background ${isScrolled ? "fixed inset-0" : "absolute inset-0"} w-full h-full object-cover`}
       autoPlay
       muted
       loop
       playsInline
+      aria-hidden="true"
     >
       <source src="/hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.

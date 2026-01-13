@@ -1,40 +1,38 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const Page = () => {
   return (
-    <section className="relative w-full h-screen">
-      <div className="absolute inset-0">
-        {/* Large Screen Image */}
-        <div className="hidden lg:block w-full h-full">
-          <Image
-            src="/images/hero.png"
-            alt="Large Screen Image"
-            layout="fill"
-            objectFit="contain"
-            className="-z-100"
-          />
-        </div>
+    <section id="hero" className="relative w-full">
+      {/*
+        Hero covers the dynamic viewport (100dvh) to avoid mobile UI clipping.
+        On phones, we prefer "contain" so the full artwork is visible (no cropping).
+        On md+ screens, we switch to "cover" for an edge-to-edge look.
+      */}
+  <div className="relative z-[100000] w-full min-h-[100dvh] h-[100dvh] overflow-hidden bg-transparent">
+        <div className="relative w-full h-full">
+          {/* Mobile (default): show full image */}
+          <div className="relative w-full h-full md:hidden">
+            <Image
+              src="/images/hero1.png"
+              alt="Hero"
+              fill
+              priority
+              style={{ objectFit: "contain", objectPosition: "50% 60%" }}
+              sizes="100vw"
+            />
+          </div>
 
-        {/* Medium Screen Image */}
-        <div className="hidden md:block lg:hidden w-full h-full">
-          <Image
-            src="/images/hero.png"
-            alt="Medium Screen Image"
-            layout="fill"
-            objectFit="contain"
-            className="-z-100"
-          />
-        </div>
-
-        {/* Small Screen Image */}
-        <div className="md:hidden w-full h-full">
-          <Image
-            src="/images/herophone.png"
-            alt="Small Screen Image"
-            layout="fill"
-            objectFit="cover"
-            className="-z-100"
-          />
+          {/* Desktop/tablet: fill viewport */}
+          <div className="relative w-full h-full hidden md:block">
+            <Image
+              src="/images/hero1.png"
+              alt="Hero"
+              fill
+              priority
+              style={{ objectFit: "cover", objectPosition: "50% 60%" }}
+              sizes="(min-width: 768px) 100vw"
+            />
+          </div>
         </div>
       </div>
     </section>
