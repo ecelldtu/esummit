@@ -17,9 +17,7 @@ export default function Home() {
     <>
       <div className="relative">
         {/* Shader background mounted fixed behind content */}
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-          <AnoAI />
-        </div>
+        <AnoAI />
 
         {/* Site content (keeps higher stacking context) */}
         <div className="relative z-10">

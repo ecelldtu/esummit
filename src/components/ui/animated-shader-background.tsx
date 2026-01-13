@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { Infinity, Rocket, Shield, Brain, Play, ChevronDown } from 'lucide-react';
 
@@ -8,10 +8,23 @@ const AnoAI = () => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    // Respect accessibility/perf hints.
+    const reduceMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // If the user prefers reduced motion, render once (static) and skip the RAF loop.
+    // This also helps on low-end devices.
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'low-power' });
+
+    // Cap DPR to keep mobile/laptop GPUs from melting.
+    const getDpr = () => Math.min(window.devicePixelRatio || 1, 1.5);
+    renderer.setPixelRatio(getDpr());
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
     container.appendChild(renderer.domElement);
 
     const material = new THREE.ShaderMaterial({
@@ -90,23 +103,64 @@ const AnoAI = () => {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    let frameId: number;
-    const animate = () => {
-      material.uniforms.iTime.value += 0.016;
+    // Throttle to ~30fps to reduce jitter/CPU on busy pages.
+    // (The site has a lot of other animations; 60fps shader often causes jank.)
+    let frameId: number | undefined;
+    let last = 0;
+    let paused = false;
+    const targetFrameMs = 1000 / 30;
+
+    const renderOnce = () => {
       renderer.render(scene, camera);
+    };
+
+    const animate = (now: number) => {
+      if (paused) return;
+      if (now - last >= targetFrameMs) {
+        // Advance time based on real elapsed time (more stable than fixed 0.016).
+        const dt = Math.min((now - last) / 1000, 0.05);
+        material.uniforms.iTime.value += dt;
+        renderer.render(scene, camera);
+        last = now;
+      }
       frameId = requestAnimationFrame(animate);
     };
-    animate();
+
+    if (reduceMotion) {
+      renderOnce();
+    } else {
+      frameId = requestAnimationFrame((now) => {
+        last = now;
+        animate(now);
+      });
+    }
 
     const handleResize = () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(getDpr());
+      renderer.setSize(window.innerWidth, window.innerHeight, false);
       material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight);
+
+      if (reduceMotion) renderOnce();
     };
     window.addEventListener('resize', handleResize);
 
+    const handleVisibility = () => {
+      const hidden = document.visibilityState === 'hidden';
+      paused = hidden;
+      if (!hidden && !reduceMotion) {
+        // Resume loop.
+        frameId = requestAnimationFrame((now) => {
+          last = now;
+          animate(now);
+        });
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+
     return () => {
-      if (typeof frameId === "number") cancelAnimationFrame(frameId);
+      if (typeof frameId === 'number') cancelAnimationFrame(frameId);
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibility);
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
       }
@@ -117,10 +171,12 @@ const AnoAI = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative overflow-x-hidden">
-      <div className="relative z-10 divider" />
-    </div>
+    <div
+      ref={containerRef}
+      className="fixed inset-0 -z-10 pointer-events-none"
+      aria-hidden="true"
+    />
   );
 };
 
-export default AnoAI;
+export default memo(AnoAI);
