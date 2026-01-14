@@ -16,7 +16,7 @@ export default function Quotes() {
   return (
     <div className="relative mt-32 md:mt-48 md:mb-36">
       <div className='font-Nova text-white text-4xl md:text-7xl font-semibold text-center' id='Sponsors'>
-        SPONSOR
+        Past Sponsors
       </div>
       <div className="h-auto flex items-center w-screen my-8 font-DarkerBold">
         <Marquee className="py-2 flex gap-4 my-2" speed={180}>
