@@ -165,13 +165,13 @@ const BookingForm = () => {
         </h1>
 
         <p className="mb-4">
-          Welcome to the E-Summit DTU 2025 accommodation services. By proceeding with
+          Welcome to the E-Summit DTU 2026 accommodation services. By proceeding with
           the booking, you agree to the following terms and conditions:
         </p>
 
         <p className="font-semibold">1. Payment Policy</p>
         <p className="mb-4">
-          All payments made for accommodation during E-Summit DTU 2025 are strictly
+          All payments made for accommodation during E-Summit DTU 2026 are strictly
           non-refundable. No requests for refunds will be entertained under any
           circumstances, including but not limited to cancellations, changes in
           schedule, or personal reasons.

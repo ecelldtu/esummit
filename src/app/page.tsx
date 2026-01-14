@@ -1,6 +1,7 @@
 "use client";
 import Hero from "./Hero/Page";
-import Zoom from "../components/ZoomParallax";
+import SponsorsGallery from "../components/gallery/SponsorsGallery";
+import YouTubeShortPip from "../components/media/YouTubeShortPip";
 import About from "./About/page";
 import Stats from "./Stats/page";
 import Why from "./Why/page";
@@ -17,15 +18,14 @@ export default function Home() {
     <>
       <div className="relative">
         {/* Shader background mounted fixed behind content */}
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-          <AnoAI />
-        </div>
+        <AnoAI />
 
         {/* Site content (keeps higher stacking context) */}
         <div className="relative z-10">
           <Hero />
           <Sponsors />
-          <Zoom />
+          <SponsorsGallery />
+          <YouTubeShortPip videoId="mF89SCQQBy4" title="E-Summit 2026" />
           <About />
           <Stats />
           <Why />
