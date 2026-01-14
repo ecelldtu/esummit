@@ -68,7 +68,7 @@ const Font = memo(({ isLargeScreen }) => {
                 font="/fonts/Hero2.ttf"
                 {...textOption}
             >
-                E-SUMMIT 2025
+                E-SUMMIT 2026
             </Text>
             <Text
                 position={[0, positionY.subtitle, -0.1]}
@@ -94,7 +94,7 @@ const Font = memo(({ isLargeScreen }) => {
                 font="/fonts/Nova.otf"
                 {...textOption}
             >
-                JANUARY 2025
+                JANUARY 2026
             </Text>
         </group>
     );
