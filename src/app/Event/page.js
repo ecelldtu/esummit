@@ -4,8 +4,16 @@ import { PinContainer } from "../../components/ui/3d-pin";
 import Image from "next/image";
 
 const items = [
-  { title: "Coming soon", href: "/", imgSrc: "" },
-  { title: "Coming soon", href: "/", imgSrc: "" },
+  {
+    title: "The Boardroom — Track 1",
+    href: "https://unstop.com/events/the-board-room-startup-pitching-competition-track-1-e-summit-2026-dtu-e-summit26-dtu-new-delhi-1621238",
+    imgSrc: "/images/bd1.jpg",
+  },
+  {
+    title: "The Boardroom — Track 2",
+    href: "https://unstop.com/competitions/the-board-room-track-2-ideation-track-e-summit26-dtu-new-delhi-1621260",
+    imgSrc: "/images/bd2.jpg",
+  },
   { title: "Coming soon", href: "/", imgSrc: "" },
   { title: "Coming soon", href: "/", imgSrc: "" },
   { title: "Coming soon", href: "/", imgSrc: "" },
