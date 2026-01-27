@@ -4,10 +4,8 @@ export default function Video() {
         <video 
           className="w-full h-auto" 
           controls 
-          preload="auto" 
-          autoPlay 
-          muted 
-          loop
+          preload="metadata" 
+          playsInline
         >
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.

@@ -37,7 +37,7 @@ export default function SponsorsGallery() {
             return (
               <article
                 key={item.id}
-                className="group relative h-[220px] w-[160px] sm:h-[280px] sm:w-[200px] overflow-hidden rounded-2xl border border-white/10 bg-black/10 shadow-xl backdrop-blur"
+                className="group relative h-[220px] w-[160px] sm:h-[280px] sm:w-[200px] overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl"
               >
                 <div className="absolute inset-0">
                   <Image

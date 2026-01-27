@@ -14,10 +14,26 @@ const items = [
     href: "https://unstop.com/competitions/the-board-room-track-2-ideation-track-e-summit26-dtu-new-delhi-1621260",
     imgSrc: "/images/bd2.jpg",
   },
-  { title: "Coming soon", href: "/", imgSrc: "" },
-  { title: "Coming soon", href: "/", imgSrc: "" },
-  { title: "Coming soon", href: "/", imgSrc: "" },
-  { title: "Coming soon", href: "/", imgSrc: "" },
+  {
+    title: "Marketing Maverick",
+    href: "https://unstop.com/competitions/marketing-maverick-e-summit26-dtu-new-delhi-1621256",
+    imgSrc: "/images/mark.jpg",
+  },
+  {
+    title: "B-Plan",
+    href: "https://unstop.com/competitions/b-plan-competition-e-summit26-dtu-new-delhi-1621241",
+    imgSrc: "/images/bplann.jpg",
+  },
+  {
+    title: "Finovate",
+    href: "https://unstop.com/events/finnovate-competition-e-summit26-dtu-new-delhi-1616789",
+    imgSrc: "/images/fin.jpg",
+  },
+  {
+    title: "Execute 5.0",
+    href: "https://unstop.com/hackathons/execute-50-dtu-new-delhi-1616804",
+    imgSrc: "/images/hack.jpg",
+  }
 ];
 export default function Page() {
   return (
