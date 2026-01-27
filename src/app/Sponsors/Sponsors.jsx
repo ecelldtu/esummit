@@ -14,7 +14,7 @@ export default function Quotes() {
     .reverse();
   const imagesR = images.reverse();
   return (
-    <div className="relative mt-32 md:mt-48 md:mb-36">
+  <div className="relative mt-32 md:mt-48 mb-12 md:mb-48">
       <div className='font-Nova text-white text-4xl md:text-7xl font-semibold text-center' id='Sponsors'>
         Past Sponsors
       </div>

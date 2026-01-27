@@ -19,8 +19,7 @@ export default function YouTubeShortPip({
   // NOTE: YouTube controls some overlays (like channel info) and they can't be fully removed
   // without using the full YouTube player UI. We still use available embed params to reduce chrome.
   const params = new URLSearchParams({
-    // autoplay requires muted in most browsers
-    autoplay: "1",
+  autoplay: "0",
     mute: "1",
     playsinline: "1",
     // minimize in-player YouTube branding where supported
@@ -57,7 +56,7 @@ export default function YouTubeShortPip({
               className="absolute inset-0 h-full w-full"
               src={src}
               title={title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />

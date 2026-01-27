@@ -27,8 +27,10 @@
   display: flex;
   justify-content: center;
   width: 0;
+    position: relative;
+    height: 10vw;
 }
-.project img{
-    width: 10vw;
+.project .img{
+    object-fit: cover;
 }
   

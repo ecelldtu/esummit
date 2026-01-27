@@ -14,8 +14,17 @@ import React, {
   useState,
 } from 'react';
 
+// Keep all ScrollTrigger animations transform-only.
+// This helps mobile GPUs and reduces main-thread layout work.
+if (typeof window !== 'undefined') {
+  // Safer defaults for touch devices.
+  ScrollTrigger.config({ ignoreMobileResize: true });
+}
+
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.config({ force3D: true });
+  ScrollTrigger.config({ ignoreMobileResize: true, limitCallbacks: true });
 }
 
 function useMergeRefs<T>(...refs: (Ref<T> | undefined)[]) {
@@ -109,6 +118,24 @@ function useHasCoarsePointer() {
   return coarse;
 }
 
+function useIsLowPowerDevice() {
+  const [isLowPower, setIsLowPower] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator === 'undefined') return;
+    const nav = navigator as any;
+    const deviceMemory: number | undefined = nav.deviceMemory;
+    const cores: number | undefined = nav.hardwareConcurrency;
+
+    const low =
+      (typeof deviceMemory === 'number' && deviceMemory <= 4) ||
+      (typeof cores === 'number' && cores <= 4);
+    setIsLowPower(low);
+  }, []);
+
+  return isLowPower;
+}
+
 export interface RadialScrollGalleryProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
   /**
@@ -182,11 +209,12 @@ export const RadialScrollGallery = forwardRef<
     const circleDiameter = currentRadius * 2;
 
     const isMobile = useIsMobile(768);
-    const hasCoarsePointer = useHasCoarsePointer();
-    // Phones tend to feel "too fast" with pinned scrubbed animations.
-    // Slow it down a bit without changing desktop behavior.
+  const hasCoarsePointer = useHasCoarsePointer();
+  const isLowPower = useIsLowPowerDevice();
+    // Phones can feel sluggish with long pinned scroll distances.
+    // Keep it tighter on mobile for a faster, more responsive feel.
     const effectiveScrollDuration = isMobile
-      ? Math.max(scrollDuration * 2.2, scrollDuration + 2000)
+      ? Math.max(scrollDuration * 1.35, scrollDuration + 600)
       : scrollDuration;
 
     const { visibleDecimal, hiddenDecimal } = useMemo(() => {
@@ -235,7 +263,16 @@ export const RadialScrollGallery = forwardRef<
           '(prefers-reduced-motion: reduce)'
         ).matches;
 
-        if (!prefersReducedMotion && !isMobile) {
+        // Extra perf guard: pinned + scrubbed animations are often janky on mobile.
+        // We'll still animate, but avoid pinning on mobile/coarse-pointer.
+          const shouldPin = !isMobile && !hasCoarsePointer;
+
+        if (!prefersReducedMotion) {
+          if (!isMobile) {
+            // Desktop: keep ticker stable for smoother scroll-linked animations.
+            gsap.ticker.lagSmoothing(0);
+            gsap.ticker.fps(60);
+          }
           gsap.fromTo(
             containerRef.current.children,
             { scale: 0, autoAlpha: 0 },
@@ -253,21 +290,29 @@ export const RadialScrollGallery = forwardRef<
             }
           );
 
-          gsap.to(containerRef.current, {
-            rotation: 360,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: pinRef.current,
-              pin: true,
-              // Keep layout breathing room on mobile where pinned elements can feel cramped.
-              pinSpacing: true,
-              start: startTrigger,
-              end: `+=${effectiveScrollDuration}`,
-              scrub: isMobile ? 1.4 : 1,
-              anticipatePin: isMobile ? 1 : 0,
-              fastScrollEnd: isMobile,
-              preventOverlaps: isMobile,
-              invalidateOnRefresh: true,
+          // Use a transform-only update loop via quickSetter for maximum smoothness.
+          const setRotation = gsap.quickSetter(containerRef.current, 'rotation', 'deg');
+          gsap.set(containerRef.current, {
+            force3D: true,
+            transformOrigin: '50% 50%',
+            willChange: 'transform',
+          });
+
+          ScrollTrigger.create({
+            trigger: pinRef.current,
+            start: startTrigger,
+            end: `+=${effectiveScrollDuration}`,
+            scrub: shouldPin ? 1.1 : 0.4,
+            pin: shouldPin,
+            pinSpacing: true,
+            anticipatePin: shouldPin ? 1 : 0,
+            invalidateOnRefresh: true,
+            // Smooth scroll on touch (prevents the "stuck" feel).
+            fastScrollEnd: true,
+            preventOverlaps: true,
+            onUpdate: (self) => {
+              // 360 deg per full progress.
+              setRotation(self.progress * 360);
             },
           });
         }
@@ -394,29 +439,34 @@ export const RadialScrollGallery = forwardRef<
                         onItemSelect?.(index);
                       }
                     }}
-                    onMouseEnter={() => !disabled && setHoveredIndex(index)}
-                    onMouseLeave={() => !disabled && setHoveredIndex(null)}
-                    onPointerEnter={() => !disabled && setHoveredIndex(index)}
-                    onPointerLeave={() => !disabled && setHoveredIndex(null)}
-                    onFocus={() => !disabled && setHoveredIndex(index)}
-                    onBlur={() => !disabled && setHoveredIndex(null)}
+                    onMouseEnter={() => !disabled && !hasCoarsePointer && setHoveredIndex(index)}
+                    onMouseLeave={() => !disabled && !hasCoarsePointer && setHoveredIndex(null)}
+                    onPointerEnter={() => !disabled && !hasCoarsePointer && setHoveredIndex(index)}
+                    onPointerLeave={() => !disabled && !hasCoarsePointer && setHoveredIndex(null)}
+                    onFocus={() => !disabled && !hasCoarsePointer && setHoveredIndex(index)}
+                    onBlur={() => !disabled && !hasCoarsePointer && setHoveredIndex(null)}
                     className={`
                       block cursor-pointer outline-none text-left
                       focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-                      rounded-xl transition-all duration-500 ease-out will-change-transform
+                      rounded-xl transition-transform duration-300 ease-out will-change-transform
                       ${
                         isHovered
                           ? isMobile
                             ? hasCoarsePointer
-                              ? 'scale-105 -translate-y-1'
-                              : 'scale-110 -translate-y-3'
+                              ? 'scale-[1.03] -translate-y-1'
+                              : 'scale-[1.05] -translate-y-2'
                             : 'scale-125 -translate-y-8'
                           : 'scale-100'
                       }
                       ${
+                        // Filters are expensive on mobile GPUs. Keep them desktop-only.
                         isAnyHovered && !isHovered
-                          ? 'blur-[2px] opacity-40 grayscale'
-                          : 'blur-0 opacity-100'
+                          ? isMobile
+                            ? 'opacity-90'
+                            : isLowPower
+                              ? 'opacity-70'
+                              : 'blur-[2px] opacity-40 grayscale'
+                          : 'opacity-100'
                       }
                     `}
                   >

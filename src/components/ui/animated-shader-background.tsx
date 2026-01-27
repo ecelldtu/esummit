@@ -1,6 +1,5 @@
 import React, { memo, useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { Infinity, Rocket, Shield, Brain, Play, ChevronDown } from 'lucide-react';
 
 const AnoAI = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -9,20 +8,23 @@ const AnoAI = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Respect accessibility/perf hints.
     const reduceMotion =
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // If the user prefers reduced motion, render once (static) and skip the RAF loop.
-    // This also helps on low-end devices.
+    const isMobile = window.innerWidth < 768;
+    const nav = typeof navigator !== 'undefined' ? (navigator as any) : undefined;
+    const deviceMemory: number | undefined = nav?.deviceMemory;
+    const cores: number | undefined = nav?.hardwareConcurrency;
+    const isLowPower = (typeof deviceMemory === 'number' && deviceMemory <= 4) ||
+      (typeof cores === 'number' && cores <= 4);
+
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'low-power' });
 
-    // Cap DPR to keep mobile/laptop GPUs from melting.
-    const getDpr = () => Math.min(window.devicePixelRatio || 1, 1.5);
+  const getDpr = () => Math.min(window.devicePixelRatio || 1, isMobile || isLowPower ? 1.0 : 1.5);
     renderer.setPixelRatio(getDpr());
     renderer.setSize(window.innerWidth, window.innerHeight, false);
     container.appendChild(renderer.domElement);
@@ -30,7 +32,8 @@ const AnoAI = () => {
     const material = new THREE.ShaderMaterial({
       uniforms: {
         iTime: { value: 0 },
-        iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+        iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+  iQuality: { value: isMobile ? 0.45 : isLowPower ? 0.7 : 1.0 },
       },
       vertexShader: `
         void main() {
@@ -40,6 +43,7 @@ const AnoAI = () => {
       fragmentShader: `
         uniform float iTime;
         uniform vec2 iResolution;
+        uniform float iQuality;
 
         #define NUM_OCTAVES 3
 
@@ -63,7 +67,9 @@ const AnoAI = () => {
           float a = 0.3;
           vec2 shift = vec2(100);
           mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.5));
+          int octaves = int(mix(2.0, float(NUM_OCTAVES), iQuality));
           for (int i = 0; i < NUM_OCTAVES; ++i) {
+            if (i >= octaves) break;
             v += a * noise(x);
             x = rot * x * 2.0 + shift;
             a *= 0.4;
@@ -79,36 +85,38 @@ const AnoAI = () => {
 
           float f = 2.0 + fbm(p + vec2(iTime * 5.0, 0.0)) * 0.5;
 
-          for (float i = 0.0; i < 35.0; i++) {
-            v = p + cos(i * i + (iTime + p.x * 0.08) * 0.025 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.003, cos(iTime * 3.5 - i) * 0.003);
-            float tailNoise = fbm(v + vec2(iTime * 0.5, i)) * 0.3 * (1.0 - (i / 35.0));
+          int maxIter = int(mix(18.0, 35.0, iQuality));
+          for (int i = 0; i < 35; i++) {
+            if (i >= maxIter) break;
+            float fi = float(i);
+            v = p + cos(fi * fi + (iTime + p.x * 0.08) * 0.025 + fi * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + fi) * 0.003, cos(iTime * 3.5 - fi) * 0.003);
+            float tailNoise = fbm(v + vec2(iTime * 0.5, fi)) * 0.3 * (1.0 - (fi / 35.0));
             vec4 auroraColors = vec4(
-              0.1 + 0.3 * sin(i * 0.2 + iTime * 0.4),
-              0.3 + 0.5 * cos(i * 0.3 + iTime * 0.5),
-              0.7 + 0.3 * sin(i * 0.4 + iTime * 0.3),
+              0.1 + 0.3 * sin(fi * 0.2 + iTime * 0.4),
+              0.3 + 0.5 * cos(fi * 0.3 + iTime * 0.5),
+              0.7 + 0.3 * sin(fi * 0.4 + iTime * 0.3),
               1.0
             );
-            vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
-            float thinnessFactor = smoothstep(0.0, 1.0, i / 35.0) * 0.6;
+            vec4 currentContribution = auroraColors * exp(sin(fi * fi + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
+            float thinnessFactor = smoothstep(0.0, 1.0, fi / 35.0) * 0.6;
             o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
           }
 
           o = tanh(pow(o / 100.0, vec4(1.6)));
           gl_FragColor = o * 1.5;
         }
-      `
+      `,
     });
 
     const geometry = new THREE.PlaneGeometry(2, 2);
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    // Throttle to ~30fps to reduce jitter/CPU on busy pages.
-    // (The site has a lot of other animations; 60fps shader often causes jank.)
     let frameId: number | undefined;
     let last = 0;
     let paused = false;
-    const targetFrameMs = 1000 / 30;
+  const targetFps = isMobile ? 45 : isLowPower ? 35 : 45;
+  const targetFrameMs = 1000 / targetFps;
 
     const renderOnce = () => {
       renderer.render(scene, camera);
@@ -117,7 +125,6 @@ const AnoAI = () => {
     const animate = (now: number) => {
       if (paused) return;
       if (now - last >= targetFrameMs) {
-        // Advance time based on real elapsed time (more stable than fixed 0.016).
         const dt = Math.min((now - last) / 1000, 0.05);
         material.uniforms.iTime.value += dt;
         renderer.render(scene, camera);
@@ -148,7 +155,6 @@ const AnoAI = () => {
       const hidden = document.visibilityState === 'hidden';
       paused = hidden;
       if (!hidden && !reduceMotion) {
-        // Resume loop.
         frameId = requestAnimationFrame((now) => {
           last = now;
           animate(now);
@@ -157,10 +163,30 @@ const AnoAI = () => {
     };
     document.addEventListener('visibilitychange', handleVisibility);
 
+    // Pause the shader briefly while scrolling on mobile to keep scroll FPS high.
+    let scrollTimeout: number | undefined;
+    const handleScroll = () => {
+      if (!isMobile) return;
+      paused = true;
+      if (scrollTimeout) window.clearTimeout(scrollTimeout);
+      scrollTimeout = window.setTimeout(() => {
+        if (!reduceMotion && document.visibilityState === 'visible') {
+          paused = false;
+          frameId = requestAnimationFrame((now) => {
+            last = now;
+            animate(now);
+          });
+        }
+      }, 150);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => {
       if (typeof frameId === 'number') cancelAnimationFrame(frameId);
       window.removeEventListener('resize', handleResize);
       document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) window.clearTimeout(scrollTimeout);
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
       }

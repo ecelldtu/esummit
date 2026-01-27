@@ -53,8 +53,8 @@ const ForgotPasswordForm = () => {
                 <div className="md:mx-10 mx-6 text-lg xl:mx-20 text-white font-DarkerBold">
                     <p className="leading-relaxed text-gray-300">
                         For direct contact, please drop a mail at
-                        <a href="mailto:raj@ecelldtu.in" className="text-white ml-2 font-semibold hover:underline">
-                            raj@ecelldtu.in
+                        <a href="mailto:akshat@ecelldtu.in" className="text-white ml-2 font-semibold hover:underline">
+                            akshat@ecelldtu.in
                         </a>.
                     </p>
                 </div>

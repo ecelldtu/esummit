@@ -2,6 +2,7 @@
 import styles from './style.module.css';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const anim = {
     initial: {width: 0},
@@ -18,7 +19,15 @@ export default function index({project}) {
         <div onMouseEnter={() => {setIsActive(true)}} onMouseLeave={() => {setIsActive(false)}} className={styles.project}>
             <p className='font-Darker text-4xl md:text-6xl text-white'>{title1}</p>
             <motion.div variants={anim} animate={isActive ? "open" : "closed"} className={styles.imgContainer}>
-                <img src={`/medias/${src}`}></img>
+                <Image
+                    src={`/medias/${src}`}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 60vw, 400px"
+                    // These images are purely decorative in a hover preview.
+                    aria-hidden="true"
+                    className={styles.img}
+                />
             </motion.div>
             <p className='font-Darker text-4xl md:text-6xl text-white'>{title2}</p>
         </div>
