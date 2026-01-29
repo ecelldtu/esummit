@@ -26,9 +26,16 @@
   font-family: 'Vin'; /*a name to be used later*/
   src: url('/fonts/Vin.otf'); /*URL to font*/
 }
+@font-face {
+  font-family: 'Kalamayka';
+  src: url('/fonts/kalamayka/KalamaykaVF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 h1{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Kalamayka", sans-serif;
 }
 
 body{
@@ -37,10 +44,14 @@ body{
   background-size: contain;
   overflow-x: hidden;
   width: screen;
+  font-family: "Kalamayka", sans-serif;
 }
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .font-Kalamayka {
+    letter-spacing: 0.01em;
   }
 }
 
@@ -98,7 +109,7 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #dfdff0;
-  font-family: "General Sans", sans-serif;
+  font-family: "Kalamayka", sans-serif;
 }
 
 @layer base {
@@ -125,6 +136,14 @@ body {
   @font-face {
     font-family: "zentry";
     src: url("/fonts/zentry-regular.woff2") format("woff2");
+  }
+  .theme {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
@@ -448,5 +467,16 @@ body {
   50% {
     transform: translateY(-10px);
     }
+  }
+}
+
+/*---break---*/
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

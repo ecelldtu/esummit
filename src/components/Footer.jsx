@@ -8,7 +8,7 @@ import ln from "../../public/images/ln.png"
 
 const Footer = () => {
     return <div className="bg-[#0A0702] z-[500]" id="Footer">
-         <h2 className='text-center text-5xl w-full text-white bg-violet-900/80 py-4 font-CyberGraph'>MAP</h2>
+         <h2 className='text-center text-5xl w-full text-white bg-violet-900/80 py-4 font-Kalamayka'>MAP</h2>
             <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Delhi%20Technological%20University+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 width="screen"
                 allowFullScreen
@@ -23,8 +23,8 @@ const Footer = () => {
                         <Link href="/"><Image src={Logo} height={"100"} width={"200"} alt={"logo"} className="" /></Link>
                     </div>
                     <div className="px-10 py-4 md:py-0">
-                        <h2 className="font-poppins font-bold text-xl md:text-3xl font-Queensides">Follow Us</h2>
-                        <div className="flex flex-row gap-4 py-3 font-Para font-semibold">
+                        <h2 className="font-Kalamayka font-bold text-xl md:text-3xl">Follow Us</h2>
+                        <div className="flex flex-row gap-4 py-3 font-Kalamayka font-semibold">
                             <Link href={'https://www.instagram.com/ecelldtu/'}>
                                 <Image width={40} height={50}
                                     src={insta}
@@ -49,8 +49,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="px-10">
-                        <h2 className="font-poppins font-bold text-xl md:text-3xl font-Queensides">Contact Us</h2>
-                        <h4 className="py-1 md:text-base flex flex-col font-Para font-semibold">
+                        <h2 className="font-Kalamayka font-bold text-xl md:text-3xl">Contact Us</h2>
+                        <h4 className="py-1 md:text-base flex flex-col font-Kalamayka font-semibold">
                             <div>info@ecelldtu.in</div>
                             <div>Delhi Technological University</div>
                             <div>Shahbad Daulatpur, Main Bawana Road, Delhi-110042</div>

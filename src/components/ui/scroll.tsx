@@ -5,6 +5,7 @@ import {
     motion,
     useAnimationFrame,
     useMotionValue,
+    useReducedMotion,
     useScroll,
     useSpring,
     useTransform,
@@ -35,6 +36,29 @@ export function VelocityScroll({
     default_velocity = 5,
     className,
 }: VelocityScrollProps) {
+    const reduceMotion = useReducedMotion();
+    const [isMobile, setIsMobile] = useState(false);
+    const [isLowPower, setIsLowPower] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const update = () => setIsMobile(window.innerWidth < 768);
+        update();
+        window.addEventListener("resize", update);
+        return () => window.removeEventListener("resize", update);
+    }, []);
+
+    useEffect(() => {
+        if (typeof navigator === "undefined") return;
+        const nav = navigator as any;
+        const deviceMemory: number | undefined = nav?.deviceMemory;
+        const cores: number | undefined = nav?.hardwareConcurrency;
+        setIsLowPower(
+            (typeof deviceMemory === "number" && deviceMemory <= 4) ||
+                (typeof cores === "number" && cores <= 4)
+        );
+    }, []);
+
     function ParallaxText({
         children,
         baseVelocity = 100,
@@ -73,10 +97,40 @@ export function VelocityScroll({
         }, [children]);
 
         const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
+        const shouldAnimate = !reduceMotion;
+        const mobileMultiplier = isMobile ? 0.55 : 1;
+        const lowPowerMultiplier = isLowPower ? 0.6 : 1;
+        const effectiveVelocity = shouldAnimate
+            ? baseVelocity * mobileMultiplier * lowPowerMultiplier
+            : 0;
+
+        // Pause animation when not visible (Apple-style optimization)
+        const [isVisible, setIsVisible] = useState(true);
+        const wrapperRef = useRef<HTMLDivElement>(null);
+        
+        useEffect(() => {
+            const el = wrapperRef.current || containerRef.current;
+            if (!el) return;
+            
+            const observer = new IntersectionObserver(
+                (entries) => setIsVisible(entries[0].isIntersecting),
+                { threshold: 0.1 }
+            );
+            observer.observe(el);
+            return () => observer.disconnect();
+        }, []);
+
+        useEffect(() => {
+            if (!shouldAnimate) {
+                baseX.set(0);
+            }
+        }, [shouldAnimate, baseX]);
 
         const directionFactor = React.useRef<number>(1);
         useAnimationFrame((t, delta) => {
-            let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+            // Don't animate if not visible or shouldn't animate
+            if (!shouldAnimate || !isVisible) return;
+            let moveBy = directionFactor.current * effectiveVelocity * (delta / 1000);
 
             if (velocityFactor.get() < 0) {
                 directionFactor.current = -1;
@@ -92,7 +146,10 @@ export function VelocityScroll({
         return (
             <div
                 className="w-full overflow-hidden whitespace-nowrap"
-                ref={containerRef}
+                ref={(el) => {
+                    (containerRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+                    (wrapperRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+                }}
             >
                 <motion.div className={cn("inline-block", className)} style={{ x }}>
                     {Array.from({ length: repetitions }).map((_, i) => (

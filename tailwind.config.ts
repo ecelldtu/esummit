@@ -15,6 +15,7 @@ const config: Config = {
         DarkerBold: ["DarkerBold", "sans-serif"],
         Vin: ["Vin", "sans-serif"],
         Hero: ["Hero", "sans-serif"],
+        Kalamayka: ["Kalamayka", "sans-serif"],
       },
       animation: {
         grid: "grid 15s linear infinite",

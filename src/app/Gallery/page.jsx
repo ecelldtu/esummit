@@ -80,7 +80,7 @@ export default function Photos() {
     return (
         <div>
             <HyperText
-            className="text-4xl text-white md:text-7xl my-24 font-bold font-Nova uppercase"
+            className="text-4xl text-white md:text-7xl my-24 font-bold font-Kalamayka uppercase"
                 text="GALLERY"
             />
             <div id="gallery" className="columns-3 columns-[33%] p-[1vw] mt-[10px] ">

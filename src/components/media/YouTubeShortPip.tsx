@@ -56,6 +56,7 @@ export default function YouTubeShortPip({
               className="absolute inset-0 h-full w-full"
               src={src}
               title={title}
+              loading="lazy"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen

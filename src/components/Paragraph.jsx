@@ -15,7 +15,7 @@ export default function Paragraph({paragraph}) {
   return (
     <motion.p 
       ref={container}         
-      className="text-center max-w-[90%] md:max-w-[60%] my-12 text-xl md:text-3xl mx-auto font-DarkerBold text-[#fff]"
+      className="text-center max-w-[92%] md:max-w-[62%] my-10 md:my-12 text-base md:text-2xl mx-auto font-Kalamayka text-white leading-relaxed md:leading-[1.85] tracking-[0.01em] text-balance"
       style={{opacity}}
     >
       {paragraph}

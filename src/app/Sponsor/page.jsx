@@ -22,7 +22,7 @@ export default function Page() {
   return (
     <div>
       <HyperText
-        className="text-4xl md:text-7xl my-24 font-bold font-Nova text-white uppercase"
+        className="text-4xl md:text-7xl my-24 font-bold font-Kalamayka text-white uppercase"
         text="PAST SPONSORS"
       />
       <div className="container mx-auto p-4">

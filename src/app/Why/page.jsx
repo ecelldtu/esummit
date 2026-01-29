@@ -10,7 +10,7 @@ export default function MeteorDemo() {
     return (
         <div className="relative flex h-auto w-screen flex-col mt-32 border-none items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
             {/* <Meteors number={40} /> */}
-            <span className="pointer-events-none font-Nova whitespace-pre-wrap text-white bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mt-20">
+            <span className="pointer-events-none font-Kalamayka whitespace-pre-wrap text-white bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mt-20">
                 Why E-Cell DTU
             </span>
             {/* <p className="text-center max-w-[80%] md:max-w-[60%] my-12 text-lg md:text-3xl font-Darker text-[#fff]">
