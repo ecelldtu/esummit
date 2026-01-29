@@ -71,7 +71,10 @@ function useResponsiveValue(baseValue: number, mobileValue: number) {
 }
 
 function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth < breakpoint;
+  });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -96,7 +99,10 @@ function useIsMobile(breakpoint = 768) {
 }
 
 function useHasCoarsePointer() {
-  const [coarse, setCoarse] = useState(false);
+  const [coarse, setCoarse] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(pointer: coarse)').matches;
+  });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -212,9 +218,9 @@ export const RadialScrollGallery = forwardRef<
   const hasCoarsePointer = useHasCoarsePointer();
   const isLowPower = useIsLowPowerDevice();
     // Phones can feel sluggish with long pinned scroll distances.
-    // Keep it tighter on mobile for a faster, more responsive feel.
-    const effectiveScrollDuration = isMobile
-      ? Math.max(scrollDuration * 1.35, scrollDuration + 600)
+    // Keep it shorter on touch devices so users can scroll past easily.
+    const effectiveScrollDuration = isMobile || hasCoarsePointer
+      ? Math.max(scrollDuration * 0.6, 900)
       : scrollDuration;
 
     const { visibleDecimal, hiddenDecimal } = useMemo(() => {
@@ -262,16 +268,19 @@ export const RadialScrollGallery = forwardRef<
         const prefersReducedMotion = window.matchMedia(
           '(prefers-reduced-motion: reduce)'
         ).matches;
+        const shouldAnimate = !prefersReducedMotion;
 
         // Extra perf guard: pinned + scrubbed animations are often janky on mobile.
         // We'll still animate, but avoid pinning on mobile/coarse-pointer.
           const shouldPin = !isMobile && !hasCoarsePointer;
 
-        if (!prefersReducedMotion) {
+        if (shouldAnimate) {
           if (!isMobile) {
             // Desktop: keep ticker stable for smoother scroll-linked animations.
             gsap.ticker.lagSmoothing(0);
             gsap.ticker.fps(60);
+          } else {
+            gsap.ticker.fps(30);
           }
           gsap.fromTo(
             containerRef.current.children,
@@ -302,9 +311,9 @@ export const RadialScrollGallery = forwardRef<
             trigger: pinRef.current,
             start: startTrigger,
             end: `+=${effectiveScrollDuration}`,
-            scrub: shouldPin ? 1.1 : 0.4,
+            scrub: shouldPin ? 1.1 : 0.2,
             pin: shouldPin,
-            pinSpacing: true,
+            pinSpacing: shouldPin,
             anticipatePin: shouldPin ? 1 : 0,
             invalidateOnRefresh: true,
             // Smooth scroll on touch (prevents the "stuck" feel).
@@ -315,6 +324,8 @@ export const RadialScrollGallery = forwardRef<
               setRotation(self.progress * 360);
             },
           });
+        } else {
+          gsap.set(containerRef.current, { rotation: 0, clearProps: 'transform' });
         }
       },
       {
@@ -326,6 +337,8 @@ export const RadialScrollGallery = forwardRef<
           startTrigger,
           childrenCount,
           isMobile,
+          isLowPower,
+          hasCoarsePointer,
         ],
       }
     );
@@ -352,12 +365,10 @@ export const RadialScrollGallery = forwardRef<
         ref={mergedRef}
         className={`min-h-screen w-full relative flex items-center justify-center overflow-hidden ${className}`}
         style={
-          // Mobile-only: avoid the pinned section acting like a nested scroll region.
-          // This improves "scroll down doesn't work" issues on touch.
+          // Mobile-only: keep touch scroll responsive without creating a nested scroll region.
           isMobile
             ? ({
                 touchAction: 'pan-y',
-                overscrollBehavior: 'contain',
               } as React.CSSProperties)
             : undefined
         }

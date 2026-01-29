@@ -14,11 +14,11 @@ export default function Quotes() {
     .reverse();
   const imagesR = images.reverse();
   return (
-  <div className="relative mt-32 md:mt-48 mb-12 md:mb-48">
-      <div className='font-Nova text-white text-4xl md:text-7xl font-semibold text-center' id='Sponsors'>
+  <div className="relative mt-16 md:mt-24 mb-24 md:mb-40">
+      <div className='font-Kalamayka text-white text-4xl md:text-7xl font-semibold text-center' id='Sponsors'>
         Past Sponsors
       </div>
-      <div className="h-auto flex items-center w-screen my-8 font-DarkerBold">
+  <div className="h-auto flex items-center w-screen my-8 font-Kalamayka">
         <Marquee className="py-2 flex gap-4 my-2" speed={180}>
           {images.map((image, index) => (
                       <div key={index} className="rounded overflow-hidden shadow-lg mx-auto mb-12">
@@ -36,7 +36,7 @@ export default function Quotes() {
           {/* Repeat for all other logos */}
         </Marquee>
       </div>
-      <div className="h-16 flex items-center w-screen my-8 font-DarkerBold">
+  <div className="h-16 flex items-center w-screen my-8 font-Kalamayka">
         <Marquee className="py-2 flex gap-4 my-2" right direction='' speed={180}>
         {imagesR.map((image, index) => (
                       <div key={index} className="rounded overflow-hidden  mb-12">

@@ -5,12 +5,12 @@ import Image from "next/image"; // Import Next.js Image component
 export default function Home() {
     return (
         <div className="pt-24 px-6">
-            <h2 className="max-w-7xl text-white pl-4 mx-auto text-4xl mt-24 mb-8 md:my-24 md:text-7xl font-bold font-Nova">
+            <h2 className="max-w-7xl text-white pl-4 mx-auto text-4xl mt-24 mb-8 md:my-24 md:text-7xl font-bold font-Kalamayka">
                 Events
             </h2>
 
             {/* Responsive Grid */}
-            <section className="font-DarkerBold">
+            <section className="font-Kalamayka">
                 <div className="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
                         <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-black h-auto md:h-full flex flex-col">

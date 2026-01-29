@@ -17,7 +17,7 @@ export default function index({project}) {
     const { title1, title2, src } = project;
     return (
         <div onMouseEnter={() => {setIsActive(true)}} onMouseLeave={() => {setIsActive(false)}} className={styles.project}>
-            <p className='font-Darker text-4xl md:text-6xl text-white'>{title1}</p>
+            <p className='font-Kalamayka text-4xl md:text-6xl text-white'>{title1}</p>
             <motion.div variants={anim} animate={isActive ? "open" : "closed"} className={styles.imgContainer}>
                 <Image
                     src={`/medias/${src}`}
@@ -29,7 +29,7 @@ export default function index({project}) {
                     className={styles.img}
                 />
             </motion.div>
-            <p className='font-Darker text-4xl md:text-6xl text-white'>{title2}</p>
+            <p className='font-Kalamayka text-4xl md:text-6xl text-white'>{title2}</p>
         </div>
     )
 }

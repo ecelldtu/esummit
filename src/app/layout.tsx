@@ -5,6 +5,7 @@ import Nav from "../components/header/Header"
 import Footer from "../components/Footer"
 import Contact from "./Contact/page"
 import { Analytics } from "@vercel/analytics/react"
+import SmoothCursorClient from "@/components/ui/smooth-cursor-client";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +33,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Analytics />
+  <Analytics />
+        <SmoothCursorClient />
         <Nav />
         {children}
         <Contact />

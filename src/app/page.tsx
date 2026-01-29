@@ -11,9 +11,9 @@ import Sponsors from "./Sponsors/Sponsors";
 import dynamic from "next/dynamic";
 import LazyMount from "../components/perf/LazyMount";
 
-const SponsorsGallery = dynamic(() => import("../components/gallery/SponsorsGallery"), {
+const SponsorsGallery = dynamic(() => import("../components/ui/scroll-morph-hero"), {
   ssr: false,
-  loading: () => <div className="h-40" />,
+  loading: () => <div className="h-screen" />,
 });
 
 const YouTubeShortPip = dynamic(() => import("../components/media/YouTubeShortPip"), {
@@ -44,12 +44,10 @@ export default function Home() {
         <div className="relative z-10">
           <Hero />
 
-          <LazyMount rootMargin="600px" placeholder={<div className="h-24" />}>
-            <Sponsors />
-          </LazyMount>
-
-          {/* Keep the scroll/pinned gallery mounted so ScrollTrigger can measure correctly */}
-          <SponsorsGallery />
+          {/* Scroll morph gallery - with top margin for spacing */}
+          <div className="mt-16 md:mt-24">
+            <SponsorsGallery />
+          </div>
 
           <LazyMount rootMargin="800px" placeholder={<div className="h-56" />}>
             <YouTubeShortPip videoId="mF89SCQQBy4" title="E-Summit 2026" />
@@ -77,6 +75,11 @@ export default function Home() {
 
           <LazyMount rootMargin="900px" placeholder={<div className="h-40" />}>
             <Speakers />
+          </LazyMount>
+
+          {/* Past Sponsors heading section - at bottom after Speakers */}
+          <LazyMount rootMargin="600px" placeholder={<div className="h-24" />}>
+            <Sponsors />
           </LazyMount>
         </div>
       </div>

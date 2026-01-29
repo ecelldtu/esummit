@@ -38,11 +38,11 @@ const items = [
 export default function Page() {
   return (
     <>
-      <h2 className="max-w-7xl text-white pl-4 mt-24 mb-[1080px] sm:mb-96 mx-auto text-4xl md:text-7xl font-bold font-Nova">
+      <h2 className="max-w-7xl text-white pl-4 mt-24 mb-[1080px] sm:mb-96 mx-auto text-4xl md:text-7xl font-bold font-Kalamayka">
         Competitions
       </h2>
       <div className="h-[40rem] w-full flex items-center md:-my-48 justify-center">
-        <div className="grid gap-6 p-4 mx-auto max-w-7xl font-DarkerBold sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid gap-6 p-4 mx-auto max-w-7xl font-Kalamayka sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {items.map((item, index) => (
             <PinContainer key={index} title={item.title} href={item.href}>
               <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
@@ -56,7 +56,7 @@ export default function Page() {
                       className="object-cover w-full h-full rounded-lg"
                     />
                   ) : (
-                    <div className="flex font-Darker items-center justify-center w-full h-full text-white text-xl font-bold">
+                    <div className="flex font-Kalamayka items-center justify-center w-full h-full text-white text-xl font-bold">
                       Coming Soon
                     </div>
                   )}

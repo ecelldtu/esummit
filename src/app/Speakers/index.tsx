@@ -1,78 +1,59 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { HemisphereLight } from "three/src/Three.js";
+import { FocusRail, FocusRailItem } from "@/components/ui/focus-rail";
 
-export default function AppleCardsCarouselDemo() {
-  const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
-  ));
-
+export default function PastSpeakers() {
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 text-white mx-auto text-4xl md:text-7xl mb-8 mt-[1040px] sm:mt-96 md:mb-0 font-bold font-Nova">
+      <h2 className="max-w-7xl pl-4 text-white mx-auto text-4xl md:text-7xl mb-8 mt-[1040px] sm:mt-96 md:mb-12 font-bold font-Kalamayka uppercase">
         Past Speakers
       </h2>
-      <a></a>
-      <Carousel items={cards} />
+      <FocusRail items={speakerItems} autoPlay={false} loop={true} />
     </div>
   );
 }
 
-const data = [
+const speakerItems: FocusRailItem[] = [
   {
-    category: "Co-Founder Zerodha",
+    id: 1,
     title: "Nikhil Kamath",
-    src: "/Speaker_C/1.webp",
-    content: "",
+    description: "Co-Founder Zerodha",
+    imageSrc: "/Speaker_C/1.webp",
   },
   {
-    category: "Entrepreneur & Content Creator",
+    id: 2,
     title: "Raj Shamani",
-    src: "/Speaker_C/2.jpg",
-    content: "",
+    description: "Entrepreneur & Content Creator",
+    imageSrc: "/Speaker_C/2.jpg",
   },
   {
-    category: "Founder & CEO at Paytm",
+    id: 3,
     title: "Vijay Shekhar Sharma",
-    src: "/Speaker_C/3.jpg",
-    content: "",
+    description: "Founder & CEO at Paytm",
+    imageSrc: "/Speaker_C/3.jpg",
   },
   {
-    category: "Founder & CEO at PhysicsWallah",
+    id: 4,
     title: "Alakh Pandey",
-    src: "/Speaker_C/4.jpeg",
-    content: "",
+    description: "Founder & CEO at PhysicsWallah",
+    imageSrc: "/Speaker_C/4.jpeg",
   },
   {
-    category: "Entrepreneur & Content Creator",
+    id: 5,
     title: "Ankur Warikoo",
-    src: "/Speaker_C/10.jpeg",
-    content: "",
+    description: "Entrepreneur & Content Creator",
+    imageSrc: "/Speaker_C/10.jpeg",
   },
   {
-    category: "Co-Founder & Ex-MD at BharatPe",
+    id: 6,
     title: "Ashneer Grover",
-    src: "/Speaker_C/5.jpg",
-    content: "",
+    description: "Co-Founder & Ex-MD at BharatPe",
+    imageSrc: "/Speaker_C/5.jpg",
   },
   {
-    category: "IPS Officer",
+    id: 7,
     title: "Kiran Bedi",
-    src: "/Speaker_C/7.jpg",
-    content: "",
+    description: "IPS Officer",
+    imageSrc: "/Speaker_C/7.jpg",
   },
-  // {
-  //   category: "Actress & Entrepreneur",
-  //   title: "Parul Gulati",
-  //   src: "/Speaker_C/6.jpg",
-  //   content: "",
-  // },
-  // {
-  //   category: "Senior Sports Journalist",
-  //   title: "Vikrant Gupta",
-  //   src: "/Speaker_C/8.jpeg",
-  //   content: "",
-  // }
 ];

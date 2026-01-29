@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div>
       <HyperText
-        className="text-4xl text-white md:text-7xl mt-24 md:my-24 font-bold font-Nova uppercase"
+        className="text-4xl text-white md:text-7xl mt-24 md:my-24 font-bold font-Kalamayka uppercase"
         text="itinerary"
       />
       <Day1 />

@@ -115,7 +115,7 @@ const AnoAI = () => {
     let frameId: number | undefined;
     let last = 0;
     let paused = false;
-  const targetFps = isMobile ? 45 : isLowPower ? 35 : 45;
+  const targetFps = isMobile ? 28 : isLowPower ? 32 : 45;
   const targetFrameMs = 1000 / targetFps;
 
     const renderOnce = () => {

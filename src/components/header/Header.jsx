@@ -26,7 +26,7 @@ export default function Header() {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <div className='font-Darker font-regular'>
+    <div className='font-Kalamayka font-regular'>
             <div className={styles.header} id='header'>
                 <motion.div
                     className={styles.menu}
