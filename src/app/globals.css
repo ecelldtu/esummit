@@ -38,6 +38,11 @@ h1{
   font-family: "Kalamayka", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body{
   /* background-image: url("/images/bg.jpg"); */
   background-color: black !important;
@@ -87,16 +92,18 @@ body{
   text-shadow: none;
 }
 
-/* global.css */
+/* ── video-background (single canonical definition) ────────────── */
 .video-background {
-  opacity: 20%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   overflow: hidden;
-  z-index: -1;
+  z-index: -10;
+  opacity: 0.2;
+  will-change: transform;
 }
 
 @import url("https://fonts.cdnfonts.com/css/general-sans");
@@ -380,81 +387,20 @@ body {
     opacity: 0.8;
   }
 }
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-body {
-  background-color: none !important;
-}
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Ensures the video is behind the content */
-}
-
-.video-background {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: position 0.3s ease; /* Smooth transition */
-}
-
 .video-background.absolute {
   position: absolute;
 }
 
 .video-background.fixed {
   position: fixed;
-  z-index: -1; /* Keeps the video behind other content */
+  z-index: -1;
 }
 
-/*
-  Mobile behavior:
-  - Keep the background video enabled only while the hero is on screen.
-  - Disable it for the rest of the page for performance.
-
-  Note: `#hero` exists on the homepage hero section.
-*/
 @media (max-width: 1023px) {
-  /* Mobile: keep the video visible across the full page */
   .video-background {
     display: block !important;
-    opacity: 0.18; /* lighter on mobile for readability */
+    opacity: 0.18;
   }
-}
-
-/* Ensure background sits behind content by using negative z-index via utility in markup, but keep a sane default here */
-.video-background {
-  z-index: -10;
-}
-.video-background {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: position 0.3s ease; /* Smooth transition */
-}
-
-.video-background.absolute {
-  position: absolute;
-}
-
-.video-background.fixed {
-  position: fixed;
-  z-index: -1; /* Keeps the video behind other content */
 }
 
 /*---break---*/

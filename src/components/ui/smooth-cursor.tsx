@@ -125,6 +125,8 @@ export function SmoothCursor({
       lastMousePos.current = currentPos;
     };
 
+    let moveTimeout: ReturnType<typeof setTimeout> | null = null;
+
     const smoothMouseMove = (e: MouseEvent) => {
       const currentPos = { x: e.clientX, y: e.clientY };
       updateVelocity(currentPos);
@@ -151,12 +153,12 @@ export function SmoothCursor({
         scale.set(0.95);
         setIsMoving(true);
 
-        const timeout = setTimeout(() => {
+        // Clear any previous timeout to prevent timer accumulation & jank
+        if (moveTimeout) clearTimeout(moveTimeout);
+        moveTimeout = setTimeout(() => {
           scale.set(1);
           setIsMoving(false);
         }, 150);
-
-        return () => clearTimeout(timeout);
       }
     };
 
@@ -177,6 +179,7 @@ export function SmoothCursor({
       window.removeEventListener("mousemove", throttledMouseMove);
       document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
+      if (moveTimeout) clearTimeout(moveTimeout);
     };
   }, [cursorX, cursorY, rotation, scale]);
 

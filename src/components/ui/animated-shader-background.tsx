@@ -24,7 +24,7 @@ const AnoAI = () => {
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'low-power' });
 
-  const getDpr = () => Math.min(window.devicePixelRatio || 1, isMobile || isLowPower ? 1.0 : 1.5);
+    const getDpr = () => Math.min(window.devicePixelRatio || 1, isMobile || isLowPower ? 1.0 : 1.5);
     renderer.setPixelRatio(getDpr());
     renderer.setSize(window.innerWidth, window.innerHeight, false);
     container.appendChild(renderer.domElement);
@@ -33,7 +33,7 @@ const AnoAI = () => {
       uniforms: {
         iTime: { value: 0 },
         iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-  iQuality: { value: isMobile ? 0.45 : isLowPower ? 0.7 : 1.0 },
+        iQuality: { value: isMobile ? 0.45 : isLowPower ? 0.7 : 1.0 },
       },
       vertexShader: `
         void main() {
@@ -115,8 +115,8 @@ const AnoAI = () => {
     let frameId: number | undefined;
     let last = 0;
     let paused = false;
-  const targetFps = isMobile ? 28 : isLowPower ? 32 : 45;
-  const targetFrameMs = 1000 / targetFps;
+    const targetFps = isMobile ? 28 : isLowPower ? 32 : 45;
+    const targetFrameMs = 1000 / targetFps;
 
     const renderOnce = () => {
       renderer.render(scene, camera);
@@ -142,12 +142,16 @@ const AnoAI = () => {
       });
     }
 
+    let resizeRaf = 0;
     const handleResize = () => {
-      renderer.setPixelRatio(getDpr());
-      renderer.setSize(window.innerWidth, window.innerHeight, false);
-      material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight);
-
-      if (reduceMotion) renderOnce();
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        renderer.setPixelRatio(getDpr());
+        renderer.setSize(window.innerWidth, window.innerHeight, false);
+        material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight);
+        if (reduceMotion) renderOnce();
+      });
     };
     window.addEventListener('resize', handleResize);
 
@@ -177,12 +181,13 @@ const AnoAI = () => {
             animate(now);
           });
         }
-      }, 150);
+      }, 200);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       if (typeof frameId === 'number') cancelAnimationFrame(frameId);
+      if (resizeRaf) cancelAnimationFrame(resizeRaf);
       window.removeEventListener('resize', handleResize);
       document.removeEventListener('visibilitychange', handleVisibility);
       window.removeEventListener('scroll', handleScroll);
