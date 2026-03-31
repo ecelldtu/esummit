@@ -12,8 +12,8 @@ const BookingForm = () => {
     gender: "",
     contact: "",
     email: "",
-    confirmEmail: "",
     team:"",
+    confirmEmail: "",
   });
 
   const handleChange = (e) => {
@@ -30,9 +30,9 @@ const BookingForm = () => {
       return;
     }
     try {
-      const response = await axios.post("https://ecell-orcin.vercel.app/visitor/", formData);
+      const response = await axios.post("https://ecell-orcin.vercel.app/startup/", formData);
       console.log("Task created:", response.data);
-      alert("Your accommodation is booked");
+      alert("Your registeration is sucessfull");
     } catch (error) {
       console.error("Error creating task:", error);
       alert("Something went wrong");
@@ -43,8 +43,8 @@ const BookingForm = () => {
     e.preventDefault();
     const currency = "INR";
 
-    const response = await axios.post("http://localhost:4000/payment/", {
-      amount: 10 * 100,
+    const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
+      amount: 575 * 100,
       receipt: "AAyu9414",
       currency,
     });
@@ -102,16 +102,16 @@ const BookingForm = () => {
       <div className="max-w-3xl mx-auto p-6 shadow-lg text-white">
         <HyperText
           className="text-2xl text-white md:text-5xl mt-24 md:my-12 font-bold font-Nova uppercase"
-          text="Accommodation"
+          text="Registeration Form"
         />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={paymentHandler}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { label: "Name", id: "name", type: "text" },
               { label: "College", id: "college", type: "text" },
               { label: "City", id: "city", type: "text" },
               { label: "Contact", id: "contact", type: "text" },
-              { label: "Team", id: "team", type: "text" },
+              { label: "Team Name(write NA if not part of any)", id: "team", type: "text" },
               { label: "Email", id: "email", type: "email" },
               { label: "Confirm Email", id: "confirmEmail", type: "email" },
             ].map(({ label, id, type }) => (
@@ -163,17 +163,17 @@ const BookingForm = () => {
       </div>
       <div className="min-h-screen bg-black text-white/80 flex font-DarkerBold flex-col items-start py-10 px-4 sm:px-8 lg:px-16">
         <h1 className="text-3xl font-bold mb-6 font-DarkerBold">
-          Terms and Conditions for Accommodation
+          Terms and Conditions for Registeration in google startup weekend
         </h1>
 
         <p className="mb-4">
-          Welcome to the E-Summit DTU 2026 accommodation services. By proceeding with
+          Welcome to the Startup Weeekend DTU 2025 registeration services. By proceeding with
           the booking, you agree to the following terms and conditions:
         </p>
 
         <p className="font-semibold">1. Payment Policy</p>
         <p className="mb-4">
-          All payments made for accommodation during E-Summit DTU 2026 are strictly
+          All payments made for registeration during google startup weekend DTU 2025 are strictly
           non-refundable. No requests for refunds will be entertained under any
           circumstances, including but not limited to cancellations, changes in
           schedule, or personal reasons.
